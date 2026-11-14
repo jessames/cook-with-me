@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_14_211625) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_14_214518) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -51,7 +51,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_14_211625) do
   create_table "measurements", force: :cascade do |t|
     t.bigint "recipe_id", null: false
     t.string "measure_unit"
-    t.integer "measure_value"
+    t.string "measure_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "ingredient_id", null: false
