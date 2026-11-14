@@ -1,6 +1,5 @@
 class RecipesController < ApplicationController
   def index
-    #Display up to 15 recently completed recipes
-    #
+    @recipes = Recipe.where(cooked: true).limit(15)
   end
 end

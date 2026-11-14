@@ -1,0 +1,10 @@
+<h1> Recent Recipes </h1>
+
+<% if @recipes.empty? %>
+<p> When you finish cooking your recipes will appear here!</p>
+<% else %>
+  <% @recipes.each do |recipe| %>
+    <h3><%= recipe.name %></h3>
+    <p><%= recipe.ingredients %></p>
+    <% end %>
+  <% end %>
