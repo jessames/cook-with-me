@@ -25,9 +25,17 @@ export default class extends Controller {
       )
       .slice(0, 8)
 
+    if (matches.length === 0) {
+      const emptyMessage = document.createElement("p")
+      emptyMessage.textContent = "No matching ingredients found."
+      this.suggestionsTarget.appendChild(emptyMessage)
+      return
+    }
+
     matches.forEach(ingredient => {
       const button = document.createElement("button")
       button.type = "button"
+      button.className = "ingredient-suggestion"
       button.textContent = ingredient.name
 
       button.addEventListener("click", () => {
