@@ -1,8 +1,7 @@
-
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["input", "suggestions", "selected", "emptyMessage"]
+  static targets = ["input", "suggestions", "selected"]
   static values = { ingredients: Array }
 
   connect() {
