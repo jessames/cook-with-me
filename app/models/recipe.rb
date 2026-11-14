@@ -1,3 +1,6 @@
 class Recipe < ApplicationRecord
-  belongs_to :session
+  has_many :measurements
+  has_many :ingredients, through: :measurements
+  has_many :instructions
+  has_many :cook_sessions
 end

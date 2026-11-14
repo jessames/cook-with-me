@@ -1,0 +1,2 @@
+class CookSessionsController < ApplicationController
+end
