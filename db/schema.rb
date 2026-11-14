@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_14_162405) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_14_211625) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -54,6 +54,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_14_162405) do
     t.integer "measure_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ingredient_id", null: false
+    t.index ["ingredient_id"], name: "index_measurements_on_ingredient_id"
     t.index ["recipe_id"], name: "index_measurements_on_recipe_id"
   end
 
@@ -91,6 +93,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_14_162405) do
   add_foreign_key "favorites", "recipes"
   add_foreign_key "favorites", "users"
   add_foreign_key "instructions", "recipes"
+  add_foreign_key "measurements", "ingredients"
   add_foreign_key "measurements", "recipes"
   add_foreign_key "messages", "cook_sessions"
 end
