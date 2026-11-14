@@ -10,3 +10,46 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Shared Styles
+
+
+// Home
+.ingredient-suggestions {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-top: 4px;
+  overflow: hidden;
+  background: white;
+  max-height: 240px;
+  overflow-y: auto;
+
+  &:empty {
+    display: none;
+  }
+
+  p {
+    padding: 12px;
+    margin: 0;
+    color: #777;
+  }
+}
+
+.ingredient-suggestion {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 1px solid #eee;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: #f5f5f5;
+  }
+}
