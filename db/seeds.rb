@@ -32,6 +32,13 @@ require "json"
         name: ingredient_name.downcase
       )
 
+      if ingredient.image_url.blank?
+        image_name = ERB::Util.url_encode(ingredient_name.titleize)
+        ingredient.update!(
+          image_url: "https://www.themealdb.com/images/ingredients/#{image_name}.png"
+        )
+      end
+
       Measurement.find_or_create_by!(
         recipe: recipe,
         ingredient: ingredient
