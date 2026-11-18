@@ -59,17 +59,30 @@
             <div class="serving-size-section">
               <div class="serving-size-label">
                 <label for="serving-size">Servings</label>
+                <p>How many servings?</p>
               </div>
 
-              <input
-                type="number"
-                id="serving-size"
-                name="serving_size"
-                value="2"
-                min="1"
-                required
-                class="serving-size-input"
-              >
+              <div class="serving-selector">
+                <button type="button" class="serving-button"
+                        onclick="this.nextElementSibling.stepDown()">
+                  −
+                </button>
+
+                <input
+                  type="number"
+                  id="serving-size"
+                  name="serving_size"
+                  value="2"
+                  min="1"
+                  required
+                  class="serving-size-input"
+                >
+
+                <button type="button" class="serving-button"
+                        onclick="this.previousElementSibling.stepUp()">
+                  +
+                </button>
+              </div>
             </div>
 
             <%= submit_tag "Give me recipes!", class: "recipes-submit-button" %>

@@ -19,7 +19,6 @@
 body {
   background-color: #788923;
   margin-left: 164px;
-  padding: 14px 14px 14px 0;
 }
 
 // ==========================================
@@ -184,8 +183,8 @@ body {
 }
 
 .serving-size-label label {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -196,14 +195,53 @@ body {
 
 // Serving input
 .serving-size-input {
-  width: 90px;
+  width: 40px;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
   border: none;
   border-radius: 12px;
-  background: #e5efad;
-  padding: 12px;
+  background-color: #d0dba0;;
+}
+
+.serving-selector {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background-color: #d0dba0;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.serving-button {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+  background-color: #012916;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #164b32;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.serving-size-input {
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 }
 
 // Submit button
