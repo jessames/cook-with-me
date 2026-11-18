@@ -10,7 +10,7 @@ class CookSessionsController < ApplicationController
     recipe = current_user.recipe.find(cook_session_params[:recipe_id])
     @cook_session = current_user.cook_sessions.build(recipe: recipe)
     if @cook_session.save
-      redirect_to cook_session_path(@cook_session), notice: "Let's get cooking!"
+      redirect_to redirect_to cook_session_instructions_path(@cook_session), notice: "Let's get cooking!"
     else
       @recipes = current_user.recipes
       render :new, status: :unprocessable_entity
