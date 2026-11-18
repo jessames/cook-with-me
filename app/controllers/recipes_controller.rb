@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
   end
 
   def results
-    ingredient_ids = Array(params[:ingredient_ids]).reject(&:blank?).map(&:to_i)
+    ingredient_ids = Array(params[:ingredients]).reject(&:blank?).map(&:to_i)
 
     @results = RecipeMatcher.new(ingredient_ids).call
   end

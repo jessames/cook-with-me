@@ -13,7 +13,7 @@
     <div class="row g-4">
       <% @results.each do |result| %>
         <div class="col-12 col-md-4">
-          <div class="card h-100">
+          <div class="card">
             <%= image_tag result[:recipe].image_url,
                           class: "card-img-top",
                           alt: result[:recipe].name %>
