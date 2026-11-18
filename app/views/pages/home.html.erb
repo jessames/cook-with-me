@@ -1,4 +1,3 @@
-
 <% if user_signed_in? %>
   <div class="container">
     <h1>What's in your kitchen?</h1>
@@ -7,7 +6,7 @@
     <%= form_with url: results_recipes_path, method: :get, local: true do %>
       <div
         data-controller="ingredient-search"
-        data-ingredient-search-ingredients-value="<%= @ingredients.to_json(only: [:id, :name]) %>"
+        data-ingredient-search-ingredients-value="<%= @ingredients.as_json(only: [:id, :name, :image_url]).to_json %>"
       >
         <label for="ingredient-search">Search ingredients</label>
 
@@ -27,11 +26,15 @@
 
         <h2>Your ingredients</h2>
 
-        <div data-ingredient-search-target="selected">
           <p data-ingredient-search-target="emptyMessage">
             You haven't added any ingredients yet.
           </p>
-        </div>
+
+          <div
+            class="selected-ingredients-grid"
+            data-ingredient-search-target="selected"
+          >
+          </div>
 
         <div>
           <label for="serving-size">How many servings?</label>

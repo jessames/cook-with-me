@@ -1,3 +1,4 @@
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -11,10 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
-// Shared Styles
+// ==========================================
+// Home - Ingredient Search
+// ==========================================
 
-
-// Home
+// Ingredient autocomplete dropdown
 .ingredient-suggestions {
   border: 1px solid #dee2e6;
   border-radius: 8px;
@@ -35,6 +37,7 @@
   }
 }
 
+// Individual autocomplete suggestions
 .ingredient-suggestion {
   display: block;
   width: 100%;
@@ -44,6 +47,8 @@
   background: white;
   text-align: left;
   cursor: pointer;
+  color: #333;
+  transition: background 0.15s ease;
 
   &:last-child {
     border-bottom: none;
@@ -51,5 +56,118 @@
 
   &:hover {
     background: #f5f5f5;
+  }
+}
+
+// ==========================================
+// Selected Ingredients
+// ==========================================
+
+// Grid containing selected ingredients
+.selected-ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+// Individual ingredient card
+.selected-ingredient-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
+// Ingredient image container
+.ingredient-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+// Ingredient thumbnail
+.selected-ingredient-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// Placeholder when an image is unavailable
+.ingredient-image-placeholder {
+  font-size: 40px;
+  color: #aaa;
+}
+
+// Ingredient name
+.selected-ingredient-name {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  word-break: break-word;
+}
+
+// Remove ingredient button
+.remove-ingredient-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background: #f1f1f1;
+  color: #555;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: #e74c3c;
+    color: white;
+  }
+}
+
+// Empty state message
+[data-ingredient-search-target="emptyMessage"] {
+  color: #888;
+  margin-top: 12px;
+}
+
+// ==========================================
+// Responsive Styling
+// ==========================================
+
+@media (max-width: 576px) {
+  .selected-ingredients-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .selected-ingredient-card {
+    padding: 12px 8px;
+  }
+
+  .ingredient-image-container {
+    height: 90px;
   }
 }
