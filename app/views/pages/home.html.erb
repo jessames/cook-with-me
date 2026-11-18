@@ -1,60 +1,90 @@
-
 <% if user_signed_in? %>
-  <div class="container">
-    <h1>What's in your kitchen?</h1>
-    <p>Add the ingredients you have, and we'll find recipes you can make.</p>
+  <div class="home-layout">
 
-    <%= form_with url: results_recipes_path, method: :get, local: true do %>
-      <div
-        data-controller="ingredient-search"
-        data-ingredient-search-ingredients-value="<%= @ingredients.to_json(only: [:id, :name]) %>"
-      >
-        <label for="ingredient-search">Search ingredients</label>
+  <!-- Main content -->
+    <main class="home-main">
 
-        <input
-          type="text"
-          id="ingredient-search"
-          placeholder="Start typing an ingredient..."
-          autocomplete="off"
-          data-ingredient-search-target="input"
-          data-action="input->ingredient-search#search"
+      <h1 class="home-title">What's in your kitchen?</h1>
+      <p>Add the ingredients you have, and we'll find recipes you can make.</p>
+
+      <%= form_with url: results_recipes_path, method: :get, local: true do %>
+        <div
+          class="ingredient-search-wrapper"
+          data-controller="ingredient-search"
+          data-ingredient-search-ingredients-value="<%= @ingredients.as_json(only: [:id, :name, :image_url]).to_json %>"
         >
 
-        <div
-          data-ingredient-search-target="suggestions"
-          class="ingredient-suggestions"
-        ></div>
+          <!-- Search -->
+          <div class="ingredient-search-section">
+            <label for="ingredient-search" class="visually-hidden">
+              Search ingredients
+            </label>
 
-        <h2>Your ingredients</h2>
+            <input
+              type="text"
+              id="ingredient-search"
+              class="ingredient-search-input"
+              placeholder="Search for an ingredient..."
+              autocomplete="off"
+              data-ingredient-search-target="input"
+              data-action="input->ingredient-search#search"
+            >
+          </div>
 
-        <div data-ingredient-search-target="selected">
-          <p data-ingredient-search-target="emptyMessage">
-            You haven't added any ingredients yet.
-          </p>
+          <div
+            data-ingredient-search-target="suggestions"
+            class="ingredient-suggestions"
+          ></div>
+
+          <!-- Selected ingredients -->
+          <section class="selected-ingredients-section">
+            <h2 class="visually-hidden">Your ingredients</h2>
+
+            <p data-ingredient-search-target="emptyMessage">
+              You haven't added any ingredients yet.
+            </p>
+
+            <div
+              class="selected-ingredients-grid"
+              data-ingredient-search-target="selected"
+            ></div>
+          </section>
+
+          <!-- Bottom controls -->
+          <div class="home-bottom-controls">
+
+            <div class="serving-size-section">
+              <div class="serving-size-label">
+                <label for="serving-size">Servings</label>
+                <p>How many servings?</p>
+              </div>
+
+              <input
+                type="number"
+                id="serving-size"
+                name="serving_size"
+                value="2"
+                min="1"
+                required
+                class="serving-size-input"
+              >
+            </div>
+
+            <%= submit_tag "Give me recipes!", class: "recipes-submit-button" %>
+
+          </div>
         </div>
+      <% end %>
 
-        <div>
-          <label for="serving-size">How many servings?</label>
-          <input
-            type="number"
-            id="serving-size"
-            name="serving_size"
-            value="2"
-            min="1"
-            required
-          >
-        </div>
-
-        <%= submit_tag "Show me recipes" %>
-      </div>
-    <% end %>
+    </main>
   </div>
 
 <% else %>
-  <div class="container">
+
+  <div class="home-landing">
     <h1>Let's get cooking!</h1>
     <p>Discover delicious recipes using ingredients you already have.</p>
-
     <%= link_to "Get Started Cooking", new_user_session_path %>
   </div>
+
 <% end %>

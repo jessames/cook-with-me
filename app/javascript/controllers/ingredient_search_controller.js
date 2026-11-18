@@ -1,7 +1,8 @@
+
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["input", "suggestions", "selected"]
+  static targets = ["input", "suggestions", "selected", "emptyMessage"]
   static values = { ingredients: Array }
 
   connect() {
@@ -12,48 +13,43 @@ export default class extends Controller {
     const query = this.inputTarget.value.trim().toLowerCase()
     this.suggestionsTarget.innerHTML = ""
 
-    if (query.length === 0) return
+    if (!query) return
 
-    const matches = this.ingredientsValue
-      .filter(ingredient =>
-        ingredient.name.toLowerCase().includes(query)
-      )
-      .filter(ingredient =>
-        !this.selectedIngredients.some(
-          selected => selected.id === ingredient.id
-        )
-      )
-      .slice(0, 8)
+    const matches = this.ingredientsValue.filter(ingredient =>
+      ingredient.name.toLowerCase().includes(query) &&
+      !this.selectedIngredients.some(selected => selected.id === ingredient.id)
+    )
 
-    if (matches.length === 0) {
-      const emptyMessage = document.createElement("p")
-      emptyMessage.textContent = "No matching ingredients found."
-      this.suggestionsTarget.appendChild(emptyMessage)
-      return
-    }
-
-    matches.forEach(ingredient => {
+    matches.slice(0, 10).forEach(ingredient => {
       const button = document.createElement("button")
       button.type = "button"
       button.className = "ingredient-suggestion"
       button.textContent = ingredient.name
-
-      button.addEventListener("click", () => {
-        this.addIngredient(ingredient)
-      })
+      button.dataset.id = ingredient.id
+      button.dataset.action = "click->ingredient-search#addIngredient"
 
       this.suggestionsTarget.appendChild(button)
     })
   }
 
-  addIngredient(ingredient) {
+  addIngredient(event) {
+    const id = Number(event.currentTarget.dataset.id)
+    const ingredient = this.ingredientsValue.find(item => item.id === id)
+
+    if (!ingredient) return
+    if (this.selectedIngredients.some(item => item.id === id)) return
+
     this.selectedIngredients.push(ingredient)
+
     this.inputTarget.value = ""
     this.suggestionsTarget.innerHTML = ""
+
     this.renderSelected()
   }
 
-  removeIngredient(id) {
+  removeIngredient(event) {
+    const id = Number(event.currentTarget.dataset.id)
+
     this.selectedIngredients = this.selectedIngredients.filter(
       ingredient => ingredient.id !== id
     )
@@ -64,46 +60,62 @@ export default class extends Controller {
   renderSelected() {
     this.selectedTarget.innerHTML = ""
 
-    if (this.selectedIngredients.length === 0) {
-      const message = document.createElement("p")
-      message.textContent = "You haven't added any ingredients yet."
-      this.selectedTarget.appendChild(message)
-      return
-    }
+    this.selectedIngredients.forEach(ingredient => {
+      const card = document.createElement("div")
+      card.className = "selected-ingredient-card"
 
-    this.selectedIngredients.forEach((ingredient, index) => {
-      const row = document.createElement("div")
-      row.className = "selected-ingredient"
+      // Ingredient thumbnail from our database
+      const imageContainer = document.createElement("div")
+      imageContainer.className = "ingredient-image-container"
 
+      if (ingredient.image_url) {
+        const image = document.createElement("img")
+        image.src = ingredient.image_url
+        image.alt = ingredient.name
+        image.className = "selected-ingredient-image"
+        image.loading = "lazy"
+
+        image.onerror = () => {
+          image.remove()
+          imageContainer.textContent = "🍳"
+          imageContainer.classList.add("ingredient-image-placeholder")
+        }
+
+        imageContainer.appendChild(image)
+      } else {
+        imageContainer.textContent = "🍳"
+        imageContainer.classList.add("ingredient-image-placeholder")
+      }
+
+      // Ingredient name
       const name = document.createElement("span")
+      name.className = "selected-ingredient-name"
       name.textContent = ingredient.name
 
-      const quantity = document.createElement("input")
-      quantity.type = "number"
-      quantity.min = "0"
-      quantity.step = "any"
-      quantity.placeholder = "Quantity"
-      quantity.name = "quantities[]"
+      // Hidden field containing the ingredient ID
+      const hiddenInput = document.createElement("input")
+      hiddenInput.type = "hidden"
+      hiddenInput.name = "ingredients[]"
+      hiddenInput.value = ingredient.id
 
-      const unit = document.createElement("input")
-      unit.type = "text"
-      unit.placeholder = "Unit (e.g. grams)"
-      unit.name = "units[]"
+      // Remove button
+      const removeButton = document.createElement("button")
+      removeButton.type = "button"
+      removeButton.className = "remove-ingredient-button"
+      removeButton.textContent = "×"
+      removeButton.setAttribute("aria-label", `Remove ${ingredient.name}`)
+      removeButton.dataset.id = ingredient.id
+      removeButton.dataset.action = "click->ingredient-search#removeIngredient"
 
-      const id = document.createElement("input")
-      id.type = "hidden"
-      id.name = "ingredient_ids[]"
-      id.value = ingredient.id
+      // Assemble the card
+      card.appendChild(imageContainer)
+      card.appendChild(name)
+      card.appendChild(hiddenInput)
+      card.appendChild(removeButton)
 
-      const remove = document.createElement("button")
-      remove.type = "button"
-      remove.textContent = "Remove"
-      remove.addEventListener("click", () => {
-        this.removeIngredient(ingredient.id)
-      })
-
-      row.append(name, id, quantity, unit, remove)
-      this.selectedTarget.appendChild(row)
+      this.selectedTarget.appendChild(card)
     })
+
+    this.emptyMessageTarget.hidden = this.selectedIngredients.length > 0
   }
 }
