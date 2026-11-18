@@ -1,8 +1,10 @@
 class InstructionsController < ApplicationController
   def new
-    #Instructions
   end
+
   def show
-    #Instructions reference the content of the recipe and each step is individually displayed
+   @cook_session = current_user.cook_sessions.find(params[:cook_session_id])
+   @recipe = @cook_session.recipe
+   @instructions = @recipe.instructions
   end
 end
