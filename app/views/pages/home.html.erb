@@ -16,6 +16,7 @@
 
           <!-- Search -->
           <div class="ingredient-search-section">
+
             <label for="ingredient-search" class="visually-hidden">
               Search ingredients
             </label>
@@ -29,16 +30,18 @@
               data-ingredient-search-target="input"
               data-action="input->ingredient-search#search"
             >
+
+            <div
+              data-ingredient-search-target="suggestions"
+              class="ingredient-suggestions"
+            ></div>
+
           </div>
 
-          <div
-            data-ingredient-search-target="suggestions"
-            class="ingredient-suggestions"
-          ></div>
 
           <!-- Selected ingredients -->
           <section class="selected-ingredients-section">
-            <h2 class="visually-hidden">Your ingredients</h2>
+            <h2>Your ingredients</h2>
 
             <p data-ingredient-search-target="emptyMessage">
               You haven't added any ingredients yet.
@@ -56,7 +59,6 @@
             <div class="serving-size-section">
               <div class="serving-size-label">
                 <label for="serving-size">Servings</label>
-                <p>How many servings?</p>
               </div>
 
               <input
@@ -84,7 +86,7 @@
   <div class="home-landing">
     <h1>Let's get cooking!</h1>
     <p>Discover delicious recipes using ingredients you already have.</p>
-    <%= link_to "Get Started Cooking", new_user_session_path %>
+    <%= link_to "Get Started Cooking", new_user_session_path, class: "landing-button" %>
   </div>
 
 <% end %>
