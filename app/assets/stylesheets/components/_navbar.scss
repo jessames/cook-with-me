@@ -1,12 +1,68 @@
+
+// ==========================================
+// Navigation
+// ==========================================
+
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  bottom: 14px;
+  width: 136px;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  background-color: #e5efad;
+  border-radius: 36px;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 28px 16px;
+  z-index: 1000;
+
+  .navbar-brand {
+    margin: 0 0 48px;
+    padding: 0;
+
+    img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+  }
+
+  .nav-link {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 14px;
+    color: #002d1c;
+    font-size: 25px;
+
+    &:hover {
+      background-color: rgba(0, 45, 28, 0.1);
+    }
+
+    &.active {
+      background-color: #002d1c;
+      color: white;
+    }
+  }
+
+  .navbar-account {
+    margin-top: auto;
+  }
 }
