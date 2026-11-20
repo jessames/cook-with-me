@@ -28,9 +28,9 @@
     </ul>
 
     <div class="navbar-account">
-      <%= link_to "Log out", destroy_user_session_path,
-          data: { turbo_method: :delete },
-          class: "nav-link" %>
+      <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link", title: "Log out" do %>
+        <i class="fas fa-sign-out-alt"></i>
+      <% end %>
     </div>
 
   <% else %>
