@@ -1,14 +1,22 @@
-
+// ==========================================
 // Graphical variables
+// ==========================================
+
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
 
+// ==========================================
 // External libraries
+// ==========================================
+
 @import "bootstrap";
 @import "font-awesome";
 
+// ==========================================
 // Your CSS partials
+// ==========================================
+
 @import "components/index";
 @import "pages/index";
 
@@ -18,7 +26,9 @@
 
 body {
   background-color: #788A25;
+  margin: 0;
   margin-left: 164px;
+  box-sizing: border-box;
 }
 
 // ==========================================
@@ -27,65 +37,24 @@ body {
 
 .home-layout {
   height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
-// Sidebar
-.home-sidebar {
-  width: 136px;
-  flex-shrink: 0;
-  background-color: #E2EDAA;
-  border-radius: 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 28px 16px;
-}
+// ==========================================
+// Main Content
+// ==========================================
 
-.sidebar-logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 42px;
-  margin-bottom: 48px;
-}
-
-.sidebar-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
-}
-
-.sidebar-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: #002d1c;
-  border-radius: 14px;
-}
-
-.sidebar-icon-active {
-  background-color: #002d1c;
-  color: white;
-}
-
-// Main content
 .home-main {
   flex: 1;
   min-height: 0;
   display: flex;
   flex-direction: column;
   padding: 28px 40px;
+  box-sizing: border-box;
 }
 
 .home-main form {
@@ -100,9 +69,13 @@ body {
   font-size: clamp(36px, 5vw, 60px);
   font-weight: 700;
   margin-bottom: 48px;
+  flex-shrink: 0;
 }
 
-// Ingredient search area
+// ==========================================
+// Ingredient Search Area
+// ==========================================
+
 .ingredient-search-wrapper {
   flex: 1;
   min-height: 0;
@@ -120,21 +93,24 @@ body {
 .ingredient-search-input {
   display: block;
   width: 100%;
+  min-width: 0;
   height: 60px;
+  box-sizing: border-box;
   padding: 0 28px;
 
   border: none;
   outline: none;
   box-shadow: none;
-
   border-radius: 20px;
-  background-color: #ffffff;
 
+  background-color: #ffffff;
   color: #002d1c;
   font-size: 18px;
 
   &::placeholder {
     color: #999999;
+    opacity: 1;
+    text-overflow: ellipsis;
   }
 
   &:focus {
@@ -144,158 +120,9 @@ body {
   }
 }
 
-.selected-ingredients-section {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 20px 8px 20px 0;
-
-  h2 {
-    color: white;
-    font-size: 22px;
-    margin-bottom: 16px;
-  }
-
-  p {
-    color: white;
-  }
-}
-
-// Bottom controls
-.home-bottom-controls {
-  flex-shrink: 0;
-  margin-top: auto;
-  padding-top: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-// Serving size
-.serving-size-section {
-  background: white;
-  border-radius: 28px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.serving-size-label label {
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.serving-size-label p {
-  color: #999;
-  margin: 4px 0 0;
-}
-
-// Serving input
-.serving-size-input {
-  width: 40px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  border: none;
-  border-radius: 12px;
-  background-color: #d0dba0;;
-}
-
-.serving-selector {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  background-color: #d0dba0;
-  border-radius: 16px;
-  padding: 8px;
-}
-
-.serving-button {
-  width: 56px;
-  height: 56px;
-  border: none;
-  border-radius: 16px;
-  background-color: #012916;
-  color: #fff;
-  font-size: 32px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: #164b32;
-  }
-
-  &:active {
-    transform: scale(0.95);
-  }
-}
-
-.serving-size-input {
-  appearance: textfield;
-
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    appearance: none;
-    margin: 0;
-  }
-}
-
-// Submit button
-.recipes-submit-button {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  border-radius: 18px;
-  background-color: #002d1c;
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.recipes-submit-button:hover {
-  background-color: #164b32;
-}
-
-// Logged-out landing page
-.home-landing {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 32px;
-}
-
-.landing-button {
-  display: inline-block;
-  padding: 16px 32px;
-  background-color: #e5efad;
-  color: #002d1c;
-  border-radius: 16px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-
-  &:hover {
-    background-color: #d0dba0;
-    color: #002d1c;
-    transform: translateY(-2px);
-  }
-}
-
 // ==========================================
-// Home - Ingredient Search
+// Ingredient Autocomplete Dropdown
 // ==========================================
-
-// Ingredient autocomplete dropdown
 
 .ingredient-suggestions {
   position: absolute;
@@ -321,34 +148,17 @@ body {
 .ingredient-suggestion {
   display: block;
   width: 100%;
-  padding: 16px 24px;
+  padding: 12px 16px;
 
   border: none;
+  border-bottom: 1px solid #eee;
   background: white;
 
-  color: #002d1c;
+  color: #333;
   font-size: 16px;
   text-align: left;
   cursor: pointer;
 
-  transition: background 0.15s ease;
-
-  &:hover {
-    background: #e5efad;
-  }
-}
-
-// Individual autocomplete suggestions
-.ingredient-suggestion {
-  display: block;
-  width: 100%;
-  padding: 12px 16px;
-  border: none;
-  border-bottom: 1px solid #eee;
-  background: white;
-  text-align: left;
-  cursor: pointer;
-  color: #333;
   transition: background 0.15s ease;
 
   &:last-child {
@@ -356,7 +166,7 @@ body {
   }
 
   &:hover {
-    background: #f5f5f5;
+    background: #e5efad;
   }
 }
 
@@ -364,7 +174,26 @@ body {
 // Selected Ingredients
 // ==========================================
 
+.selected-ingredients-section {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 8px 20px 0;
+
+  h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: white;
+  }
+}
+
 // Grid containing selected ingredients
+
 .selected-ingredients-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -373,16 +202,21 @@ body {
 }
 
 // Individual ingredient card
+
 .selected-ingredient-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
+
   padding: 12px 8px;
   border: 1px solid #e5e5e5;
   border-radius: 12px;
+
   background: white;
   text-align: center;
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
@@ -392,10 +226,12 @@ body {
 }
 
 // Ingredient image container
+
 .ingredient-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
   height: 110px;
   margin-bottom: 12px;
@@ -403,6 +239,7 @@ body {
 }
 
 // Ingredient thumbnail
+
 .selected-ingredient-image {
   width: 100%;
   height: 100%;
@@ -410,12 +247,14 @@ body {
 }
 
 // Placeholder when an image is unavailable
+
 .ingredient-image-placeholder {
   font-size: 40px;
   color: #aaa;
 }
 
 // Ingredient name
+
 .selected-ingredient-name {
   font-weight: 500;
   font-size: 15px;
@@ -424,22 +263,28 @@ body {
 }
 
 // Remove ingredient button
+
 .remove-ingredient-button {
   position: absolute;
   top: 8px;
   right: 8px;
+
   width: 26px;
   height: 26px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   border: none;
   border-radius: 50%;
   background: #f1f1f1;
+
   color: #555;
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
+
   transition: background 0.15s ease, color 0.15s ease;
 
   &:hover {
@@ -449,26 +294,366 @@ body {
 }
 
 // Empty state message
+
 [data-ingredient-search-target="emptyMessage"] {
-  color: #888;
+  color: white;
   margin-top: 12px;
 }
 
 // ==========================================
-// Responsive Styling
+// Bottom Controls
 // ==========================================
 
-@media (max-width: 576px) {
-  .selected-ingredients-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+.home-bottom-controls {
+  flex-shrink: 0;
+  margin-top: auto;
+  padding-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// ==========================================
+// Serving Size
+// ==========================================
+
+.serving-size-section {
+  background: white;
+  border-radius: 28px;
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.serving-size-label {
+  min-width: 0;
+
+  label {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
   }
 
-  .selected-ingredient-card {
-    padding: 12px 8px;
+  p {
+    color: #999;
+    margin: 4px 0 0;
+  }
+}
+
+// Serving selector
+
+.serving-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  background-color: #d0dba0;
+  border-radius: 16px;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+// Serving number input
+
+.serving-size-input {
+  width: 40px;
+  min-width: 0;
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 12px;
+  background-color: transparent;
+
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+// Plus and minus buttons
+
+.serving-button {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 16px;
+
+  background-color: #012916;
+  color: white;
+
+  font-size: 32px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #164b32;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// ==========================================
+// Submit Button
+// ==========================================
+
+.recipes-submit-button {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 16px;
+  border: none;
+  border-radius: 18px;
+
+  background-color: #002d1c;
+  color: white;
+
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #164b32;
+  }
+}
+
+// ==========================================
+// Logged-out Landing Page
+// ==========================================
+
+.home-landing {
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 32px;
+}
+
+.landing-button {
+  display: inline-block;
+  padding: 16px 32px;
+
+  background-color: #e5efad;
+  color: #002d1c;
+
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #d0dba0;
+    color: #002d1c;
+    transform: translateY(-2px);
+  }
+}
+
+// ==========================================
+// Responsive Styling: Tablet
+// ==========================================
+
+@media (max-width: 900px) {
+  body {
+    margin-left: 150px;
+  }
+
+  .home-main {
+    padding: 24px;
+  }
+
+  .home-title {
+    margin-bottom: 32px;
+  }
+
+  .selected-ingredients-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .ingredient-image-container {
     height: 90px;
+  }
+}
+
+// ==========================================
+// Responsive Styling: Mobile
+// ==========================================
+
+@media (max-width: 767px) {
+  body {
+    margin-left: 0;
+  }
+
+  .home-layout {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+
+    // Reserve space for the bottom navigation.
+    // We'll coordinate this with the navbar CSS next.
+    padding-bottom: 100px;
+  }
+
+  .home-main {
+    min-height: 0;
+    padding: 24px 20px 16px;
+  }
+
+  .home-title {
+    font-size: clamp(30px, 7vw, 42px);
+    margin-bottom: 24px;
+  }
+
+  .ingredient-search-input {
+    height: 56px;
+    padding: 0 16px;
+    font-size: 16px;
+    border-radius: 16px;
+  }
+
+  .selected-ingredients-section {
+    padding: 16px 0;
+  }
+
+  .selected-ingredients-section h2 {
+    font-size: 20px;
+  }
+
+  .selected-ingredients-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .ingredient-image-container {
+    height: 75px;
+  }
+
+  .selected-ingredient-card {
+    padding: 10px 6px;
+  }
+
+  .selected-ingredient-name {
+    font-size: 13px;
+  }
+
+  // Stack serving label above the selector
+
+  .serving-size-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .serving-size-label label {
+    font-size: 20px;
+  }
+
+  .serving-selector {
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 12px;
+  }
+
+  .serving-button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .serving-size-input {
+    width: 70px;
+    height: 56px;
+  }
+
+  .home-bottom-controls {
+    padding-top: 16px;
+    gap: 12px;
+  }
+
+  .recipes-submit-button {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
+// ==========================================
+// Responsive Styling: Very Small Screens
+// ==========================================
+
+@media (max-width: 380px) {
+  .home-main {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .home-title {
+    font-size: 28px;
+  }
+
+  .ingredient-search-input {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  .selected-ingredients-grid {
+    gap: 8px;
+  }
+
+  .ingredient-image-container {
+    height: 60px;
+  }
+
+  .serving-size-section {
+    padding: 14px;
+  }
+
+  .serving-selector {
+    gap: 8px;
+  }
+
+  .serving-button {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .serving-size-input {
+    width: 60px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .recipes-submit-button {
+    font-size: 17px;
   }
 }

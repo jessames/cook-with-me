@@ -1,14 +1,13 @@
-
 // ==========================================
-// Navigation
+// Navigation - Tablet and Desktop
 // ==========================================
 
 .navbar-lewagon {
   position: fixed;
   top: 14px;
-  left: 14px;
   bottom: 14px;
-  width: 136px;
+  left: 14px;
+  width: 132px;
 
   background-color: #e5efad;
   border-radius: 36px;
@@ -21,6 +20,8 @@
   padding: 28px 16px;
   z-index: 1000;
 
+  transform: none;
+
   .navbar-brand {
     margin: 0 0 48px;
     padding: 0;
@@ -31,6 +32,13 @@
       object-fit: contain;
       border-radius: 50%;
     }
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    flex-grow: 0;
+    width: 100%;
+    justify-content: center;
   }
 
   .navbar-nav {
@@ -64,5 +72,64 @@
 
   .navbar-account {
     margin-top: auto;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+
+// ==========================================
+// Navigation - Mobile
+// ==========================================
+
+@media (max-width: 767px) {
+  .navbar-lewagon {
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+    // max-width: 400px;
+    min-width: 0;
+    height: 64px;
+
+    border-radius: 22px;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 12px;
+    margin: auto 2px auto 2px;
+
+    .navbar-brand {
+      display: none;
+    }
+
+    .navbar-collapse {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    .nav-link {
+      width: 44px;
+      height: 44px;
+      font-size: 21px;
+      border-radius: 13px;
+    }
+
+    .navbar-account {
+      margin: 0;
+    }
   }
 }
