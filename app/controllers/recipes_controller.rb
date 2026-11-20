@@ -8,4 +8,8 @@ class RecipesController < ApplicationController
 
     @results = RecipeMatcher.new(ingredient_ids).call
   end
+
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
 end

@@ -26,7 +26,9 @@ class RecipeMatcher
     end
 
     results = results.sort_by do |result|
-      [result[:missing_count], -result[:matching_count]]
+      # [result[:missing_count], -result[:matching_count]]
+      total = result[:matching_count] + result[:missing_count]
+      [-result[:matching_count].to_f/total, -result[:matching_count]]
     end
 
     results.first(3)
