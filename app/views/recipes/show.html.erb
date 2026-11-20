@@ -1,0 +1,31 @@
+<div class="container py-5">
+  <%= link_to "← Back to Suggestions",
+            results_recipes_path(ingredients: params[:ingredients]),
+            class: "btn btn-outline-secondary mb-4" %>
+  <h1><%= @recipe.name %></h1>
+
+  <%= image_tag @recipe.image_url,
+                alt: @recipe.name,
+                width: 350 %>
+
+  <h2 class="mt-4">Ingredients</h2>
+
+  <ul>
+    <% @recipe.measurements.includes(:ingredient).each do |measurement| %>
+      <li>
+        <%= measurement.measure_value %>
+        <%= measurement.ingredient.name %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h2 class="mt-4">Instructions</h2>
+
+  <ol>
+    <% @recipe.instructions.order(:instruction_number).each do |instruction| %>
+      <li><%= instruction.instruction_content %></li>
+    <% end %>
+  </ol>
+
+  <%= button_to "Cook With Me", recipe_cook_sessions_path(@recipe), method: :post, class: "btn btn-success btn-lg mt-4" %>
+</div>
