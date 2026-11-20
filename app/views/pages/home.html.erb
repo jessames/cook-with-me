@@ -5,7 +5,6 @@
     <main class="home-main">
 
       <h1 class="home-title">What's in your kitchen?</h1>
-      <p>Add the ingredients you have, and we'll find recipes you can make.</p>
 
       <%= form_with url: results_recipes_path, method: :get, local: true do %>
         <div
@@ -16,6 +15,7 @@
 
           <!-- Search -->
           <div class="ingredient-search-section">
+
             <label for="ingredient-search" class="visually-hidden">
               Search ingredients
             </label>
@@ -29,16 +29,18 @@
               data-ingredient-search-target="input"
               data-action="input->ingredient-search#search"
             >
+
+            <div
+              data-ingredient-search-target="suggestions"
+              class="ingredient-suggestions"
+            ></div>
+
           </div>
 
-          <div
-            data-ingredient-search-target="suggestions"
-            class="ingredient-suggestions"
-          ></div>
 
           <!-- Selected ingredients -->
           <section class="selected-ingredients-section">
-            <h2 class="visually-hidden">Your ingredients</h2>
+            <h2>Your ingredients</h2>
 
             <p data-ingredient-search-target="emptyMessage">
               You haven't added any ingredients yet.
@@ -59,15 +61,27 @@
                 <p>How many servings?</p>
               </div>
 
-              <input
-                type="number"
-                id="serving-size"
-                name="serving_size"
-                value="2"
-                min="1"
-                required
-                class="serving-size-input"
-              >
+              <div class="serving-selector">
+                <button type="button" class="serving-button"
+                        onclick="this.nextElementSibling.stepDown()">
+                  −
+                </button>
+
+                <input
+                  type="number"
+                  id="serving-size"
+                  name="serving_size"
+                  value="2"
+                  min="1"
+                  required
+                  class="serving-size-input"
+                >
+
+                <button type="button" class="serving-button"
+                        onclick="this.previousElementSibling.stepUp()">
+                  +
+                </button>
+              </div>
             </div>
 
             <%= submit_tag "Give me recipes!", class: "recipes-submit-button" %>
@@ -84,7 +98,7 @@
   <div class="home-landing">
     <h1>Let's get cooking!</h1>
     <p>Discover delicious recipes using ingredients you already have.</p>
-    <%= link_to "Get Started Cooking", new_user_session_path %>
+    <%= link_to "Get Started Cooking", new_user_session_path, class: "landing-button" %>
   </div>
 
 <% end %>
