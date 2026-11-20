@@ -17,14 +17,13 @@ class CookSessionsController < ApplicationController
     end
   end
 
-  def destory
+  def destroy
     CookSession.transaction do
       @cook_session.recipe.update!(cooked: true)
       @cook_session.destroy!
       # delete chat
   end
   redirect_to recipes_path, notice: "Recipe added to recent recipes."
-end
 
 private
 
@@ -34,4 +33,5 @@ end
 
 def cook_session_params
   params.require(:cook_session).permit(:recipe_id)
+end
 end
