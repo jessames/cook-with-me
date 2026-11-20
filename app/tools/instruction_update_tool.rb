@@ -1,6 +1,10 @@
 class InstructionUpdateTool < RubyLLM::Tool
-  description "Edit and update the instruction content based on chats"
+  description "Updates the current recipe's instruction when the user reports a cooking problem or missing ingredient. Examples: 'I burnt the chicken' or 'I don't have enough cream'. Use the report to give an immediate recovery step and adapt the remaining instructions."
 
-  param :cooking_query, desc: "The issue described by the user"
+  param :situation, desc: "The cooking issue or missing ingredient the user reported"
+
+  def initialize (recipe:)
+    @recipe = recipe
+  end
 
 end
