@@ -1,7 +1,10 @@
 <div class="container py-5">
-  <%= link_to "← Back to Suggestions",
-            results_recipes_path(ingredients: params[:ingredients]),
-            class: "btn btn-outline-secondary mb-4" %>
+  <% if params[:ingredients].present? %>
+    <%= link_to "← Back to Suggestions",
+              results_recipes_path(ingredients: params[:ingredients]),
+              class: "btn btn-outline-secondary mb-4" %>
+  <% end %>
+
   <h1><%= @recipe.name %></h1>
 
   <%= image_tag @recipe.image_url,
@@ -26,6 +29,16 @@
       <li><%= instruction.instruction_content %></li>
     <% end %>
   </ol>
+
+  <% if user_signed_in? %>
+    <% favorite = current_user.favorites.find_by(recipe: @recipe) %>
+
+    <% if favorite %>
+      <%= button_to "♥ Remove from Favorites", favorite_path(favorite, ingredients: params[:ingredients]), method: :delete, class: "btn btn-danger mt-4" %>
+    <% else %>
+      <%= button_to "♡ Add to Favorites", recipe_favorites_path(@recipe, ingredients: params[:ingredients]), method: :post, class: "btn btn-outline-danger mt-4" %>
+    <% end %>
+  <% end %>
 
   <%= button_to "Cook With Me", recipe_cook_sessions_path(@recipe), method: :post, class: "btn btn-success btn-lg mt-4" %>
 </div>
