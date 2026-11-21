@@ -6,8 +6,8 @@ class RecipesController < ApplicationController
 
   def results
     ingredient_ids = Array(params[:ingredients]).reject(&:blank?).map(&:to_i)
-
     @results = RecipeMatcher.new(ingredient_ids).call
+    @favorite_ids = current_user.favorites.pluck(:recipe_id)
   end
 
   def show
