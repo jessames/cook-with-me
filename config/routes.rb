@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :favorites, only: %i[create]
   end
   resources :favorites, only: %i[destroy]
-  resources :cook_sessions, only: %i[new create destroy] do
+  resources :cook_sessions, only:%i[destroy] do
     resources :instructions, only: %i[show]
     resources :messages, only: %i[create]
   end

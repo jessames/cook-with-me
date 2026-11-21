@@ -8,19 +8,19 @@ class CookSessionsController < ApplicationController
   end
 
   def create
-    recipe = current_user.recipe.find(cook_session_params[:recipe_id])
+    recipe = current_user.recipes.find(params[:recipe_id])
     @cook_session = current_user.cook_sessions.build(recipe: recipe)
 
-    if @cook_session.save
-      instruction = recipe.instructions.first
-        redirect_to cook_session_instruction_path(@cook_session, instruction, step: 1),
-        notice: "Let's get cooking!"
-      else
-        @recipes = current_user.recipes
-        @recipe = recipe
-        render :new, status: :unprocessable_entity
-      end
+  if @cook_session.save
+    instruction = recipe.instructions.order(:instruction_number, :id).first!
+    redirect_to cook_session_instruction_path(@cook_session, instruction, step: 1),
+                notice: "Let's get cooking!"
+  else
+    @recipes = current_user.recipes
+    @recipe = recipe
+    render "cook_sessions/new", status: :unprocessable_entity
   end
+end
 
   def destroy
     CookSession.transaction do
