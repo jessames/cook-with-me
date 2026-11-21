@@ -8,7 +8,7 @@ class CookSessionsController < ApplicationController
   end
 
   def create
-    recipe = current_user.recipes.find(params[:recipe_id])
+    recipe = Recipe.find(params[:recipe_id])
     @cook_session = current_user.cook_sessions.build(recipe: recipe)
 
   if @cook_session.save
