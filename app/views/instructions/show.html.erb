@@ -1,13 +1,31 @@
-<h1><%= @recipe.name %></h1>
-<p>Step <%= @step_number %> of <%= @steps.length %></p>
-<p><%= @step %></p>
+<div class="container py-5 text-center">
+  <h1 class="mb-4"><%= @recipe.name %></h1>
 
-<% if @step_number > 1 %>
-  <%= link_to "← Previous step",
-      cook_session_instruction_path(@cook_session, @instruction, step: @step_number - 1) %>
-<% end %>
+  <div class="card shadow-sm p-5 mb-4">
+    <p class="text-muted mb-2">Step <%= @step_number %> of <%= @total_steps %></p>
+    <div class="display-6 mb-4">
+      <%= @step %>
+    </div>
+  </div>
 
-<% if @step_number < @steps.length %>
-  <%= link_to "Next step →",
-      cook_session_instruction_path(@cook_session, @instruction, step: @step_number + 1) %>
-<% end %>
+  <div class="d-flex justify-content-between">
+    <% if @prev_instruction %>
+      <%= link_to "← Previous Step",
+            cook_session_instruction_path(@cook_session, @prev_instruction),
+            class: "btn btn-outline-secondary btn-lg" %>
+    <% else %>
+      <div></div>
+    <% end %>
+
+    <% if @next_instruction %>
+      <%= link_to "Next Step →",
+            cook_session_instruction_path(@cook_session, @next_instruction),
+            class: "btn btn-primary btn-lg" %>
+    <% else %>
+      <%= link_to "Finish Cooking!",
+            cook_session_path(@cook_session),
+            data: { turbo_method: :delete },
+            class: "btn btn-success btn-lg" %>
+    <% end %>
+  </div>
+</div>
