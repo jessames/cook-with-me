@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     resources :cook_sessions, only: %i[create]
     resources :favorites, only: %i[create]
   end
-  resources :favorites, only: %i[index destroy]
-  resources :cook_sessions, only: [] do
+  resources :favorites, only: %i[destroy]
+  resources :cook_sessions, only:%i[destroy] do
     resources :instructions, only: %i[show]
     resources :messages, only: %i[create]
   end
