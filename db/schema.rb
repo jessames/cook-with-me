@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_14_220804) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_21_180545) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -65,7 +65,9 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_14_220804) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "instruction_id", null: false
     t.index ["cook_session_id"], name: "index_messages_on_cook_session_id"
+    t.index ["instruction_id"], name: "index_messages_on_instruction_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -98,4 +100,5 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_14_220804) do
   add_foreign_key "measurements", "ingredients"
   add_foreign_key "measurements", "recipes"
   add_foreign_key "messages", "cook_sessions"
+  add_foreign_key "messages", "instructions"
 end
