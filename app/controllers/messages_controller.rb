@@ -27,12 +27,28 @@ class MessagesController < ApplicationController
     what should change and why.
   PROMPT
 
+  def index
+    @cook_session = current_user.cook_sessions.find(params[:cook_session_id])
+
+    @instruction = @cook_session.recipe.instructions.find(
+      params[:instruction_id]
+    )
+
+    @messages = @cook_session.messages.order(:created_at)
+  end
+
   def create
     @cook_session = current_user.cook_sessions.find(params[:cook_session_id])
 
     @message = Message.new(message_params)
     @message.cook_session = @cook_session
     @message.role = "user"
+
+    @message.instruction = @cook_session.recipe.instructions.find(
+    @message.instruction_id
+    ) if @message.instruction_id.present?
+
+    @instruction = @message.instruction
 
     if @message.save
       @ruby_llm_chat = RubyLLM.chat
@@ -73,7 +89,10 @@ class MessagesController < ApplicationController
     @cook_session.messages.where.not(id: @message.id).each do |message|
       next if message.content.blank?
 
-      @ruby_llm_chat.add_message(message)
+      @ruby_llm_chat.add_message(
+      role: message.role.to_sym,
+      content: message.content
+    )
     end
   end
 
@@ -87,7 +106,7 @@ class MessagesController < ApplicationController
       #{@cook_session.recipe.name}
 
       Their current instruction is:
-      #{instruction&.content}
+      #{instruction&.instruction_content}
 
       Use this recipe and instruction as context when
       answering their questions.
