@@ -40,6 +40,3 @@
       <%= button_to "♡ Add to Favorites", recipe_favorites_path(@recipe, ingredients: params[:ingredients]), method: :post, class: "btn btn-outline-danger mt-4" %>
     <% end %>
   <% end %>
-
-  <%= button_to "Cook With Me", recipe_cook_sessions_path(@recipe), method: :post, class: "btn btn-success btn-lg mt-4" %>
-</div>
