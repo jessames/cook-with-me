@@ -2,19 +2,24 @@ class CookSessionsController < ApplicationController
   before_action :set_cook_session, only: :destroy
 
   def new
-    @cook_session = current_user.cook_sessions.build
     @recipes = current_user.recipes
+    @recipe = @recipes.find_by(id: params[:recipe_id])
+    @cook_session = current_user.cook_sessions.build(recipe: @recipe)
   end
 
   def create
     recipe = current_user.recipe.find(cook_session_params[:recipe_id])
     @cook_session = current_user.cook_sessions.build(recipe: recipe)
+
     if @cook_session.save
-      redirect_to cook_session_instructions_path(@cook_session), notice: "Let's get cooking!"
-    else
-      @recipes = current_user.recipes
-      render :new, status: :unprocessable_entity
-    end
+      instruction = recipe.instructions.first
+        redirect_to cook_session_instruction_path(@cook_session, instruction, step: 1),
+        notice: "Let's get cooking!"
+      else
+        @recipes = current_user.recipes
+        @recipe = recipe
+        render :new, status: :unprocessable_entity
+      end
   end
 
   def destroy
