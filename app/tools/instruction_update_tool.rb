@@ -7,4 +7,8 @@ class InstructionUpdateTool < RubyLLM::Tool
     @recipe = recipe
   end
 
+  def execute(situation:)
+    return {error: "Please describe what happened."} if situation.blank?
+  end
+
 end
