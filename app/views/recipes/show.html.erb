@@ -30,6 +30,7 @@
     <% end %>
   </ol>
 
+  <%= button_to "Cook With Me", recipe_cook_sessions_path(@recipe), class: "btn btn-success btn-lg mt-4" %>
   <% if user_signed_in? %>
     <% favorite = current_user.favorites.find_by(recipe: @recipe) %>
 
