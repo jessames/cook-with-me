@@ -1,9 +1,12 @@
 <div class="container py-5">
   <% if params[:ingredients].present? %>
-    <%= link_to "← Back to Suggestions",
-              results_recipes_path(ingredients: params[:ingredients]),
-              class: "btn btn-outline-secondary mb-4" %>
-  <% end %>
+  <%= link_to "← Back to Suggestions",
+            results_recipes_path(
+              ingredients: params[:ingredients],
+              meal_type: params[:meal_type]
+            ),
+            class: "btn btn-outline-secondary mb-4" %>
+<% end %>
 
   <h1><%= @recipe.name %></h1>
 
@@ -35,9 +38,15 @@
     <% favorite = current_user.favorites.find_by(recipe: @recipe) %>
 
     <% if favorite %>
-      <%= button_to "♥ Remove from Favorites", favorite_path(favorite, ingredients: params[:ingredients]), method: :delete, class: "btn btn-danger mt-4" %>
+      <%= button_to "♥ Remove from Favorites",
+        favorite_path(favorite, ingredients: params[:ingredients], meal_type: params[:meal_type]),
+        method: :delete,
+        class: "btn btn-danger mt-4" %>
     <% else %>
-      <%= button_to "♡ Add to Favorites", recipe_favorites_path(@recipe, ingredients: params[:ingredients]), method: :post, class: "btn btn-outline-danger mt-4" %>
+      <%= button_to "♡ Add to Favorites",
+        recipe_favorites_path(@recipe, ingredients: params[:ingredients], meal_type: params[:meal_type]),
+        method: :post,
+        class: "btn btn-outline-danger mt-4" %>
     <% end %>
   <% end %>
 

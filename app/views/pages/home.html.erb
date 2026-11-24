@@ -54,7 +54,23 @@
 
           <!-- Bottom controls -->
           <div class="home-bottom-controls">
+            <div class="meal-type-section">
+              <div class="meal-type-label">
+                <%= label_tag :meal_type, "Meal type" %>
+                <p>What are you cooking?</p>
+              </div>
 
+              <%= select_tag :meal_type,
+                options_for_select([
+                  ["Any meal", "any"],
+                  ["Breakfast", "breakfast"],
+                  ["Lunch", "lunch"],
+                  ["Dinner", "dinner"],
+                  ["Dessert", "dessert"],
+                  ["Snack", "snack"]
+                ], "any"),
+                class: "meal-type-select" %>
+            </div>
             <div class="serving-size-section">
               <div class="serving-size-label">
                 <label for="serving-size">Servings</label>

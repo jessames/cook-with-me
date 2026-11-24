@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_20_164949) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_24_162827) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -33,11 +33,23 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_164949) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
+  create_table "ingredient_families", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ingredient_family_id"
+    t.bigint "equivalence_key"
+    t.string "relationship_type"
+    t.boolean "review_needed", default: false
+    t.boolean "is_pantry_staple", default: false, null: false
+    t.index ["ingredient_family_id"], name: "index_ingredients_on_ingredient_family_id"
   end
 
   create_table "instructions", force: :cascade do |t|
@@ -76,6 +88,11 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_164949) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "external_id"
+    t.string "source_category"
+    t.string "dish_role"
+    t.string "meal_types", default: [], null: false, array: true
+    t.boolean "recommendation_eligible", default: false, null: false
+    t.boolean "review_needed", default: true, null: false
     t.index ["external_id"], name: "index_recipes_on_external_id", unique: true
   end
 
@@ -95,6 +112,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_20_164949) do
   add_foreign_key "cook_sessions", "users"
   add_foreign_key "favorites", "recipes"
   add_foreign_key "favorites", "users"
+  add_foreign_key "ingredients", "ingredient_families"
   add_foreign_key "instructions", "recipes"
   add_foreign_key "measurements", "ingredients"
   add_foreign_key "measurements", "recipes"

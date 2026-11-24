@@ -318,7 +318,8 @@ body {
 // Serving Size
 // ==========================================
 
-.serving-size-section {
+.serving-size-section,
+.meal-type-section {
   background: white;
   border-radius: 28px;
   padding: 16px 20px;
@@ -329,7 +330,8 @@ body {
   gap: 20px;
 }
 
-.serving-size-label {
+.serving-size-label,
+.meal-type-label {
   min-width: 0;
 
   label {
@@ -341,6 +343,29 @@ body {
   p {
     color: #999;
     margin: 4px 0 0;
+  }
+}
+
+// Meal type selector
+
+.meal-type-select {
+  min-width: 172px;
+  height: 72px;
+  padding: 0 16px;
+
+  background-color: #d0dba0;
+  color: #002d1c;
+
+  border: none;
+  border-radius: 16px;
+
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid #002d1c;
+    outline-offset: 2px;
   }
 }
 
@@ -565,7 +590,7 @@ body {
 
   // Stack serving label above the selector
 
-  .serving-size-section {
+  .serving-size-section, .meal-type-section {
     flex-direction: column;
     align-items: stretch;
     gap: 14px;
@@ -574,7 +599,7 @@ body {
     border-radius: 20px;
   }
 
-  .serving-size-label label {
+  .serving-size-label label, .meal-type-label label {
     font-size: 20px;
   }
 
@@ -603,6 +628,12 @@ body {
   .recipes-submit-button {
     font-size: 18px;
     padding: 16px;
+  }
+
+  .meal-type-select {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
   }
 }
 
@@ -633,7 +664,7 @@ body {
     height: 60px;
   }
 
-  .serving-size-section {
+  .serving-size-section, .meal-type-section {
     padding: 14px;
   }
 

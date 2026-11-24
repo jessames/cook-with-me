@@ -13,8 +13,12 @@
     <div class="row g-4">
       <% @results.each do |result| %>
         <div class="col-12 col-md-4">
-          <%= link_to recipe_path(result[:recipe], ingredients: params[:ingredients]),
-            class: "text-decoration-none" do %>
+          <%= link_to recipe_path(
+            result[:recipe],
+            ingredients: params[:ingredients],
+            meal_type: @meal_type
+          ),
+          class: "text-decoration-none" do %>
             <div class="card">
               <%= image_tag result[:recipe].image_url, class: "card-img-top", alt: result[:recipe].name %>
 

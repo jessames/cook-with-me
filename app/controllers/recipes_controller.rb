@@ -5,8 +5,9 @@ class RecipesController < ApplicationController
 
   def results
     ingredient_ids = Array(params[:ingredients]).reject(&:blank?).map(&:to_i)
+    @meal_type = params[:meal_type].presence || "any"
 
-    @results = RecipeMatcher.new(ingredient_ids).call
+    @results = RecipeMatcher.new(ingredient_ids, meal_type: @meal_type).call
   end
 
   def show

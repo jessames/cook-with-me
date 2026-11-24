@@ -10,40 +10,44 @@
 require "net/http"
 require "json"
 
-("a".."z").each do |letter|
-  url = URI("https://www.themealdb.com/api/json/v1/1/search.php?f=#{letter}")
-  response = Net::HTTP.get(url)
-  data = JSON.parse(response)
+ActiveRecord::Base.transaction do
+  ("a".."z").each do |letter|
+    url = URI("https://www.themealdb.com/api/json/v1/1/search.php?f=#{letter}")
+    response = Net::HTTP.get(url)
+    data = JSON.parse(response)
 
-  meals = data["meals"] || []
+    meals = data["meals"] || []
 
-  meals.each do |meal|
-    recipe = Recipe.find_or_create_by!(external_id: meal["idMeal"]) do |record|
-      record.name = meal["strMeal"]
-      record.image_url = meal["strMealThumb"]
-    end
-    (1..20).each do |number|
-      ingredient_name = meal["strIngredient#{number}"]&.strip
-      measurement_text = meal["strMeasure#{number}"]&.strip
-
-      next if ingredient_name.nil? || ingredient_name.empty?
-
-      ingredient = Ingredient.find_or_create_by!(
-        name: ingredient_name.downcase
-      )
-
-      if ingredient.image_url.blank?
-        image_name = ERB::Util.url_encode(ingredient_name.titleize)
-        ingredient.update!(
-          image_url: "https://www.themealdb.com/images/ingredients/#{image_name}.png"
-        )
+    meals.each do |meal|
+      recipe = Recipe.find_or_create_by!(external_id: meal["idMeal"]) do |record|
+        record.name = meal["strMeal"]
+        record.image_url = meal["strMealThumb"]
+        record.source_category = meal["strCategory"]
       end
 
-      Measurement.find_or_create_by!(
-        recipe: recipe,
-        ingredient: ingredient
-      ) do |measurement|
-        measurement.measure_value = measurement_text
+      (1..20).each do |number|
+        ingredient_name = meal["strIngredient#{number}"]&.strip
+        measurement_text = meal["strMeasure#{number}"]&.strip
+
+        next if ingredient_name.nil? || ingredient_name.empty?
+
+        ingredient = Ingredient.find_or_create_by!(
+          name: ingredient_name.downcase
+        )
+
+        if ingredient.image_url.blank?
+          image_name = ERB::Util.url_encode(ingredient_name.titleize)
+          ingredient.update!(
+            image_url: "https://www.themealdb.com/images/ingredients/#{image_name}.png"
+          )
+        end
+
+        Measurement.find_or_create_by!(
+          recipe: recipe,
+          ingredient: ingredient
+        ) do |measurement|
+          measurement.measure_value = measurement_text
+        end
       end
 
       steps = meal["strInstructions"]
@@ -61,9 +65,13 @@ require "json"
         end
       end
     end
+
+    puts "Imported recipes beginning with #{letter.upcase}: #{meals.length}"
   end
 
-  puts "Imported recipes beginning with #{letter.upcase}: #{meals.length}"
-end
+  puts "Applying recipe repairs and classifications..."
 
-puts "Total recipes in database: #{Recipe.count}"
+  RecipeDataImportService.new.call
+
+  puts "Total recipes in database: #{Recipe.count}"
+end
