@@ -15,7 +15,7 @@
         <div class="col-12 col-md-4">
           <%= link_to recipe_path(result[:recipe], ingredients: params[:ingredients]),
             class: "text-decoration-none" do %>
-            <div class="card">
+            <div class="card h-100">
               <%= image_tag result[:recipe].image_url, class: "card-img-top", alt: result[:recipe].name %>
 
               <div class="card-body">

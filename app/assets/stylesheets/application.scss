@@ -31,6 +31,10 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  color: #fff;
+}
+
 // ==========================================
 // Home Page Layout
 // ==========================================
@@ -203,7 +207,7 @@ body {
 
 // Individual ingredient card
 
-.selected-ingredient-card {
+.card, .selected-ingredient-card {
   position: relative;
   display: flex;
   flex-direction: column;
