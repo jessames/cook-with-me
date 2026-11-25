@@ -26,8 +26,6 @@ end
     CookSession.transaction do
       @cook_session.recipe.update!(cooked: true)
       @cook_session.destroy!
-      # delete chat
-    end
       redirect_to recipes_path, notice: "Recipe added to recent recipes."
   end
 
