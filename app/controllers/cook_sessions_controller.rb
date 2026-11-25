@@ -27,6 +27,7 @@ end
       @cook_session.recipe.update!(cooked: true)
       @cook_session.destroy!
       redirect_to recipes_path, notice: "Recipe added to recent recipes."
+    end
   end
 
   private
