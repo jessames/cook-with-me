@@ -24,6 +24,9 @@
 
               <div class="card-body">
                 <h5 class="card-title"><%= result[:recipe].name %></h5>
+                <% if result[:recipe].cooked  %>
+                <span class="text-success small">✓ Cooked</span>
+                <% end %>
               </div>
             </div>
           <% end %>
