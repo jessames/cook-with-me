@@ -1,0 +1,11 @@
+<%= turbo_stream.append "messages" do %>
+  <%= render "messages/message", message: @message %>
+  <%= render "messages/message", message: @assistant_message %>
+<% end %>
+
+<%= turbo_stream.update "new_message_container" do %>
+  <%= render "messages/form", message: Message.new %>
+  <p class="text-center text-muted small mt-2 mb-0">
+    Cooking Cat is here to help, one step at a time.
+  </p>
+<% end %>

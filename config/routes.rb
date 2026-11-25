@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :favorites, only: %i[index destroy]
   resources :cook_sessions, only:%i[destroy] do
     resources :instructions, only: %i[show]
-    resources :messages, only: %i[create]
+    resources :messages, only: %i[index create]
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

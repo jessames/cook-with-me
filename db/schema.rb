@@ -78,7 +78,11 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_24_162827) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "instruction_id", null: false
+    t.jsonb "proposed_change"
+    t.datetime "accepted_at"
     t.index ["cook_session_id"], name: "index_messages_on_cook_session_id"
+    t.index ["instruction_id"], name: "index_messages_on_instruction_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -117,4 +121,5 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_24_162827) do
   add_foreign_key "measurements", "ingredients"
   add_foreign_key "measurements", "recipes"
   add_foreign_key "messages", "cook_sessions"
+  add_foreign_key "messages", "instructions"
 end

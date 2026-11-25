@@ -28,4 +28,54 @@
             class: "btn btn-success btn-lg" %>
     <% end %>
   </div>
+
+
+  <!-- CHAT CODE START -->
+  <!-- CHAT BUTTON -->
+  <div class="text-center mt-5 mb-4">
+    <button
+      type="button"
+      class="btn btn-primary btn-lg"
+      data-bs-toggle="modal"
+      data-bs-target="#cookChatModal">
+      ✨ Ask Cooking Cat
+    </button>
+  </div>
+
+  <!-- CHAT MODAL -->
+  <div
+    class="modal fade"
+    id="cookChatModal"
+    tabindex="-1"
+    aria-labelledby="cookChatModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="cookChatModalLabel">
+            ✨ Ask Cooking Cat
+          </h5>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close">
+          </button>
+        </div>
+
+        <div class="modal-body p-0">
+          <%= turbo_frame_tag "cook_chat_frame",
+              src: cook_session_messages_path(
+              @cook_session,
+              instruction_id: @instruction.id
+          ) %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </div>
