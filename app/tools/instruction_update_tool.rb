@@ -10,5 +10,6 @@ class InstructionUpdateTool < RubyLLM::Tool
   def execute(situation:)
     return {error: "Please describe what happened."} if situation.blank?
   end
-
+  revised_instructions = response.content.to_s.strip
+  return {error:"The instructions could not be updated."} if revised_instructions.blank?
 end

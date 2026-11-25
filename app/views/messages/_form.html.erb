@@ -1,0 +1,18 @@
+<%= form_with model: [@cook_session, message],
+    html: { class: "d-flex gap-2 align-items-center" } do |f| %>
+
+  <%= f.hidden_field :instruction_id,
+      value: @instruction&.id %>
+
+  <%= f.text_field :content,
+      class: "form-control form-control-lg",
+      placeholder: "Ask Cooking Cat anything...",
+      required: true,
+      autocomplete: "off" %>
+
+  <%= f.button type: "submit",
+      class: "btn btn-primary btn-lg" do %>
+    <i class="fa-solid fa-paper-plane"></i>
+  <% end %>
+
+<% end %>

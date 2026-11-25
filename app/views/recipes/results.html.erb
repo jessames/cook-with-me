@@ -13,15 +13,23 @@
     <div class="row g-4">
       <% @results.each do |result| %>
         <div class="col-12 col-md-4">
-          <div class="card">
-            <%= image_tag result[:recipe].image_url,
-                          class: "card-img-top",
-                          alt: result[:recipe].name %>
+          <%= link_to recipe_path(
+            result[:recipe],
+            ingredients: params[:ingredients],
+            meal_type: @meal_type
+          ),
+          class: "text-decoration-none" do %>
+            <div class="card">
+              <%= image_tag result[:recipe].image_url, class: "card-img-top", alt: result[:recipe].name %>
 
-            <div class="card-body">
-              <h5 class="card-title"><%= result[:recipe].name %></h5>
+              <div class="card-body">
+                <h5 class="card-title"><%= result[:recipe].name %></h5>
+                <% if result[:recipe].cooked  %>
+                <span class="text-success small">✓ Cooked</span>
+                <% end %>
+              </div>
             </div>
-          </div>
+          <% end %>
         </div>
       <% end %>
     </div>
