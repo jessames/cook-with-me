@@ -10,10 +10,10 @@ class FavoritesController < ApplicationController
     @favorite = current_user.favorites.find_or_initialize_by(recipe: @recipe)
 
     if @favorite.save
-      redirect_to recipe_path(@recipe, ingredients: params[:ingredients]),
+      redirect_to recipe_path(@recipe, ingredients: params[:ingredients], meal_type: params[:meal_type]),
               notice: "Recipe added to favorites!"
     else
-      redirect_to recipe_path(@recipe, ingredients: params[:ingredients]),
+      redirect_to recipe_path(@recipe, ingredients: params[:ingredients], meal_type: params[:meal_type]),
               alert: "Could not add recipe to favorites."
     end
   end
@@ -24,7 +24,7 @@ class FavoritesController < ApplicationController
 
     @favorite.destroy
 
-    redirect_to recipe_path(@recipe, ingredients: params[:ingredients]),
+    redirect_to recipe_path(@recipe, ingredients: params[:ingredients], meal_type: params[:meal_type]),
               notice: "Recipe removed from favorites."
   end
 end

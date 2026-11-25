@@ -6,7 +6,9 @@ class RecipesController < ApplicationController
 
   def results
     ingredient_ids = Array(params[:ingredients]).reject(&:blank?).map(&:to_i)
-    @results = RecipeMatcher.new(ingredient_ids).call
+    @meal_type = params[:meal_type].presence || "any"
+
+    @results = RecipeMatcher.new(ingredient_ids, meal_type: @meal_type).call
     @favorite_ids = current_user.favorites.pluck(:recipe_id)
   end
 
