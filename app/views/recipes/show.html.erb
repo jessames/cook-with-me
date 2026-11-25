@@ -8,64 +8,34 @@
             class: "btn btn-outline-secondary mb-4" %>
 <% end %>
 
-  <div class="row g-4">
-    <div class="col-12 col-lg-5">
-      <%= image_tag @recipe.image_url,
-            alt: @recipe.name,
-            class: "img-fluid rounded shadow-sm" %>
-    </div>
+  <h1><%= @recipe.name %></h1>
 
-    <div class="col-12 col-lg-7">
-      <h1 class="display-5 fw-bold mb-3"><%= @recipe.name %></h1>
+  <%= image_tag @recipe.image_url,
+                alt: @recipe.name,
+                width: 350 %>
 
-      <div class="d-flex flex-wrap gap-2 mb-4">
-        <%= button_to "✨ Cook With Me",
-            recipe_cook_sessions_path(@recipe),
-            method: :post,
-            class: "btn btn-primary btn-lg" %>
+  <h2 class="mt-4">Ingredients</h2>
 
-        <% if user_signed_in? %>
-          <% favorite = current_user.favorites.find_by(recipe: @recipe) %>
+  <ul>
+    <% @recipe.measurements.includes(:ingredient).each do |measurement| %>
+      <li>
+        <%= measurement.measure_value %>
+        <%= measurement.ingredient.name %>
+      </li>
+    <% end %>
+  </ul>
 
-          <% if favorite %>
-            <%= button_to "♥ Remove from Favorites",
-                  favorite_path(favorite, ingredients: params[:ingredients]),
-                  method: :delete,
-                  class: "btn btn-outline-danger bg-white btn-lg" %>
-          <% else %>
-            <%= button_to "♡ Add to Favorites",
-                  recipe_favorites_path(@recipe, ingredients: params[:ingredients]),
-                  method: :post,
-                  class: "btn btn-outline-danger bg-white btn-lg" %>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+  <h2 class="mt-4">Instructions</h2>
 
-  <div class="row g-4 mt-2">
-    <div class="col-12 col-lg-5">
-      <div class="card h-100">
-        <div class="card-header bg-light">
-          <h2 class="h4 mb-0">Ingredients</h2>
-        </div>
+  <ol>
+    <% @recipe.instructions.order(:instruction_number).each do |instruction| %>
+      <li><%= instruction.instruction_content %></li>
+    <% end %>
+  </ol>
 
-        <ul class="list-group list-group-flush text-start">
-          <% @recipe.measurements.includes(:ingredient).each do |measurement| %>
-            <li class="list-group-item">
-              <%= measurement.measure_value %>
-              <%= measurement.ingredient.name %>
-            </li>
-          <% end %>
-        </ul>
-        <h2 class="mt-4">Instructions</h2>
-          <ol>
-          <% @recipe.instructions.order(:instruction_number).each do |instruction| %>
-          <li><%= instruction.instruction_content %></li>
-          <% end %>
-          </ol>
-      </div>
-    </div>
+  <%= button_to "Cook With Me", recipe_cook_sessions_path(@recipe), class: "btn btn-success btn-lg mt-4" %>
+  <% if user_signed_in? %>
+    <% favorite = current_user.favorites.find_by(recipe: @recipe) %>
 
     <% if favorite %>
       <%= button_to "♥ Remove from Favorites",
@@ -78,4 +48,5 @@
         method: :post,
         class: "btn btn-outline-danger mt-4" %>
     <% end %>
+  <% end %>
 </div>
