@@ -25,6 +25,16 @@ class MessagesController < ApplicationController
 
     If you suggest a recipe modification, explain
     what should change and why.
+
+    You have access to one tool:
+      - InstructionUpdateTool:
+        - Use the tool when the user reports a problem, missing ingredient, requested recipe change, or limitation that makes a recipe step difficult or impossible for them.
+        - Do not use it for unrelated cooking questions.
+        - Call it at most twice per user turn. Combine related information from the current message and relevant earlier messages.
+        - Adapt the affected step and any remaining steps that depend on it. Preserve unaffected steps, and do not assume a step is unfinished if the user says they completed it.
+        - Respect the user's stated needs without making assumptions about their abilities or circumstances.
+        - Do not invent ingredients, quantities, equipment, or details about what happened. Suggest an alternative method only when it can be done with information already available; otherwise, ask what tools or ingredients the user has.
+
   PROMPT
 
   def index
@@ -55,6 +65,10 @@ class MessagesController < ApplicationController
 
       build_conversation_history
 
+      @ruby_llm_chat = @ruby_llm_chat.with_tools(
+      InstructionUpdateTool.new(recipe: @cook_session.recipe)
+      )
+
       # @ruby_llm_chat.with_tool(TripItemsTool.new(trip_id:@chat.trip.id))
       # @ruby_llm_chat.with_tool(WeatherTool.new)
 
@@ -70,7 +84,23 @@ class MessagesController < ApplicationController
       )
 
       respond_to do |format|
-        format.turbo_stream
+        format.turbo_stream do
+        streams = [
+          turbo_stream.append("messages_list",
+          partial: "messages/message",
+          locals: {message: @assistant_message})
+        ]
+        if response.tool_calls.any? { |call| call.tool_name == "InstructionUpdateTool" }
+          fresh_instruction = @message.instruction&.reload
+
+          if fresh_instruction
+            streams << turbo_stream.replace("instruction_content",
+              "<div id='instruction_content' class='display-6 mb-4'>#{fresh_instruction.instruction_content}</div>")
+          end
+        end
+
+        render turbo_stream: streams
+      end
         format.html do
           redirect_to cook_session_instruction_path(
             @cook_session,
@@ -78,7 +108,6 @@ class MessagesController < ApplicationController
           )
         end
       end
-
     else
       render "instructions/show",
              status: :unprocessable_entity
