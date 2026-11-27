@@ -1,52 +1,83 @@
-<div class="container py-5">
+<main class="app-page recipe-show-page">
+
   <% if params[:ingredients].present? %>
-  <%= link_to "← Back to Suggestions",
-            results_recipes_path(
-              ingredients: params[:ingredients],
-              meal_type: params[:meal_type]
-            ),
-            class: "btn btn-outline-secondary mb-4" %>
-<% end %>
+    <%= link_to "← Back to Suggestions",
+        results_recipes_path(
+          ingredients: params[:ingredients],
+          meal_type: params[:meal_type]
+        ),
+        class: "recipe-secondary-button recipe-back-button" %>
+  <% end %>
 
   <h1><%= @recipe.name %></h1>
 
   <%= image_tag @recipe.image_url,
-                alt: @recipe.name,
-                width: 350 %>
+      alt: @recipe.name,
+      class: "recipe-show-image" %>
 
-  <h2 class="mt-4">Ingredients</h2>
-
-  <ul>
-    <% @recipe.measurements.includes(:ingredient).each do |measurement| %>
-      <li>
-        <%= measurement.measure_value %>
-        <%= measurement.ingredient.name %>
-      </li>
-    <% end %>
-  </ul>
-
-  <h2 class="mt-4">Instructions</h2>
-
-  <ol>
-    <% @recipe.instructions.order(:instruction_number).each do |instruction| %>
-      <li><%= instruction.instruction_content %></li>
-    <% end %>
-  </ol>
-
-  <%= button_to "Cook With Me", recipe_cook_sessions_path(@recipe), class: "btn btn-success btn-lg mt-4" %>
   <% if user_signed_in? %>
+
     <% favorite = current_user.favorites.find_by(recipe: @recipe) %>
 
     <% if favorite %>
+
       <%= button_to "♥ Remove from Favorites",
-        favorite_path(favorite, ingredients: params[:ingredients], meal_type: params[:meal_type]),
-        method: :delete,
-        class: "btn btn-danger mt-4" %>
+          favorite_path(
+            favorite,
+            ingredients: params[:ingredients],
+            meal_type: params[:meal_type]
+          ),
+          method: :delete,
+          class: "recipe-secondary-button recipe-favorite-button" %>
+
     <% else %>
+
       <%= button_to "♡ Add to Favorites",
-        recipe_favorites_path(@recipe, ingredients: params[:ingredients], meal_type: params[:meal_type]),
-        method: :post,
-        class: "btn btn-outline-danger mt-4" %>
+          recipe_favorites_path(
+            @recipe,
+            ingredients: params[:ingredients],
+            meal_type: params[:meal_type]
+          ),
+          method: :post,
+          class: "recipe-secondary-button recipe-favorite-button" %>
+
     <% end %>
+
   <% end %>
-</div>
+
+  <section class="card recipe-details-card">
+    <div class="card-body">
+
+      <h2>Ingredients</h2>
+
+      <ul class="recipe-ingredients-list">
+        <% @recipe.measurements.includes(:ingredient).each do |measurement| %>
+          <li>
+            <%= measurement.measure_value %>
+            <%= measurement.ingredient.name %>
+          </li>
+        <% end %>
+      </ul>
+
+    </div>
+  </section>
+
+  <section class="card recipe-details-card">
+    <div class="card-body">
+
+      <h2>Instructions</h2>
+
+      <ol class="recipe-instructions-list">
+        <% @recipe.instructions.order(:instruction_number).each do |instruction| %>
+          <li><%= instruction.instruction_content %></li>
+        <% end %>
+      </ol>
+
+    </div>
+  </section>
+
+  <%= button_to "Cook With Me",
+      recipe_cook_sessions_path(@recipe),
+      class: "recipes-submit-button recipe-cook-button" %>
+
+</main>

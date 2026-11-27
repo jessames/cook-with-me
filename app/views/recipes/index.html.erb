@@ -1,45 +1,71 @@
-<div class = "container py-5">
-<h1 class="mb-4"> Recent Recipes </h1>
+<main class="app-page">
 
-<% if @recipes.any? %>
-<div class="row g-4">
-<% @recipes.each do |recipe|%>
-  <div class="col-md-4">
-  <%= link_to recipe_path(recipe), class:"text-decoration-none" do %>
-    <div class="card h-100 shadow-sm">
-    <div class="card-body">
+  <h1>Recent Recipes</h1>
+
+  <% if @recipes.any? %>
+
+    <div class="row g-4">
+
+      <% @recipes.each do |recipe| %>
+
+        <div class="col-md-4">
+
+          <%= link_to recipe_path(recipe), class: "text-decoration-none" do %>
+
+            <div class="card h-100 shadow-sm">
+
+              <div class="card-body">
+
                 <div class="d-flex justify-content-between align-items-start">
+
                   <h5 class="card-title text-dark">
                     <%= recipe.name %>
                   </h5>
 
                   <div class="favorite-toggle">
+
                     <% if @favorite_ids.include?(recipe.id) %>
+
                       <%= button_to favorite_path(current_user.favorites.find_by(recipe: recipe)),
-                                    method: :delete,
-                                    class: "btn btn-link p-0 text-danger",
-                                    title: "Remove from Favorites" do %>
+                          method: :delete,
+                          class: "btn btn-link p-0 text-danger",
+                          title: "Remove from Favorites" do %>
                         ♥ Favorited
                       <% end %>
+
                     <% else %>
+
                       <%= button_to recipe_favorites_path(recipe),
-                                    method: :post,
-                                    class: "btn btn-link p-0 text-muted",
-                                    title: "Add to Favorites" do %>
+                          method: :post,
+                          class: "btn btn-link p-0 text-muted",
+                          title: "Add to Favorites" do %>
                         ♡ Favorite
                       <% end %>
+
                     <% end %>
+
                   </div>
+
                 </div>
 
                 <span class="text-success small">✓ Cooked</span>
+
               </div>
+
             </div>
+
           <% end %>
+
         </div>
+
       <% end %>
+
     </div>
+
   <% else %>
+
     <p>When you finish cooking, your recipes will appear here!</p>
+
   <% end %>
-</div>
+
+</main>

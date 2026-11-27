@@ -1,31 +1,52 @@
-<div class="container py-5">
-  <h1 class="mb-4">My Favorites</h1>
+<main class="app-page">
+
+  <h1>My Favorites</h1>
 
   <% if @favorites.any? %>
+
     <div class="row g-4">
+
       <% @favorites.each do |favorite| %>
+
         <div class="col-md-4">
+
           <%= link_to recipe_path(favorite.recipe),
-                      class: "text-decoration-none" do %>
+              class: "text-decoration-none" do %>
+
             <div class="card h-100">
+
               <% if favorite.recipe.image_url.present? %>
+
                 <%= image_tag favorite.recipe.image_url,
-                              class: "card-img-top",
-                              alt: favorite.recipe.name %>
+                    class: "card-img-top",
+                    alt: favorite.recipe.name %>
+
               <% end %>
 
               <div class="card-body">
+
                 <h5 class="card-title">
                   <%= favorite.recipe.name %>
                 </h5>
+
                 <span class="text-danger">♥ Favorited</span>
+
               </div>
+
             </div>
+
           <% end %>
+
         </div>
+
       <% end %>
+
     </div>
+
   <% else %>
+
     <p>You haven't saved any favorite recipes yet.</p>
+
   <% end %>
-</div>
+
+</main>

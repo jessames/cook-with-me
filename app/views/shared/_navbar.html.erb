@@ -1,26 +1,32 @@
 
 <nav class="navbar navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "logo.png", alt: "Home" %>
+    <%= image_tag "logo-vector.png", alt: "Home" %>
   <% end %>
 
   <% if user_signed_in? %>
     <ul class="navbar-nav">
 
       <li class="nav-item">
-        <%= link_to root_path, class: "nav-link active", title: "Home" do %>
+        <%= link_to root_path,
+            class: "nav-link #{'active' if current_page?(root_path)}",
+            title: "Home" do %>
           <i class="fa-solid fa-utensils"></i>
         <% end %>
       </li>
 
       <li class="nav-item">
-        <%= link_to recipes_path, class: "nav-link", title: "Recent Recipes" do %>
+        <%= link_to recipes_path,
+            class: "nav-link #{'active' if controller_name == 'recipes'}",
+            title: "Recent Recipes" do %>
           <i class="fa-solid fa-book-open"></i>
         <% end %>
       </li>
 
       <li class="nav-item">
-        <%= link_to favorites_path, class: "nav-link", title: "Favorites" do %>
+        <%= link_to favorites_path,
+            class: "nav-link #{'active' if controller_name == 'favorites'}",
+            title: "Favorites" do %>
           <i class="fa-regular fa-heart"></i>
         <% end %>
       </li>

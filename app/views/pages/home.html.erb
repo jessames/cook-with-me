@@ -1,60 +1,66 @@
 <% if user_signed_in? %>
-  <div class="home-layout">
 
-  <!-- Main content -->
-    <main class="home-main">
+  <main class="app-page app-page--home">
 
-      <h1 class="home-title">What's in your kitchen?</h1>
+    <h1>What's in your kitchen?</h1>
 
-      <%= form_with url: results_recipes_path, method: :get, local: true do %>
-        <div
-          class="ingredient-search-wrapper"
-          data-controller="ingredient-search"
-          data-ingredient-search-ingredients-value="<%= @ingredients.as_json(only: [:id, :name, :image_url]).to_json %>"
-        >
+    <%= form_with url: results_recipes_path, method: :get, local: true, html: { class: "home-form" } do %>
 
-          <!-- Search -->
-          <div class="ingredient-search-section">
+      <div
+        class="ingredient-search-wrapper"
+        data-controller="ingredient-search"
+        data-ingredient-search-ingredients-value="<%= @ingredients.as_json(only: [:id, :name, :image_url]).to_json %>"
+      >
 
-            <label for="ingredient-search" class="visually-hidden">
-              Search ingredients
-            </label>
+        <!-- Search -->
+        <div class="ingredient-search-section">
 
-            <input
-              type="text"
-              id="ingredient-search"
-              class="ingredient-search-input"
-              placeholder="Search for an ingredient..."
-              autocomplete="off"
-              data-ingredient-search-target="input"
-              data-action="input->ingredient-search#search"
-            >
+          <label for="ingredient-search" class="visually-hidden">
+            Search ingredients
+          </label>
 
-            <div
-              data-ingredient-search-target="suggestions"
-              class="ingredient-suggestions"
-            ></div>
+          <input
+            type="text"
+            id="ingredient-search"
+            class="ingredient-search-input"
+            placeholder="Search for an ingredient..."
+            autocomplete="off"
+            data-ingredient-search-target="input"
+            data-action="input->ingredient-search#search"
+          >
 
-          </div>
+          <div
+            data-ingredient-search-target="suggestions"
+            class="ingredient-suggestions"
+          ></div>
 
+        </div>
 
-          <!-- Selected ingredients -->
-          <section class="selected-ingredients-section">
-            <h2>Your ingredients</h2>
+        <!-- Selected ingredients -->
+        <section class="selected-ingredients-section">
 
-            <p data-ingredient-search-target="emptyMessage">
-              You haven't added any ingredients yet.
-            </p>
+          <h2>Your ingredients</h2>
 
-            <div
-              class="selected-ingredients-grid"
-              data-ingredient-search-target="selected"
-            ></div>
-          </section>
+          <p data-ingredient-search-target="emptyMessage">
+            You haven't added any ingredients yet.
+          </p>
 
-          <!-- Bottom controls -->
-          <div class="home-bottom-controls">
+          <div
+            class="selected-ingredients-grid"
+            data-ingredient-search-target="selected"
+          ></div>
+
+        </section>
+
+        <!-- Bottom controls -->
+
+        <div class="home-bottom-controls">
+
+          <div class="home-options-row">
+
+            <!-- Meal Type -->
             <div class="meal-type-section">
+
               <div class="meal-type-label">
                 <%= label_tag :meal_type, "Meal type" %>
                 <p>What are you cooking?</p>
@@ -70,16 +76,23 @@
                   ["Snack", "snack"]
                 ], "any"),
                 class: "meal-type-select" %>
+
             </div>
+
+            <!-- Serving Size -->
             <div class="serving-size-section">
+
               <div class="serving-size-label">
                 <label for="serving-size">Servings</label>
                 <p>How many servings?</p>
               </div>
 
               <div class="serving-selector">
-                <button type="button" class="serving-button"
-                        onclick="this.nextElementSibling.stepDown()">
+
+                <button
+                  type="button"
+                  class="serving-button"
+                  onclick="this.nextElementSibling.stepDown()">
                   −
                 </button>
 
@@ -93,28 +106,47 @@
                   class="serving-size-input"
                 >
 
-                <button type="button" class="serving-button"
-                        onclick="this.previousElementSibling.stepUp()">
+                <button
+                  type="button"
+                  class="serving-button"
+                  onclick="this.previousElementSibling.stepUp()">
                   +
                 </button>
+
               </div>
+
             </div>
 
-            <%= submit_tag "Give me recipes!", class: "recipes-submit-button" %>
-
           </div>
-        </div>
-      <% end %>
 
-    </main>
-  </div>
+          <%= submit_tag "Give me recipes!", class: "recipes-submit-button" %>
+
+        </div>
+
+      </div>
+
+    <% end %>
+
+  </main>
 
 <% else %>
 
-  <div class="home-landing">
-    <h1>Let's get cooking!</h1>
-    <p>Discover delicious recipes using ingredients you already have.</p>
-    <%= link_to "Get Started Cooking", new_user_session_path, class: "landing-button" %>
-  </div>
+  <main class="app-page">
+
+    <div class="home-landing">
+
+      <h1>Let's get cooking!</h1>
+
+      <p>
+        Discover delicious recipes using ingredients you already have.
+      </p>
+
+      <%= link_to "Get Started Cooking",
+          new_user_session_path,
+          class: "landing-button" %>
+
+    </div>
+
+  </main>
 
 <% end %>
