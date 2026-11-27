@@ -34,16 +34,11 @@ class MessagesController < ApplicationController
         - Adapt the affected step and any remaining steps that depend on it. Preserve unaffected steps, and do not assume a step is unfinished if the user says they completed it.
         - Respect the user's stated needs without making assumptions about their abilities or circumstances.
         - Do not invent ingredients, quantities, equipment, or details about what happened. Suggest an alternative method only when it can be done with information already available; otherwise, ask what tools or ingredients the user has.
-
   PROMPT
 
   def index
     @cook_session = current_user.cook_sessions.find(params[:cook_session_id])
-
-    @instruction = @cook_session.recipe.instructions.find(
-      params[:instruction_id]
-    )
-
+    @instruction = @cook_session.recipe.instructions.find(params[:instruction_id])
     @messages = @cook_session.messages.order(:created_at)
   end
 
@@ -54,29 +49,26 @@ class MessagesController < ApplicationController
     @message.cook_session = @cook_session
     @message.role = "user"
 
-    @message.instruction = @cook_session.recipe.instructions.find(
-    @message.instruction_id
-    ) if @message.instruction_id.present?
-
-    @instruction = @message.instruction
+    if @message.instruction_id.present?
+      @message.instruction = @cook_session.recipe.instructions.find(@message.instruction_id)
+    end
 
     if @message.save
       @ruby_llm_chat = RubyLLM.chat
 
+      # Fix: History must be ordered and limited to prevent token overflow
       build_conversation_history
 
+      # Connect the tool to the chat instance
       @ruby_llm_chat = @ruby_llm_chat.with_tools(
-      InstructionUpdateTool.new(recipe: @cook_session.recipe)
+        InstructionUpdateTool.new(recipe: @cook_session.recipe)
       )
-
-      # @ruby_llm_chat.with_tool(TripItemsTool.new(trip_id:@chat.trip.id))
-      # @ruby_llm_chat.with_tool(WeatherTool.new)
 
       response = @ruby_llm_chat
         .with_instructions(instructions)
         .ask(@message.content)
 
-      @assistant_message = Message.create(
+      @assistant_message = Message.create!(
         role: "assistant",
         content: response.content,
         cook_session: @cook_session,
@@ -85,47 +77,50 @@ class MessagesController < ApplicationController
 
       respond_to do |format|
         format.turbo_stream do
-        streams = [
-          turbo_stream.append("messages_list",
-          partial: "messages/message",
-          locals: {message: @assistant_message})
-        ]
-        if response.tool_calls.any? { |call| call.tool_name == "InstructionUpdateTool" }
-          fresh_instruction = @message.instruction&.reload
+          streams = [
+            turbo_stream.append("messages_list",
+              partial: "messages/message",
+              locals: { message: @assistant_message })
+          ]
 
-          if fresh_instruction
-            streams << turbo_stream.replace("instruction_content",
-              "<div id='instruction_content' class='display-6 mb-4'>#{fresh_instruction.instruction_content}</div>")
+
+          if response.tool_calls.any? { |call| call.tool_name == "InstructionUpdateTool" }
+
+            fresh_instruction = @message.instruction&.reload
+
+            if fresh_instruction
+              streams << turbo_stream.replace("instruction_content",
+                "<div id='instruction_content' class='display-6 mb-4'>#{fresh_instruction.instruction_content}</div>")
+            end
           end
-        end
 
-        render turbo_stream: streams
-      end
+          render turbo_stream: streams
+        end
         format.html do
-          redirect_to cook_session_instruction_path(
-            @cook_session,
-            @message.instruction
-          )
+          redirect_to cook_session_instruction_path(@cook_session, @message.instruction)
         end
       end
     else
-      render "instructions/show",
-             status: :unprocessable_entity
-    end
-  end
-
-  def build_conversation_history
-    @cook_session.messages.where.not(id: @message.id).each do |message|
-      next if message.content.blank?
-
-      @ruby_llm_chat.add_message(
-      role: message.role.to_sym,
-      content: message.content
-    )
+      render "instructions/show", status: :unprocessable_entity
     end
   end
 
   private
+
+  def build_conversation_history
+    @cook_session.messages
+                 .where.not(id: @message.id)
+                 .order(:created_at)
+                 .last(20)
+                 .each do |msg|
+      next if msg.content.blank?
+
+      @ruby_llm_chat.add_message(
+        role: msg.role.to_sym,
+        content: msg.content
+      )
+    end
+  end
 
   def cooking_context
     instruction = @message.instruction
@@ -149,5 +144,4 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content, :instruction_id)
   end
-
 end
