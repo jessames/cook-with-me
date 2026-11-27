@@ -84,7 +84,23 @@ class MessagesController < ApplicationController
       )
 
       respond_to do |format|
-        format.turbo_stream
+        format.turbo_stream do
+        streams = [
+          turbo_stream.append("messages_list",
+          partial: "messages/message",
+          locals: {message: @assistant_message})
+        ]
+        if response.tool_calls.any? { |call| call.tool_name == "InstructionUpdateTool" }
+          fresh_instruction = @message.instruction&.reload
+
+          if fresh_instruction
+            streams << turbo_stream.replace("instruction_content",
+              "<div id='instruction_content' class='display-6 mb-4'>#{fresh_instruction.instruction_content}</div>")
+          end
+        end
+
+        render turbo_stream: streams
+      end
         format.html do
           redirect_to cook_session_instruction_path(
             @cook_session,
@@ -92,7 +108,6 @@ class MessagesController < ApplicationController
           )
         end
       end
-
     else
       render "instructions/show",
              status: :unprocessable_entity
