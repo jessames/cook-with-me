@@ -1,4 +1,5 @@
 class InstructionUpdateTool < RubyLLM::Tool
+<<<<<<< HEAD
   description "Updates the current recipe's instruction when the user reports a cooking problem or missing ingredient. Examples: 'I burnt the chicken' or 'I don't have enough cream'. Use the report to give an immediate recovery step and adapt the remaining instructions."
 
   parameter :situation, desc: "The problem, limitation, or missing ingredient the user reported"
@@ -52,4 +53,6 @@ class InstructionUpdateTool < RubyLLM::Tool
   rescue ActiveRecord::RecordInvalid => e
     { error: e.record.errors.full_messages.to_sentence }
   end
+=======
+>>>>>>> 0bf27f870bf97aa2e5cb21b0d9a4b2cc28bcf933
 end
