@@ -9,6 +9,8 @@
 #   end
 require "net/http"
 require "json"
+require_relative "../lib/instruction_cleanup_v1"
+require_relative "../lib/reviewed_instruction_cleanup"
 
 ActiveRecord::Base.transaction do
   ("a".."z").each do |letter|
@@ -50,13 +52,21 @@ ActiveRecord::Base.transaction do
         end
       end
 
+      next if recipe.instructions.exists?
+
       steps = meal["strInstructions"]
         .to_s
         .split(/\r?\n/)
         .map(&:strip)
         .reject(&:empty?)
 
-      steps.each_with_index do |step, index|
+      cleaned_steps = InstructionCleanupV1.without_numbered_prefixes(steps)
+      cleaned_steps = InstructionCleanupV1.without_zero_padded_prefixes(cleaned_steps)
+        .reject { |step| InstructionCleanupV1.standalone_marker?(step) }
+
+      cleaned_steps = ReviewedInstructionCleanup.normalize(recipe.external_id, cleaned_steps)
+
+      cleaned_steps.each_with_index do |step, index|
         Instruction.find_or_create_by!(
           recipe: recipe,
           instruction_number: index + 1

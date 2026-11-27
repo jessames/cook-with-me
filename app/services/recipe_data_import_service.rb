@@ -1,5 +1,6 @@
 require "csv"
 require "json"
+require_relative "../../lib/reviewed_instruction_cleanup"
 
 class RecipeDataImportService
   def call
@@ -148,7 +149,7 @@ class RecipeDataImportService
       )
 
       sync_measurements(recipe, data.fetch("measurements"))
-      sync_instructions(recipe, data.fetch("instructions"))
+      sync_instructions(recipe, reviewed_instructions(data))
     end
 
     puts "Recipe repairs applied: #{@recipe_repairs.fetch("recipes").size}"
@@ -175,6 +176,17 @@ class RecipeDataImportService
     end
 
     recipe.measurements.where.not(id: retained_ids).destroy_all
+  end
+
+  def reviewed_instructions(data)
+    instructions = data.fetch("instructions").sort_by { |step| step.fetch("instruction_number") }
+    texts = instructions.map { |step| step.fetch("instruction_content") }
+    cleaned = ReviewedInstructionCleanup.normalize(data.fetch("external_id"), texts)
+    return instructions if cleaned == texts
+
+    cleaned.each_with_index.map do |text, index|
+      { "instruction_number" => index + 1, "instruction_content" => text }
+    end
   end
 
   def sync_instructions(recipe, instructions)
@@ -289,9 +301,7 @@ class RecipeDataImportService
         }
       end
 
-      expected_instructions = data.fetch("instructions").sort_by do |instruction|
-        instruction["instruction_number"]
-      end
+      expected_instructions = reviewed_instructions(data)
 
       unless actual_measurements.sort_by { |m| m["ingredient_name"] } ==
             expected_measurements.sort_by { |m| m["ingredient_name"] }
