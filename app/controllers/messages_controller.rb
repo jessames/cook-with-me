@@ -28,17 +28,12 @@ class MessagesController < ApplicationController
 
     You have access to one tool:
       - InstructionUpdateTool:
-        - Use the tool only when the user reports a problem, missing ingredient, requested recipe change, or limitation that makes a recipe step difficult or impossible for them.
+        - Use the tool when the user reports a problem, missing ingredient, requested recipe change, or limitation that makes a recipe step difficult or impossible for them.
         - Do not use it for unrelated cooking questions.
-        - Call it at most once per user turn. Combine related information from the current message and relevant earlier messages.
-        - Respect the user's stated needs without making assumptions about their ability
-        - Do not invent ingredients, quantities, equipment, or details about what happened. Suggest an alternative method only when it can be done with information available; otherwise, ask what tools or ingredients the user has.
-
-
-        requests an ingredient change.
-        - Call the tool once when a change to the recipe instructions is distinctly requested.
-        - Consider all previous messages with the user when editing the recipe instructions.
-        - Change all following instructions that involve the missing ingredient or mistake.
+        - Call it at most twice per user turn. Combine related information from the current message and relevant earlier messages.
+        - Adapt the affected step and any remaining steps that depend on it. Preserve unaffected steps, and do not assume a step is unfinished if the user says they completed it.
+        - Respect the user's stated needs without making assumptions about their abilities or circumstances.
+        - Do not invent ingredients, quantities, equipment, or details about what happened. Suggest an alternative method only when it can be done with information already available; otherwise, ask what tools or ingredients the user has.
 
   PROMPT
 
@@ -69,6 +64,10 @@ class MessagesController < ApplicationController
       @ruby_llm_chat = RubyLLM.chat
 
       build_conversation_history
+
+      @ruby_llm_chat = @ruby_llm_chat.with_tools(
+      InstructionUpdateTool.new(recipe: @cook_session.recipe)
+      )
 
       # @ruby_llm_chat.with_tool(TripItemsTool.new(trip_id:@chat.trip.id))
       # @ruby_llm_chat.with_tool(WeatherTool.new)
