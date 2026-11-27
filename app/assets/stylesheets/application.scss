@@ -21,44 +21,124 @@
 @import "pages/index";
 
 // ==========================================
-// Global Layout
+// Global styles
 // ==========================================
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: #788A25;
+  color: white;
   margin: 0;
   margin-left: 164px;
-  box-sizing: border-box;
+  min-height: 100vh;
 }
 
+// Shared heading styles
 h1 {
-  color: #fff;
+  color: white;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+h2 {
+  color: white;
 }
 
 // ==========================================
-// Home Page Layout
+// Global mobile and tablet page spacing
+// ==========================================
+
+@media (max-width: 767px) {
+  main.app-page {
+    padding-bottom: 110px;
+  }
+}
+
+
+// ==========================================
+// Global card styling
+// ==========================================
+
+.card {
+  background-color: #ffffff;
+  color: #002d1c;
+
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+
+  // Keep card contents from touching the edges
+  .card-body {
+    padding: 24px;
+  }
+
+  // Card headings
+  .card-title {
+    color: #002d1c;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  // Card descriptions
+  .card-text {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  // Images at the top of cards
+  .card-img-top {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  // Card footer
+  .card-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    padding: 16px 24px;
+  }
+}
+
+// ==========================================
+// Shared page layout
+// ==========================================
+
+.app-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 40px;
+}
+
+.app-page--home {
+  max-width: none;
+}
+
+// ==========================================
+// Home page layout
 // ==========================================
 
 .home-layout {
-  height: 100vh;
-  height: 100dvh;
-  min-height: 0;
-  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
-
-// ==========================================
-// Main Content
-// ==========================================
 
 .home-main {
   flex: 1;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  padding: 28px 40px;
-  box-sizing: border-box;
+  padding: 32px 40px;
 }
 
 .home-main form {
@@ -72,12 +152,12 @@ h1 {
   color: white;
   font-size: clamp(36px, 5vw, 60px);
   font-weight: 700;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   flex-shrink: 0;
 }
 
 // ==========================================
-// Ingredient Search Area
+// Ingredient search
 // ==========================================
 
 .ingredient-search-wrapper {
@@ -99,7 +179,6 @@ h1 {
   width: 100%;
   min-width: 0;
   height: 60px;
-  box-sizing: border-box;
   padding: 0 28px;
 
   border: none;
@@ -125,7 +204,7 @@ h1 {
 }
 
 // ==========================================
-// Ingredient Autocomplete Dropdown
+// Ingredient autocomplete
 // ==========================================
 
 .ingredient-suggestions {
@@ -175,7 +254,7 @@ h1 {
 }
 
 // ==========================================
-// Selected Ingredients
+// Selected ingredients
 // ==========================================
 
 .selected-ingredients-section {
@@ -196,16 +275,12 @@ h1 {
   }
 }
 
-// Grid containing selected ingredients
-
 .selected-ingredients-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-top: 12px;
 }
-
-// Individual ingredient card
 
 .selected-ingredient-card {
   position: relative;
@@ -229,8 +304,6 @@ h1 {
   }
 }
 
-// Ingredient image container
-
 .ingredient-image-container {
   display: flex;
   justify-content: center;
@@ -242,22 +315,16 @@ h1 {
   overflow: hidden;
 }
 
-// Ingredient thumbnail
-
 .selected-ingredient-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-// Placeholder when an image is unavailable
-
 .ingredient-image-placeholder {
   font-size: 40px;
   color: #aaa;
 }
-
-// Ingredient name
 
 .selected-ingredient-name {
   font-weight: 500;
@@ -265,8 +332,6 @@ h1 {
   color: #333;
   word-break: break-word;
 }
-
-// Remove ingredient button
 
 .remove-ingredient-button {
   position: absolute;
@@ -297,41 +362,49 @@ h1 {
   }
 }
 
-// Empty state message
-
 [data-ingredient-search-target="emptyMessage"] {
   color: white;
   margin-top: 12px;
 }
 
 // ==========================================
-// Bottom Controls
+// Home page bottom controls
 // ==========================================
 
 .home-bottom-controls {
   flex-shrink: 0;
   margin-top: auto;
-  padding-top: 24px;
+  padding-top: 20px;
 
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+}
+
+// Meal type and serving size side by side
+.home-options-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
 // ==========================================
-// Serving Size
+// Meal type and serving size cards
 // ==========================================
 
 .serving-size-section,
 .meal-type-section {
+  min-width: 0;
+
   background: white;
-  border-radius: 28px;
-  padding: 16px 20px;
+  color: #002d1c;
+  border-radius: 20px;
+  padding: 12px 18px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 12px;
 }
 
 .serving-size-label,
@@ -339,33 +412,49 @@ h1 {
   min-width: 0;
 
   label {
-    font-size: 22px;
+    color: #002d1c;
+    font-size: 18px;
     font-weight: 600;
     margin: 0;
   }
 
   p {
     color: #999;
-    margin: 4px 0 0;
+    font-size: 13px;
+    margin: 2px 0 0;
   }
 }
 
+// ==========================================
 // Meal type selector
+// ==========================================
 
 .meal-type-select {
-  min-width: 172px;
-  height: 72px;
-  padding: 0 16px;
+  min-width: 0;
+  width: 145px;
+  height: 46px;
+  padding: 0 12px;
 
   background-color: #d0dba0;
   color: #002d1c;
 
   border: none;
-  border-radius: 16px;
+  border-radius: 12px;
 
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  padding-right: 12px;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none' stroke='%23002d1c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 7 5 5 5-5'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
 
   &:focus {
     outline: 2px solid #002d1c;
@@ -373,33 +462,34 @@ h1 {
   }
 }
 
-// Serving selector
+// ==========================================
+// Serving size selector
+// ==========================================
 
 .serving-selector {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 4px;
 
   background-color: #d0dba0;
-  border-radius: 16px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 5px;
+
   flex-shrink: 0;
 }
 
-// Serving number input
-
 .serving-size-input {
-  width: 40px;
+  width: 32px;
   min-width: 0;
   text-align: center;
 
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
 
   border: none;
-  border-radius: 12px;
-  background-color: transparent;
+  border-radius: 8px;
+  background: transparent;
 
   appearance: textfield;
 
@@ -410,23 +500,21 @@ h1 {
   }
 }
 
-// Plus and minus buttons
-
 .serving-button {
-  width: 56px;
-  height: 56px;
+  width: 36px;
+  height: 36px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border: none;
-  border-radius: 16px;
+  border-radius: 10px;
 
   background-color: #012916;
   color: white;
 
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 500;
   cursor: pointer;
 
@@ -442,21 +530,21 @@ h1 {
 }
 
 // ==========================================
-// Submit Button
+// Submit button
 // ==========================================
 
 .recipes-submit-button {
   width: 100%;
   box-sizing: border-box;
 
-  padding: 16px;
+  padding: 13px;
   border: none;
-  border-radius: 18px;
+  border-radius: 14px;
 
   background-color: #002d1c;
   color: white;
 
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 500;
   cursor: pointer;
 
@@ -468,7 +556,7 @@ h1 {
 }
 
 // ==========================================
-// Logged-out Landing Page
+// Logged-out landing page
 // ==========================================
 
 .home-landing {
@@ -506,12 +594,16 @@ h1 {
 }
 
 // ==========================================
-// Responsive Styling: Tablet
+// Responsive styling: Tablet
 // ==========================================
 
 @media (max-width: 900px) {
   body {
     margin-left: 150px;
+  }
+
+  .app-page {
+    padding: 28px 24px;
   }
 
   .home-main {
@@ -529,10 +621,16 @@ h1 {
   .ingredient-image-container {
     height: 90px;
   }
+
+  // Stack meal type and serving size on tablets
+  .home-options-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 
 // ==========================================
-// Responsive Styling: Mobile
+// Responsive styling: Mobile
 // ==========================================
 
 @media (max-width: 767px) {
@@ -540,13 +638,15 @@ h1 {
     margin-left: 0;
   }
 
-  .home-layout {
-    height: 100vh;
-    height: 100dvh;
-    min-height: 0;
+  .app-page {
+    padding: 24px 20px;
+  }
 
-    // Reserve space for the bottom navigation.
-    // We'll coordinate this with the navbar CSS next.
+  .home-layout {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    // Reserve space for the bottom navigation
     padding-bottom: 100px;
   }
 
@@ -592,60 +692,48 @@ h1 {
     font-size: 13px;
   }
 
-  // Stack serving label above the selector
-
-  .serving-size-section, .meal-type-section {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-
-    padding: 18px;
-    border-radius: 20px;
-  }
-
-  .serving-size-label label, .meal-type-label label {
-    font-size: 20px;
-  }
-
-  .serving-selector {
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    gap: 12px;
-  }
-
-  .serving-button {
-    width: 56px;
-    height: 56px;
-  }
-
-  .serving-size-input {
-    width: 70px;
-    height: 56px;
-  }
-
-  .home-bottom-controls {
-    padding-top: 16px;
-    gap: 12px;
-  }
-
-  .recipes-submit-button {
-    font-size: 18px;
-    padding: 16px;
+  .serving-size-section,
+  .meal-type-section {
+    padding: 12px 16px;
+    border-radius: 16px;
   }
 
   .meal-type-select {
-    width: 100%;
-    height: 48px;
-    font-size: 16px;
+    width: 140px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .serving-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .serving-size-input {
+    width: 32px;
+  }
+
+  .home-bottom-controls {
+    padding-top: 14px;
+    gap: 10px;
+  }
+
+  .recipes-submit-button {
+    font-size: 17px;
+    padding: 13px;
   }
 }
 
 // ==========================================
-// Responsive Styling: Very Small Screens
+// Responsive styling: Very small screens
 // ==========================================
 
 @media (max-width: 380px) {
+  .app-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
   .home-main {
     padding-left: 14px;
     padding-right: 14px;
@@ -668,27 +756,314 @@ h1 {
     height: 60px;
   }
 
-  .serving-size-section, .meal-type-section {
-    padding: 14px;
+  .serving-size-section,
+  .meal-type-section {
+    padding: 10px 12px;
+  }
+
+  .meal-type-select {
+    width: 125px;
+    font-size: 13px;
   }
 
   .serving-selector {
-    gap: 8px;
-  }
-
-  .serving-button {
-    width: 50px;
-    height: 50px;
-    font-size: 28px;
-  }
-
-  .serving-size-input {
-    width: 60px;
-    height: 50px;
-    font-size: 21px;
+    gap: 4px;
   }
 
   .recipes-submit-button {
     font-size: 17px;
+  }
+}
+
+// ==========================================
+// Home page layout
+// ==========================================
+
+.app-page--home {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+// The page heading stays at the top
+.app-page--home > h1 {
+  flex-shrink: 0;
+}
+
+// The form fills the remaining screen height
+.app-page--home .home-form {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// Main ingredient area
+.app-page--home .ingredient-search-wrapper {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// Search stays visible
+.app-page--home .ingredient-search-section {
+  flex-shrink: 0;
+}
+
+// Ingredients take up available space and scroll
+.app-page--home .selected-ingredients-section {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+// Bottom controls stay at the bottom
+.app-page--home .home-bottom-controls {
+  flex-shrink: 0;
+  margin-top: 16px;
+}
+
+// ==========================================
+// Recipe show page
+// ==========================================
+
+.recipe-show-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.recipe-back-button {
+  align-self: flex-start;
+}
+
+.recipe-show-image {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.recipe-details-card {
+  width: 100%;
+}
+
+.recipe-details-card h2 {
+  color: #002d1c;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.recipe-details-card h2:not(:first-child) {
+  margin-top: 32px;
+}
+
+.recipe-ingredients-list,
+.recipe-instructions-list {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-left: 24px;
+}
+
+.recipe-ingredients-list li,
+.recipe-instructions-list li {
+  margin-bottom: 8px;
+}
+
+// ==========================================
+// Recipe page buttons
+// ==========================================
+
+.recipe-action-button,
+.recipe-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+// Primary button uses the existing home page styling
+.recipe-action-button {
+  border: none;
+}
+
+// Secondary outlined buttons
+.recipe-secondary-button {
+  background: transparent;
+  color: #002d1c;
+  border: 2px solid #002d1c;
+}
+
+.recipe-secondary-button:hover {
+  background: #002d1c;
+  color: #ffffff;
+}
+
+// Button layout
+.recipe-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.recipe-actions form {
+  margin: 0;
+}
+
+.recipe-favorite-button {
+  background-color: #fff;
+}
+
+// ==========================================
+// Cooking session page
+// ==========================================
+
+.cooking-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  padding-bottom: 140px;
+}
+
+.cooking-page > h1 {
+  flex-shrink: 0;
+}
+
+.cooking-instruction-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 24px;
+  text-align: left;
+  overflow: visible;
+}
+
+.cooking-instruction-card .card-body {
+  padding: 40px;
+}
+
+.cooking-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cooking-navigation > a:last-child {
+  margin-left: auto;
+}
+
+.cooking-instruction-card .card-body {
+  padding: 40px;
+}
+
+.cooking-instruction-card .display-6 {
+  color: #002d1c;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+// ==========================================
+// Step navigation
+// ==========================================
+
+.cooking-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cooking-navigation .recipe-secondary-button {
+  padding: 12px 24px;
+}
+
+.cooking-navigation > a:last-child {
+  margin-left: auto;
+}
+
+// ==========================================
+// Fixed Cooking Cat button
+// ==========================================
+
+.cooking-chat-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 164px;
+  right: 0;
+  z-index: 100;
+  padding: 16px 40px 24px;
+  background: #788A25;
+}
+
+.cooking-chat-button {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 14px;
+  padding: 15px 24px;
+}
+
+.chat-user-message {
+  background-color: #002d1c;
+  color: #ffffff;
+}
+
+.chat-assistant-message {
+  background-color: #e5efad;
+  color: #002d1c;
+}
+
+.chat-send-button {
+  width: 48px;
+  height: 100%;
+  min-width: 48px;
+  padding: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+// ==========================================
+// Responsive
+// ==========================================
+
+@media (max-width: 767px) {
+  .cooking-chat-bottom {
+    left: 0;
+    padding: 12px 20px 20px;
+    bottom: 70px;
+  }
+
+  .cooking-instruction-card .card-body {
+    padding: 24px;
+  }
+
+  .cooking-navigation {
+    gap: 10px;
   }
 }

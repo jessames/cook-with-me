@@ -1,39 +1,65 @@
-<div class="container py-5"
-     data-controller="recipe-suggestions"
-     data-recipe-suggestions-recipes-value="<%= @results.map { |result|
-       {
-         id: result[:recipe].id,
-         name: result[:recipe].name,
-         image_url: result[:recipe].image_url
-       }
-     }.to_json %>">
-  <h1 class="mb-4">What can you cook?</h1>
+<main
+  class="app-page"
+  data-controller="recipe-suggestions"
+  data-recipe-suggestions-recipes-value="<%= @results.map { |result|
+    {
+      id: result[:recipe].id,
+      name: result[:recipe].name,
+      image_url: result[:recipe].image_url
+    }
+  }.to_json %>"
+>
+
+  <h1>What can you cook?</h1>
 
   <% if @results.any? %>
+
     <div class="row g-4">
+
       <% @results.each do |result| %>
+
         <div class="col-12 col-md-4">
+
           <%= link_to recipe_path(
             result[:recipe],
             ingredients: params[:ingredients],
             meal_type: @meal_type
-          ),
-          class: "text-decoration-none" do %>
-            <div class="card">
-              <%= image_tag result[:recipe].image_url, class: "card-img-top", alt: result[:recipe].name %>
+          ), class: "text-decoration-none" do %>
+
+            <div class="card h-100">
+
+              <%= image_tag result[:recipe].image_url,
+                  class: "card-img-top",
+                  alt: result[:recipe].name %>
 
               <div class="card-body">
-                <h5 class="card-title"><%= result[:recipe].name %></h5>
-                <% if result[:recipe].cooked  %>
-                <span class="text-success small">✓ Cooked</span>
+
+                <h5 class="card-title">
+                  <%= result[:recipe].name %>
+                </h5>
+
+                <% if result[:recipe].cooked %>
+                  <span class="text-success small">✓ Cooked</span>
                 <% end %>
+
               </div>
+
             </div>
+
           <% end %>
+
         </div>
+
       <% end %>
+
     </div>
+
   <% else %>
-    <p>No matching recipes found. Try selecting different ingredients.</p>
+
+    <p>
+      No matching recipes found. Try selecting different ingredients.
+    </p>
+
   <% end %>
-</div>
+
+</main>
