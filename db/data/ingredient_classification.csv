@@ -1,950 +1,950 @@
-ingredient_name,family_name,equivalence_ingredient_name,relationship_type,review_needed,is_pantry_staple
-black eyed peas,black eyed peas,black eyed peas,standalone,false,false
-garlic,fresh garlic,garlic,canonical,false,true
-green chilli,fresh hot chile,green chilli,related_variant,false,false
-red onions,onions,red onions,related_variant,false,false
-plain flour,all purpose flour,all purpose flour,exact_equivalent,false,true
-salt,salt,salt,canonical,false,true
-chilli powder,ground chile,chilli powder,exact_equivalent,true,false
-baking powder,baking powder,baking powder,standalone,false,true
-vegetable oil,neutral cooking oil,vegetable oil,canonical,false,true
-ginger,ginger,ginger,canonical,false,false
-red chilli,fresh hot chile,red chilli,related_variant,false,false
-raw tiger prawns,shrimp and prawns,raw tiger prawns,related_variant,false,false
-plum tomatoes,fresh tomatoes,plum tomatoes,related_variant,false,false
-coriander,coriander seed,coriander,related_variant,true,false
-lime,limes,lime,canonical,false,false
-achiote seeds,annatto,achiote seeds,canonical,false,false
-romano pepper,sweet peppers,romano pepper,related_variant,false,false
-lamb mince,lamb mince,lamb mince,standalone,false,false
-red pepper paste,red pepper paste,red pepper paste,standalone,false,false
-pul biber,chile flakes,pul biber,related_variant,false,false
-sunflower oil,neutral cooking oil,sunflower oil,related_variant,false,true
-olive oil,olive oil,olive oil,canonical,false,true
-ground pork,ground pork,ground pork,canonical,false,false
-carrots,carrots,carrot,exact_equivalent,false,false
-scallions,scallions,scallions,canonical,false,false
-cabbage,headed cabbage,cabbage,canonical,false,false
-soy sauce,soy sauce,soy sauce,canonical,false,false
-rice vinegar,rice vinegar,rice vinegar,canonical,false,false
-egg roll wrappers,egg roll wrappers,egg roll wrappers,standalone,false,false
-oil,oil,oil,standalone,true,true
-duck sauce,duck sauce,duck sauce,standalone,false,false
-plum sauce,plum sauce,plum sauce,standalone,false,false
-potatoes,potatoes,potatoes,canonical,false,false
-onion,onions,onion,canonical,false,true
-paprika,paprika,paprika,standalone,false,true
-tomato puree,tomato puree,tomato puree,canonical,true,false
-tinned tomatos,canned tomatoes,canned tomatoes,exact_equivalent,false,false
-basil leaves,fresh basil,basil leaves,related_variant,false,true
-avocado,avocado,avocado,standalone,false,false
-habanero pepper,fresh hot chile,habanero pepper,related_variant,false,false
-egg,whole eggs,egg,canonical,false,false
-vinegar,vinegar,vinegar,standalone,true,true
-cilantro,cilantro,cilantro,canonical,false,false
-white bread,bread,white bread,related_variant,false,false
-almonds,almonds,almonds,canonical,false,false
-extra virgin olive oil,olive oil,extra virgin olive oil,related_variant,false,true
-garlic clove,fresh garlic,garlic,exact_equivalent,false,true
-red wine vinegar,red wine vinegar,red wine vinegar,standalone,false,false
-all purpose flour,all purpose flour,all purpose flour,canonical,false,true
-cornstarch,cornstarch,cornstarch,canonical,false,true
-butter,butter,butter,canonical,false,true
-sugar,granulated sugar,granulated sugar,exact_equivalent,false,true
-egg yolks,egg yolks,egg yolks,standalone,false,false
-lemon zest,lemon zest,lemon zest,standalone,false,false
-dulce de leche,dulce de leche,dulce de leche,standalone,false,false
-desiccated coconut,shredded coconut,desiccated coconut,related_variant,false,false
-red pepper,sweet peppers,red pepper,related_variant,true,false
-tomato,fresh tomatoes,tomato,canonical,false,false
-jalapeno,fresh hot chile,jalapeno,related_variant,false,false
-semolina,semolina,semolina,canonical,false,false
-water,water,water,canonical,false,true
-black pepper,black pepper,black pepper,related_variant,true,true
-ground cinnamon,cinnamon,ground cinnamon,canonical,false,true
-ground cumin,cumin,ground cumin,related_variant,false,true
-thyme,thyme,thyme,related_variant,false,true
-bay leaf,bay leaves,bay leaves,exact_equivalent,false,false
-lemon juice,lemon juice,lemon juice,standalone,false,false
-green pepper,sweet peppers,green pepper,related_variant,true,false
-pepper,pepper,pepper,standalone,true,true
-ground beef,ground beef,ground beef,canonical,false,false
-parsley,fresh parsley,parsley,canonical,false,true
-cornmeal,cornmeal,cornmeal,canonical,false,false
-queso fresco,queso fresco,queso fresco,standalone,false,false
-mozzarella,mozzarella,mozzarella,canonical,false,false
-eggs,whole eggs,egg,exact_equivalent,false,false
-milk,dairy milk,milk,canonical,false,false
-fish fillet,fish fillet,fish fillet,standalone,true,false
-coconut milk,coconut milk,coconut milk,canonical,false,false
-red curry paste,thai red curry paste,thai red curry paste,exact_equivalent,false,false
-fish sauce,fish sauce,fish sauce,canonical,false,false
-brown sugar,soft brown sugar,brown sugar,canonical,false,true
-chicken stock,chicken stock,chicken stock,canonical,false,false
-kaffir lime leaves,makrut lime leaves,makrut lime leaves,exact_equivalent,false,false
-banana leaves,banana leaves,banana leaves,standalone,false,false
-egg plants,eggplant,aubergine,exact_equivalent,false,false
-callaloo,callaloo,callaloo,standalone,true,false
-pumpkin,pumpkin,pumpkin,canonical,false,false
-porridge oats,oats,porridge oats,related_variant,false,false
-caster sugar,granulated sugar,caster sugar,related_variant,false,true
-golden syrup,golden syrup,golden syrup,standalone,false,false
-bicarbonate of soda,bicarbonate of soda,bicarbonate of soda,standalone,false,false
-flour,flour,flour,standalone,true,true
-unsalted butter,butter,unsalted butter,related_variant,false,true
-peanut butter,peanut butter,peanut butter,standalone,false,false
-braeburn apples,apples,braeburn apples,related_variant,false,false
-demerara sugar,demerara sugar,demerara sugar,standalone,false,true
-blackberries,blackberries,blackberries,standalone,false,false
-cinnamon,cinnamon,cinnamon,related_variant,false,true
-ice cream,ice cream,ice cream,standalone,false,false
-self-raising flour,self-raising flour,self-raising flour,standalone,false,true
-melted butter,butter,melted butter,related_variant,false,true
-vanilla extract,vanilla flavoring,vanilla extract,canonical,false,false
-apples,apples,apples,canonical,false,false
-ground sugar,granulated sugar,ground sugar,related_variant,true,true
-digestive biscuits,digestive biscuits,digestive biscuits,standalone,false,false
-bramley apples,apples,bramley apples,related_variant,false,false
-salted butter,butter,salted butter,related_variant,false,true
-"free-range eggs, beaten",whole eggs,"free-range egg, beaten",exact_equivalent,false,false
-ground almonds,almonds,ground almonds,related_variant,false,false
-almond extract,almond flavoring,almond extract,canonical,false,false
-flaked almonds,almonds,flaked almonds,related_variant,false,false
-sour milk,sour milk,sour milk,standalone,true,false
-shortening,vegetable shortening,shortening,related_variant,false,false
-cold water,water,cold water,related_variant,false,true
-ground nutmeg,nutmeg,ground nutmeg,canonical,false,false
-cinnamon stick,cinnamon,cinnamon stick,related_variant,false,true
-maple syrup,maple syrup,maple syrup,standalone,false,false
-bacon,bacon,bacon,canonical,false,false
-cheese,cheese,cheese,standalone,true,false
-sesame seed,sesame seed,sesame seed,standalone,false,false
-mascarpone,mascarpone,mascarpone,standalone,false,false
-greek yogurt,plain yogurt,greek yogurt,related_variant,false,false
-icing sugar,powdered sugar,powdered sugar,exact_equivalent,false,true
-orange blossom water,orange blossom water,orange blossom water,standalone,false,false
-meringue nests,meringue nests,meringue nests,standalone,false,false
-apricot,fresh apricots,apricot,standalone,false,false
-turkish delight,turkish delight,turkish delight,standalone,false,false
-mint,mint,mint,canonical,false,false
-corn flour,cornstarch,corn flour,related_variant,true,true
-warm water,water,warm water,related_variant,false,true
-corn arepa filled with mozarella cheese,corn arepa filled with mozarella cheese,corn arepa filled with mozarella cheese,standalone,false,false
-fried ripe bananas,fried ripe bananas,fried ripe bananas,standalone,true,false
-black beans,black beans,black beans,standalone,false,false
-pico de gallo sauce,pico de gallo sauce,pico de gallo sauce,standalone,false,false
-shredded meat,shredded meat,shredded meat,standalone,false,false
-beef,beef cuts unspecified,beef,canonical,false,false
-cumin,cumin,cumin,related_variant,false,true
-oregano,oregano,oregano,canonical,false,true
-beef stock,beef stock,beef stock,canonical,false,false
-puff pastry,puff pastry,puff pastry,standalone,false,false
-vanilla sugar,vanilla sugar,vanilla sugar,standalone,false,false
-cardamom,cardamom,cardamom,canonical,false,false
-figs,figs,figs,standalone,false,false
-walnuts,walnuts,walnuts,canonical,false,false
-pork belly slices,pork meat cuts,pork belly slices,related_variant,false,false
-black pudding,blood sausage,black pudding,canonical,false,false
-bacon lardon,bacon,bacon lardon,related_variant,false,false
-chilli flakes,chile flakes,red chilli flakes,exact_equivalent,false,false
-dried white beans,white beans,dried white beans,canonical,false,false
-paella rice,short grain rice,paella rice,related_variant,false,false
-raw king prawns,shrimp and prawns,raw king prawns,related_variant,false,false
-saffron,saffron,saffron,standalone,false,false
-white wine,white wine,white wine,canonical,false,false
-seafood stock,seafood stock,seafood stock,standalone,false,false
-squid,squid,squid,canonical,false,false
-rice,rice,rice,standalone,true,false
-condensed milk,condensed milk,sweetened condensed milk,exact_equivalent,false,false
-mixed beef cuts,beef cuts unspecified,mixed beef cuts,related_variant,false,false
-chorizo,chorizo,chorizo,standalone,false,false
-morcilla,blood sausage,morcilla,related_variant,false,false
-aubergine,eggplant,aubergine,canonical,false,false
-bread,bread,bread,canonical,false,false
-hummus,hummus,hummus,standalone,false,false
-cherry tomatoes,fresh tomatoes,cherry tomatoes,related_variant,false,false
-lemon,lemons,lemon,canonical,false,false
-couscous,couscous,couscous,standalone,false,false
-vegetable stock,vegetable stock,vegetable stock,canonical,false,false
-goats cheese,goats cheese,goats cheese,standalone,false,false
-lean minced steak,ground beef,lean minced beef,exact_equivalent,false,false
-cooked beetroot,beets,cooked beetroot,related_variant,false,false
-naan bread,flatbread,naan bread,related_variant,false,false
-rocket,rocket,rocket,standalone,false,false
-soured cream and chive dip,soured cream and chive dip,soured cream and chive dip,standalone,false,false
-tapioca,tapioca,tapioca,standalone,true,false
-banana,banana,banana,canonical,false,false
-egg white,egg white,egg white,standalone,false,false
-powdered sugar,powdered sugar,powdered sugar,canonical,false,true
-natural yoghurt,plain yogurt,natural yoghurt,canonical,false,false
-baby new potatoes,potatoes,baby new potatoes,related_variant,false,false
-hot chilli powder,ground chile,hot chilli powder,related_variant,false,false
-cumin seeds,cumin,cumin seeds,canonical,false,true
-tortillas,tortillas,tortillas,standalone,true,false
-chicken thighs,chicken meat,chicken thighs,related_variant,false,false
-challots,shallots,shallots,exact_equivalent,false,false
-cayenne pepper,ground chile,cayenne pepper,related_variant,false,true
-turmeric,turmeric powder,turmeric,related_variant,false,false
-fennel,fennel bulb,fennel,related_variant,true,false
-tamarind paste,tamarind,tamarind paste,related_variant,false,false
-kosher salt,salt,kosher salt,related_variant,false,true
-tahini,tahini,tahini,canonical,false,false
-ground walnuts,walnuts,ground walnuts,related_variant,false,false
-lime juice,lime juice,lime juice,standalone,false,false
-coconut oil,coconut oil,coconut oil,standalone,false,true
-spring onions,scallions,scallions,exact_equivalent,false,false
-pork shoulder,pork meat cuts,pork shoulder,related_variant,false,false
-oyster sauce,oyster sauce,oyster sauce,standalone,false,false
-honey,honey,honey,canonical,false,false
-jasmine rice,aromatic long grain rice,jasmine rice,related_variant,false,false
-cucumber,cucumber,cucumber,standalone,false,false
-cilantro leaves,cilantro,cilantro,exact_equivalent,false,false
-tomatoes,fresh tomatoes,tomato,exact_equivalent,false,false
-red chilli powder,ground chile,red chilli powder,canonical,false,false
-coriander leaves,cilantro,cilantro,exact_equivalent,false,false
-yeast,bakers yeast,yeast,related_variant,false,false
-coconut,coconut,coconut,standalone,false,false
-raisins,raisins,raisins,canonical,false,false
-evaporated milk,evaporated milk,evaporated milk,standalone,false,false
-almond essence,almond flavoring,almond essence,related_variant,true,false
-dried sorrel,dried sorrel,dried sorrel,standalone,true,false
-ground ginger,ginger,ground ginger,related_variant,false,false
-vanilla pod,vanilla flavoring,vanilla pod,related_variant,false,false
-orange,orange,orange,standalone,false,false
-brie,brie,brie,standalone,false,false
-sorrel jam,sorrel jam,sorrel jam,standalone,true,false
-salmon,salmon,salmon,standalone,false,false
-black olives,black olives,black olives,canonical,false,false
-yuca,cassava root,cassava,exact_equivalent,false,false
-ground black pepper,black pepper,ground black pepper,canonical,false,true
-sour cream,sour cream,sour cream,canonical,false,false
-chilled butter,butter,chilled butter,related_variant,false,false
-raspberry jam,raspberry jam,raspberry jam,standalone,false,false
-"free-range egg, beaten",whole eggs,"free-range egg, beaten",related_variant,false,false
-pecan nuts,pecan nuts,pecan nuts,standalone,false,false
-ground cardomom,cardamom,ground cardomom,related_variant,false,false
-ricotta,ricotta,ricotta,standalone,false,false
-vanilla bean paste,vanilla flavoring,vanilla bean paste,related_variant,false,false
-filo pastry,phyllo,phyllo dough,exact_equivalent,false,false
-ground pistachios,pistachios,ground pistachios,related_variant,false,false
-salt cod,salt cod,salt cod,standalone,false,false
-tobasco sauce,hot sauce,tabasco sauce,exact_equivalent,false,false
-nutmeg,nutmeg,nutmeg,related_variant,false,false
-raspberries,raspberries,raspberries,standalone,false,false
-rice noodles,rice noodles,rice noodles,canonical,false,false
-sweet chilli sauce,sweet chilli sauce,sweet chilli sauce,standalone,false,false
-bean sprouts,mung bean sprouts,bean sprouts,related_variant,true,false
-prawns,shrimp and prawns,shrimp,exact_equivalent,false,false
-white fish,white fish fillets,white fish,related_variant,true,false
-daikon radish,radishes,daikon radish,related_variant,false,false
-ground turmeric,turmeric powder,turmeric powder,exact_equivalent,false,false
-ground coriander,coriander seed,ground coriander,related_variant,false,false
-pigs trotters,pigs trotters,pigs trotters,standalone,false,false
-oxtail,oxtail,oxtail,standalone,false,false
-scotch bonnet,fresh hot chile,scotch bonnet,related_variant,false,false
-cloves,cloves,clove,exact_equivalent,false,false
-basil,fresh basil,basil,related_variant,false,true
-white bread mix,white bread mix,white bread mix,standalone,false,false
-clear honey,honey,honey,exact_equivalent,false,false
-barramundi,barramundi,barramundi,standalone,false,false
-chili powder,ground chile,chili powder,related_variant,true,true
-pink food colouring,pink food colouring,pink food colouring,standalone,false,false
-marzipan,marzipan,marzipan,standalone,false,false
-pork,pork meat cuts,pork,canonical,false,false
-barbeque sauce,barbeque sauce,barbeque sauce,standalone,false,false
-hotsauce,hot sauce,hotsauce,canonical,false,false
-tomato ketchup,tomato ketchup,tomato ketchup,standalone,false,false
-sausages,sausages,sausages,standalone,false,false
-tomato sauce,tomato sauce,tomato sauce,standalone,false,false
-butter beans,lima beans,lima beans,exact_equivalent,false,false
-black treacle,molasses,black treacle,related_variant,false,false
-english mustard,prepared mustard,english mustard,related_variant,false,false
-dry sherry,sherry,dry sherry,related_variant,false,false
-sirloin steak,beef steaks,sirloin steak,canonical,false,false
-broccoli,broccoli,broccoli,canonical,false,false
-high heat cooking oil,neutral cooking oil,high heat cooking oil,related_variant,false,true
-rapeseed oil,neutral cooking oil,rapeseed oil,related_variant,false,true
-red wine,red wine,red wine,standalone,false,false
-mustard,prepared mustard,mustard,canonical,false,false
-green beans,green beans,green beans,canonical,false,false
-shallots,shallots,shallots,canonical,false,false
-stout,beer,stout,related_variant,false,false
-oysters,oysters,oysters,standalone,false,false
-beef stock concentrate,beef stock,beef stock concentrate,related_variant,false,false
-white wine vinegar,white wine vinegar,white wine vinegar,canonical,false,false
-goose fat,goose fat,goose fat,standalone,false,false
-beef shin,beef braising cuts,beef shin,related_variant,false,false
-chestnut mushroom,fresh mushrooms,chestnut mushroom,related_variant,false,false
-bouquet garni,bouquet garni,bouquet garni,standalone,false,false
-celeriac,celeriac,celeriac,standalone,false,false
-rosemary,rosemary,rosemary,standalone,false,false
-beef brisket,beef braising cuts,beef brisket,related_variant,false,false
-bay leaves,bay leaves,bay leaves,canonical,false,false
-onions,onions,onion,exact_equivalent,false,true
-celery,celery,celery,standalone,false,false
-leek,leek,leek,standalone,false,false
-swede,swede,swede,standalone,false,false
-suet,suet,suet,standalone,false,false
-lard,lard,lard,standalone,false,false
-dried oregano,oregano,dried oregano,related_variant,false,true
-red pepper flakes,chile flakes,red chilli flakes,exact_equivalent,false,true
-egg wash,egg wash,egg wash,standalone,false,false
-chimichurri sauce,chimichurri sauce,chimichurri sauce,standalone,false,false
-sesame seed oil,sesame seed oil,sesame seed oil,standalone,false,false
-starch,starch,starch,standalone,true,false
-noodles,noodles,noodles,standalone,true,false
-minced garlic,fresh garlic,minced garlic,related_variant,false,true
-mushrooms,fresh mushrooms,mushrooms,canonical,false,false
-beef tenderloin,beef steaks,beef tenderloin,related_variant,false,false
-palm sugar,palm sugar,palm sugar,canonical,false,false
-sea salt,salt,sea salt,related_variant,false,true
-lettuce,lettuce,lettuce,canonical,false,false
-kampot pepper,black pepper,kampot pepper,related_variant,false,false
-basmati rice,aromatic long grain rice,basmati rice,canonical,false,false
-turmeric powder,turmeric powder,turmeric powder,canonical,false,false
-star anise,star anise,star anise,standalone,false,false
-coriander seeds,coriander seed,coriander seeds,canonical,false,false
-birds-eye chillies,fresh hot chile,birds-eye chillies,related_variant,false,false
-pumpkin puree,pumpkin,pumpkin puree,related_variant,false,false
-worcestershire sauce,worcestershire sauce,worcestershire sauce,standalone,false,false
-coconut cream,coconut cream,coconut cream,standalone,false,false
-beef fillet,beef steaks,beef tenderloin,exact_equivalent,false,false
-creme fraiche,creme fraiche,creme fraiche,standalone,false,false
-parma ham,dry cured ham,parma ham,related_variant,false,false
-beetroot,beets,beetroot,canonical,false,false
-red cabbage,headed cabbage,red cabbage,related_variant,false,false
-caraway seed,caraway seed,caraway seed,standalone,false,false
-frozen mixed berries,frozen mixed berries,frozen mixed berries,standalone,false,false
-blackcurrant jam,blackcurrant jam,blackcurrant jam,standalone,false,false
-chicken stock cube,chicken stock,chicken stock cube,related_variant,false,false
-cannellini beans,white beans,cannellini beans,related_variant,false,false
-dill,dill,dill,canonical,false,false
-minced beef,ground beef,ground beef,exact_equivalent,false,false
-minced pork,ground pork,ground pork,exact_equivalent,false,false
-breadcrumbs,breadcrumbs,breadcrumbs,standalone,false,false
-sirop de liège,sirop de liège,sirop de liège,standalone,false,false
-beer,beer,beer,canonical,false,false
-savoy cabbage,headed cabbage,savoy cabbage,related_variant,false,false
-whole milk,dairy milk,whole milk,related_variant,false,false
-chicken legs,chicken meat,chicken legs,related_variant,false,false
-chicken breast,chicken meat,chicken breast,related_variant,false,false
-cream,dairy cream,cream,canonical,false,false
-ginger garlic paste,ginger garlic paste,ginger garlic paste,standalone,false,false
-curry powder,curry powder,curry powder,standalone,false,false
-garam masala,garam masala,garam masala,standalone,false,false
-red potatoes,potatoes,red potatoes,related_variant,false,false
-sesame seed burger buns,bread,sesame seed burger buns,related_variant,false,false
-iceberg lettuce,lettuce,iceberg lettuce,related_variant,false,false
-dill pickles,dill pickles,dill pickles,standalone,false,false
-mayonnaise,mayonnaise,mayonnaise,standalone,false,false
-onion salt,onion salt,onion salt,standalone,false,true
-garlic powder,dried garlic,garlic powder,canonical,false,true
-kielbasa,kielbasa,kielbasa,standalone,false,false
-sauerkraut,sauerkraut,sauerkraut,canonical,false,false
-marjoram,marjoram,marjoram,standalone,false,false
-diced tomatoes,canned tomatoes,diced tomatoes,related_variant,true,false
-white cabbage,headed cabbage,white cabbage,related_variant,false,false
-german sausages,german sausages,german sausages,standalone,false,false
-prunes,prunes,prunes,standalone,false,false
-peppercorns,black pepper,peppercorns,related_variant,true,true
-juniper berries,juniper berries,juniper berries,standalone,false,false
-allspice berries,allspice,allspice berries,canonical,false,false
-coconut flakes,shredded coconut,coconut flakes,related_variant,false,false
-dried fruit,dried fruit,dried fruit,standalone,false,false
-pork back ribs,pork meat cuts,pork back ribs,related_variant,false,false
-hazlenuts,hazelnuts,hazlenuts,canonical,false,false
-double cream,dairy cream,double cream,related_variant,false,false
-yogurt,plain yogurt,yogurt,related_variant,false,false
-buckwheat,buckwheat,buckwheat,standalone,false,false
-unwaxed lemon,lemons,unwaxed lemon,related_variant,false,false
-cheddar cheese,cheddar,cheddar cheese,canonical,false,false
-feta,feta,feta,canonical,false,false
-kidney beans,kidney beans,kidney beans,standalone,false,false
-crusty bread,bread,crusty bread,related_variant,false,false
-dark chocolate,dark chocolate,dark chocolate,canonical,false,false
-allspice,allspice,allspice,related_variant,false,false
-ancho chillies,dried whole chile,ancho chillies,related_variant,false,false
-balsamic vinegar,balsamic vinegar,balsamic vinegar,standalone,false,false
-dark brown sugar,soft brown sugar,dark brown soft sugar,exact_equivalent,false,true
-borlotti beans,borlotti beans,borlotti beans,standalone,false,false
-cabbage leaves,headed cabbage,cabbage leaves,related_variant,false,false
-cooked chestnut,chestnuts,cooked chestnut,related_variant,false,false
-cranberry,cranberries,cranberry,canonical,false,false
-cocoa powder,cocoa powder,cocoa powder,canonical,false,false
-parmesan,parmesan,parmesan,canonical,false,false
-pistachio,pistachios,pistachio,canonical,false,false
-sultanas,raisins,sultanas,related_variant,false,false
-alinos sauce,alinos sauce,alinos sauce,standalone,true,false
-breadfruit,breadfruit,breadfruit,standalone,false,false
-red pepper sauce,red pepper sauce,red pepper sauce,standalone,false,false
-codfish bulljaw,codfish bulljaw,codfish bulljaw,standalone,true,false
-prosciutto,dry cured ham,prosciutto,canonical,false,false
-stilton cheese,stilton cheese,stilton cheese,standalone,false,false
-chicken,chicken meat,chicken,canonical,false,false
-bryndza cheese,bryndza cheese,bryndza cheese,standalone,false,false
-chives,chives,chives,canonical,false,false
-lemons,lemons,lemon,exact_equivalent,false,false
-dark rum,dark rum,dark rum,standalone,false,false
-radish,radishes,radish,canonical,false,false
-apple cider vinegar,apple cider vinegar,apple cider vinegar,canonical,false,false
-chocolate chips,chocolate chips,chocolate chips,canonical,false,false
-smoked paprika,smoked paprika,smoked paprika,canonical,false,true
-dried mint,mint,dried mint,related_variant,false,false
-heavy cream,dairy cream,heavy cream,related_variant,false,false
-cafe la llave,cafe la llave,cafe la llave,standalone,false,false
-cajun,cajun,cajun,standalone,true,false
-flour tortilla,wheat tortillas,flour tortilla,standalone,false,false
-little gem lettuce,lettuce,little gem lettuce,related_variant,false,false
-salsa,salsa,salsa,standalone,false,false
-kale,kale,kale,standalone,false,false
-white vinegar,white vinegar,white vinegar,standalone,false,true
-morning glory,morning glory,morning glory,standalone,false,false
-soya bean,soybean,soya bean,standalone,false,false
-chilli,fresh hot chile,chilli,canonical,false,false
-rice flour,rice flour,rice flour,standalone,false,false
-wheat flour,wheat flour,wheat flour,standalone,true,false
-shortcrust pastry,shortcrust pastry,shortcrust pastry,canonical,false,false
-muscovado sugar,soft brown sugar,muscovado sugar,related_variant,false,false
-single cream,dairy cream,single cream,related_variant,false,false
-dried apricots,dried apricots,dried apricots,standalone,false,false
-tamarind pulp,tamarind,tamarind pulp,canonical,false,false
-canned beans,canned beans,canned beans,standalone,false,false
-cream cheese,cream cheese,cream cheese,standalone,false,false
-cashew nuts,cashews,cashews,exact_equivalent,false,false
-farine,farine,farine,standalone,true,false
-cassava flour,cassava flour,cassava flour,standalone,false,false
-cassava,cassava root,cassava,canonical,false,false
-dark brown soft sugar,soft brown sugar,dark brown soft sugar,related_variant,false,true
-casabe,casabe,casabe,standalone,false,false
-turkey ham,turkey ham,turkey ham,standalone,false,false
-sweetcorn,sweetcorn,sweetcorn,canonical,false,false
-green olives,green olives,green olives,canonical,false,false
-beets,beets,beetroot,exact_equivalent,false,false
-peas,green peas,peas,canonical,false,false
-lobster,lobster,lobster,standalone,false,false
-vegetable stock cube,vegetable stock,vegetable stock cube,related_variant,false,false
-strong white bread flour,bread flour,bread flour,exact_equivalent,false,false
-poppy seeds,poppy seeds,poppy seeds,canonical,false,false
-gouda cheese,gouda cheese,gouda cheese,standalone,false,false
-emmentaler cheese,emmentaler cheese,emmentaler cheese,standalone,false,false
-phyllo dough,phyllo,phyllo dough,canonical,false,false
-white flour,white flour,white flour,standalone,true,true
-pickle juice,pickle juice,pickle juice,standalone,false,false
-celery salt,celery salt,celery salt,standalone,false,true
-mustard powder,mustard seed,mustard powder,canonical,false,false
-squash,winter squash,squash,canonical,true,false
-parmesan cheese,parmesan,parmesan,exact_equivalent,false,false
-bowtie pasta,wheat pasta,bowtie pasta,related_variant,false,false
-jerk,jerk,jerk,standalone,true,false
-sun-dried tomatoes,sun-dried tomatoes,sun-dried tomatoes,standalone,false,false
-dry white wine,white wine,dry white wine,related_variant,false,false
-ginger cordial,ginger cordial,ginger cordial,standalone,false,false
-harissa spice,harissa spice,harissa spice,standalone,false,false
-chickpeas,chickpeas,chickpeas,canonical,false,false
-enchilada sauce,enchilada sauce,enchilada sauce,standalone,false,false
-shredded monterey jack cheese,monterey jack,monterey jack cheese,exact_equivalent,false,false
-corn tortillas,corn tortillas,corn tortillas,standalone,false,false
-chicken breasts,chicken meat,chicken breast,exact_equivalent,false,false
-macaroni,wheat pasta,macaroni,related_variant,false,false
-fajita seasoning,fajita seasoning,fajita seasoning,standalone,false,false
-canola oil,neutral cooking oil,canola oil,related_variant,false,true
-chinese five spice powder,chinese five spice,chinese five spice powder,canonical,false,false
-ham,ham,ham,canonical,false,false
-ginger paste,ginger,ginger paste,related_variant,false,false
-fenugreek,fenugreek,fenugreek,standalone,false,false
-orange juice,orange juice,orange juice,standalone,false,false
-sake,sake,sake,standalone,false,false
-granulated sugar,granulated sugar,granulated sugar,canonical,false,true
-potato starch,potato starch,potato starch,standalone,false,false
-chicken liver,chicken liver,chicken liver,standalone,false,false
-ground mustard,mustard seed,mustard powder,exact_equivalent,false,false
-sherry,sherry,sherry,canonical,false,false
-chicken wings,chicken meat,chicken wings,related_variant,false,false
-passata,passata,passata,standalone,false,false
-gruyere cheese,gruyere,gruyere,exact_equivalent,false,false
-quinoa,quinoa,quinoa,standalone,false,false
-dijon mustard,prepared mustard,dijon mustard,related_variant,false,false
-pine nuts,pine nuts,pine nuts,standalone,false,false
-sherry vinegar,sherry vinegar,sherry vinegar,standalone,false,false
-spinach,spinach,spinach,standalone,false,false
-zapallo squash,winter squash,zapallo squash,related_variant,false,false
-lamb loin chops,lamb cuts,lamb loin chops,related_variant,false,false
-linguine pasta,wheat pasta,linguine pasta,related_variant,false,false
-sugar snap peas,edible pod peas,sugar snap peas,related_variant,false,false
-king prawns,shrimp and prawns,king prawns,related_variant,false,false
-fromage frais,fromage frais,fromage frais,standalone,false,false
-chicken bouillon powder,chicken stock,chicken bouillon powder,related_variant,false,false
-red wine jelly,red wine jelly,red wine jelly,standalone,false,false
-molasses,molasses,molasses,canonical,false,false
-bread flour,bread flour,bread flour,canonical,false,true
-light brown soft sugar,soft brown sugar,light brown soft sugar,related_variant,false,true
-dark chocolate chips,chocolate chips,dark chocolate chips,related_variant,false,false
-unsweetened cocoa,cocoa powder,cocoa powder,exact_equivalent,false,false
-milk chocolate,milk chocolate,milk chocolate,standalone,false,false
-cacao,cocoa powder,cacao,related_variant,true,false
-vanilla,vanilla flavoring,vanilla,related_variant,true,false
-mars bar,mars bar,mars bar,standalone,false,false
-rice krispies,rice krispies,rice krispies,standalone,false,false
-golden caster sugar,granulated sugar,golden caster sugar,related_variant,false,true
-plain chocolate,dark chocolate,plain chocolate,related_variant,true,false
-cocoa,cocoa powder,cocoa,related_variant,true,false
-freekeh,freekeh,freekeh,standalone,false,false
-lamb,lamb cuts,lamb,canonical,false,false
-zucchini,zucchini,zucchini,canonical,false,false
-beef tomatoes,fresh tomatoes,beef tomatoes,related_variant,false,false
-candied peel,candied citrus peel,candied peel,canonical,false,false
-glace cherry,glace cherry,glace cherry,standalone,false,false
-currants,currants,currants,standalone,false,false
-mixed spice,mixed spice,mixed spice,standalone,false,false
-rose water,rose water,rose water,standalone,false,false
-dark soft brown sugar,soft brown sugar,dark brown soft sugar,exact_equivalent,false,false
-rolled oats,oats,rolled oats,canonical,false,false
-christmas pudding,christmas pudding,christmas pudding,standalone,false,false
-grand marnier,grand marnier,grand marnier,standalone,false,false
-custard,custard,custard,standalone,false,false
-new potatoes,potatoes,new potatoes,related_variant,false,false
-pork chops,pork meat cuts,pork chops,related_variant,false,false
-strong white flour,bread flour,bread flour,exact_equivalent,false,true
-fast action yeast,bakers yeast,instant yeast,exact_equivalent,false,false
-clams,clams,clams,standalone,false,false
-brandy,brandy,brandy,standalone,false,false
-asparagus,asparagus,asparagus,canonical,false,false
-dried leaves of summer savoury,summer savory,dried leaves of summer savoury,related_variant,false,false
-ground clove,cloves,ground clove,related_variant,false,false
-russet potato,potatoes,russet potato,related_variant,false,false
-cider,cider,cider,standalone,false,false
-farmers cheese,farmers cheese,farmers cheese,standalone,false,false
-sazon goya with azafran,sazon,sazon goya with azafran,related_variant,false,false
-conchs,conchs,conchs,standalone,false,false
-seasoning,seasoning,seasoning,standalone,true,false
-lentils,whole lentils,lentils,canonical,false,false
-corn on the cob,sweetcorn,corn on the cob,related_variant,false,false
-small potatoes,potatoes,small potatoes,related_variant,false,false
-corned beef,corned beef,corned beef,standalone,false,false
-freshly chopped parsley,fresh parsley,parsley,exact_equivalent,false,true
-cottage cheese,cottage cheese,cottage cheese,standalone,false,false
-mango,mango,mango,standalone,false,false
-ice cubes,ice cubes,ice cubes,standalone,false,false
-chopped tomatoes,canned tomatoes,chopped tomatoes,related_variant,true,false
-orange zest,orange zest,orange zest,standalone,false,false
-tempura flour,tempura flour,tempura flour,standalone,false,false
-italian fennel sausages,italian fennel sausages,italian fennel sausages,standalone,false,false
-shiitake mushrooms,fresh mushrooms,shiitake mushrooms,related_variant,false,false
-courgettes,zucchini,zucchini,exact_equivalent,false,false
-lamb shoulder,lamb cuts,lamb shoulder,related_variant,false,false
-garlic sauce,garlic sauce,garlic sauce,standalone,false,false
-vinaigrette dressing,vinaigrette dressing,vinaigrette dressing,standalone,false,false
-refried beans,refried beans,refried beans,standalone,false,false
-hard taco shells,hard taco shells,hard taco shells,standalone,false,false
-shredded mexican cheese,shredded mexican cheese,shredded mexican cheese,standalone,false,false
-grape tomatoes,fresh tomatoes,grape tomatoes,related_variant,false,false
-green salsa,green salsa,green salsa,standalone,false,false
-cuban bread,bread,cuban bread,related_variant,false,false
-swiss cheese,swiss cheese,swiss cheese,standalone,false,false
-deli ham,ham,deli ham,related_variant,false,false
-fennel bulb,fennel bulb,fennel bulb,canonical,false,false
-beef stock cubes,beef stock,beef stock cubes,related_variant,false,false
-feather blade beef,beef braising cuts,feather blade beef,related_variant,false,false
-mature cheddar,cheddar,mature cheddar,related_variant,false,false
-toor dal,toor dal,toor dal,standalone,false,false
-ghee,ghee,ghee,standalone,false,false
-mustard seeds,mustard seed,mustard seeds,related_variant,false,false
-rye grain,rye grain,rye grain,canonical,false,false
-dark beer,beer,dark beer,related_variant,false,false
-buttermilk,buttermilk,buttermilk,standalone,false,false
-seeds,seeds,seeds,standalone,true,false
-rye flour,rye flour,rye flour,standalone,false,false
-pitted dates,dates,pitted dates,canonical,false,false
-oats,oats,oats,related_variant,false,false
-pickled grape leaves,vine leaves,pickled grape leaves,related_variant,false,false
-boiling water,water,boiling water,related_variant,false,true
-instant yeast,bakers yeast,instant yeast,canonical,false,false
-flat rice noodles,rice noodles,flat rice noodles,related_variant,false,false
-duck legs,duck legs,duck legs,standalone,false,false
-maria cookies,maria cookies,maria cookies,standalone,false,false
-sweetened condensed milk,condensed milk,sweetened condensed milk,canonical,false,false
-apricot jam,apricot jam,apricot jam,standalone,false,false
-buckwheat flour,buckwheat flour,buckwheat flour,standalone,false,false
-dutch stroop,dutch stroop,dutch stroop,standalone,false,false
-yellow pepper,sweet peppers,yellow pepper,related_variant,false,false
-sweet smoked paprika,smoked paprika,sweet smoked paprika,related_variant,false,true
-summer savoury,summer savory,summer savoury,canonical,false,false
-mixed peel,candied citrus peel,candied peel,exact_equivalent,false,false
-unsalted beef stock,beef stock,unsalted beef stock,related_variant,false,false
-shaoxing wine,shaoxing wine,shaoxing wine,canonical,false,false
-mung bean sprouts,mung bean sprouts,mung bean sprouts,canonical,false,false
-shrimp,shrimp and prawns,shrimp,canonical,false,false
-pita bread,flatbread,pita bread,canonical,false,false
-red snapper,red snapper,red snapper,standalone,false,false
-malt vinegar,malt vinegar,malt vinegar,standalone,false,false
-strawberries,strawberries,strawberries,standalone,false,false
-pomegranate molasses,pomegranate molasses,pomegranate molasses,standalone,false,false
-sumac,sumac,sumac,standalone,false,false
-chickpea flour,chickpea flour,chickpea flour,standalone,false,false
-falafel,falafel,falafel,standalone,false,false
-whole black peppercorns,black pepper,whole black peppercorns,exact_equivalent,false,true
-fettuccine,wheat pasta,fettuccine,related_variant,false,false
-clotted cream,clotted cream,clotted cream,standalone,false,false
-haddock,haddock,haddock,standalone,false,false
-floury potatoes,potatoes,floury potatoes,related_variant,false,false
-semi-skimmed milk,dairy milk,semi-skimmed milk,related_variant,false,false
-white fish fillets,white fish fillets,white fish fillets,canonical,false,false
-jerusalem artichokes,jerusalem artichokes,jerusalem artichokes,standalone,false,false
-gruyère,gruyere,gruyere,exact_equivalent,false,false
-fish stock,fish stock,fish stock,standalone,false,false
-cod,cod,cod,standalone,false,false
-mussels,mussels,mussels,standalone,false,false
-graham cracker crumbs,graham cracker crumbs,graham cracker crumbs,standalone,false,false
-cream of tartar,cream of tartar,cream of tartar,standalone,false,false
-turnips,turnips,turnips,standalone,false,false
-french lentils,whole lentils,french lentils,related_variant,false,false
-tarragon leaves,tarragon leaves,tarragon leaves,standalone,false,false
-sardines,sardines,sardines,canonical,false,false
-capers,capers,capers,standalone,false,false
-cocoy banana,banana,cocoy banana,related_variant,false,false
-crab meay,crab meay,crab meay,standalone,false,false
-frogs legs,frogs legs,frogs legs,standalone,false,false
-broad beans,broad beans,broad beans,standalone,false,false
-baked beans,baked beans,baked beans,standalone,false,false
-salsa lizano,salsa lizano,salsa lizano,standalone,false,false
-chopped onion,onions,onion,exact_equivalent,false,true
-cubed feta cheese,feta,feta,exact_equivalent,false,false
-gochujang,gochujang,gochujang,standalone,false,false
-speculaas spice mix,speculaas spice mix,speculaas spice mix,standalone,false,false
-almond paste,almond paste,almond paste,standalone,false,false
-chopped parsley,fresh parsley,parsley,exact_equivalent,false,true
-gingerbread spice,gingerbread spice,gingerbread spice,standalone,false,false
-grape nut cereal,grape nut cereal,grape nut cereal,standalone,false,false
-tahini paste,tahini,tahini,exact_equivalent,false,false
-strong wholemeal flour,bread flour,strong wholemeal flour,related_variant,false,true
-monterey jack cheese,monterey jack,monterey jack cheese,canonical,false,false
-colby jack cheese,colby jack cheese,colby jack cheese,standalone,false,false
-grits,grits,grits,standalone,false,false
-light raisins,raisins,light raisins,related_variant,false,false
-cherry,fresh cherries,cherry,standalone,false,false
-jamón ibérico,dry cured ham,jamón ibérico,related_variant,false,false
-date molasses,date molasses,date molasses,standalone,false,false
-fruit mix,fruit mix,fruit mix,standalone,false,false
-wood ear mushrooms,fresh mushrooms,wood ear mushrooms,related_variant,false,false
-tofu,tofu,tofu,canonical,false,false
-white chocolate chips,chocolate chips,white chocolate chips,related_variant,false,false
-miniature marshmallows,miniature marshmallows,miniature marshmallows,standalone,false,false
-lamb leg,lamb cuts,lamb leg,related_variant,false,false
-sweet peppadew peppers,sweet peppadew peppers,sweet peppadew peppers,standalone,false,false
-coarse salt,salt,coarse salt,related_variant,false,true
-whole wheat,whole wheat,whole wheat,standalone,false,false
-charlotte potatoes,potatoes,charlotte potatoes,related_variant,false,false
-fresh thyme,thyme,fresh thyme,canonical,false,true
-jam,jam,jam,standalone,false,false
-fine yellow cornmeal,cornmeal,fine yellow cornmeal,related_variant,false,false
-ground allspice,allspice,ground allspice,related_variant,false,false
-all-purpose seasoning,all-purpose seasoning,all-purpose seasoning,standalone,false,false
-goat meat,goat meat,goat meat,standalone,false,false
-jamaican curry powder,jamaican curry powder,jamaican curry powder,standalone,false,false
-jumbo shrimp,shrimp and prawns,jumbo shrimp,related_variant,false,false
-unsweetened coconut milk,coconut milk,coconut milk,exact_equivalent,false,false
-ground annatto,annatto,ground annatto,related_variant,false,false
-shrimp stock,shrimp stock,shrimp stock,standalone,false,false
-caramelized sugar sauce,caramel sauce,caramelized sugar sauce,related_variant,false,false
-dried cranberries,cranberries,dried cranberries,related_variant,false,false
-dried cherries,dried cherries,dried cherries,standalone,false,false
-sweet potatoes,sweet potatoes,sweet potatoes,standalone,false,false
-wild garlic leaves,wild garlic leaves,wild garlic leaves,standalone,false,false
-manchego,manchego,manchego,standalone,false,false
-sushi rice,short grain rice,sushi rice,canonical,false,false
-mirin,mirin,mirin,standalone,false,false
-yellow split peas,yellow split peas,yellow split peas,standalone,false,false
-kabse spice,kabse spice,kabse spice,standalone,false,false
-ras el hanout,ras el hanout,ras el hanout,standalone,false,false
-fries,fries,fries,standalone,false,false
-doner meat,doner meat,doner meat,standalone,false,false
-carrot,carrots,carrot,canonical,false,false
-smoked haddock,smoked haddock,smoked haddock,standalone,false,false
-lamb fat,lamb fat,lamb fat,standalone,false,false
-sage,sage,sage,standalone,false,false
-sirloin steak tips,beef steaks,sirloin steak tips,related_variant,false,false
-semolina flour,semolina,semolina flour,related_variant,false,false
-knafeh,knafeh,knafeh,standalone,true,false
-yellow food colouring,yellow food colouring,yellow food colouring,standalone,false,false
-garlic bulb,fresh garlic,garlic,exact_equivalent,false,true
-chilli sauce,hot sauce,chilli sauce,related_variant,true,false
-brown lentils,whole lentils,brown lentils,related_variant,false,false
-ground mahleb,ground mahleb,ground mahleb,standalone,false,false
-red chilli flakes,chile flakes,red chilli flakes,canonical,false,false
-water chestnut,water chestnut,water chestnut,standalone,false,false
-peanuts,peanuts,peanuts,canonical,false,false
-whipping cream,dairy cream,whipping cream,related_variant,false,false
-thai red curry paste,thai red curry paste,thai red curry paste,canonical,false,false
-khus khus,poppy seeds,poppy seeds,exact_equivalent,false,false
-full fat yogurt,plain yogurt,full fat yogurt,related_variant,false,false
-biryani masala,biryani masala,biryani masala,standalone,false,false
-madras paste,madras paste,madras paste,standalone,false,false
-tomato purée,tomato puree,tomato purée,exact_equivalent,true,false
-butternut squash,winter squash,butternut squash,related_variant,false,false
-vine leaves,vine leaves,vine leaves,canonical,false,false
-clove,cloves,clove,canonical,false,false
-bulgur wheat,bulgur wheat,bulgur wheat,standalone,false,false
-bun,bread,bun,related_variant,false,false
-lamb kidney,lamb kidney,lamb kidney,standalone,false,false
-sour pork sausage,sour pork sausage,sour pork sausage,standalone,false,false
-pickled garlics,pickled garlics,pickled garlics,standalone,false,false
-hot mint,hot mint,hot mint,standalone,true,false
-roasted peanut,peanuts,roasted peanut,related_variant,false,false
-vegetables,vegetables,vegetables,standalone,false,false
-plantain,plantain,plantain,standalone,false,false
-lasagne sheets,lasagne sheets,lasagne sheets,standalone,false,false
-mozzarella balls,mozzarella,mozzarella balls,related_variant,false,false
-lemongrass stalks,lemongrass,lemongrass,exact_equivalent,false,false
-five spice powder,chinese five spice,chinese five spice powder,exact_equivalent,false,false
-dried white corn,dried white corn,dried white corn,standalone,false,false
-doubanjiang,doubanjiang,doubanjiang,canonical,false,false
-fermented black beans,fermented black beans,fermented black beans,standalone,false,false
-sichuan pepper,sichuan pepper,sichuan pepper,canonical,false,false
-ground onion,ground onion,ground onion,standalone,false,true
-strained yoghurt,plain yogurt,strained yoghurt,related_variant,false,false
-massaman curry paste,massaman curry paste,massaman curry paste,standalone,false,false
-dried dill,dill,dried dill,related_variant,false,false
-beef flank steak,beef steaks,beef flank steak,related_variant,false,false
-paneer,paneer,paneer,standalone,false,false
-almond flour,almond flour,almond flour,standalone,false,false
-dried shrimp,dried shrimp,dried shrimp,standalone,false,false
-pickled scallion heads,pickled scallion heads,pickled scallion heads,standalone,false,false
-pickled scallion head brine,pickled scallion head brine,pickled scallion head brine,standalone,false,false
-galangal,galangal,galangal,canonical,false,false
-baby plum tomatoes,fresh tomatoes,baby plum tomatoes,related_variant,false,false
-fresh basil,fresh basil,fresh basil,canonical,false,true
-farfalle,wheat pasta,bowtie pasta,exact_equivalent,false,false
-tuna,tuna,tuna,standalone,false,false
-chinese broccoli,chinese broccoli,chinese broccoli,standalone,false,false
-beef cutlet,beef steaks,beef cutlet,related_variant,false,false
-mincemeat,mincemeat,mincemeat,standalone,false,false
-ready rolled shortcrust pastry,shortcrust pastry,ready rolled shortcrust pastry,related_variant,false,false
-chopped chive,chives,chives,exact_equivalent,false,false
-dried white navy beans,white beans,dried white navy beans,related_variant,false,false
-cider vinegar,apple cider vinegar,apple cider vinegar,exact_equivalent,false,false
-mulukhiyah,mulukhiyah,mulukhiyah,standalone,false,false
-chestnuts,chestnuts,chestnuts,canonical,false,false
-wild mushrooms,fresh mushrooms,wild mushrooms,related_variant,false,false
-truffle oil,truffle oil,truffle oil,standalone,false,false
-custard powder,custard powder,custard powder,standalone,false,false
-napa cabbage,napa cabbage,napa cabbage,canonical,false,false
-peanut oil,neutral cooking oil,ground nut oil,exact_equivalent,false,false
-anchovy fillet,anchovy fillet,anchovy fillet,standalone,false,false
-hot smoked flaked salmon,smoked salmon,hot smoked flaked salmon,related_variant,false,false
-pretzels,pretzels,pretzels,standalone,false,false
-ground nut oil,neutral cooking oil,ground nut oil,related_variant,false,false
-horseradish,horseradish,horseradish,standalone,false,false
-white asparagus,asparagus,white asparagus,related_variant,false,false
-rye bread,rye bread,rye bread,standalone,false,false
-västerbottensost cheese,västerbottensost cheese,västerbottensost cheese,standalone,false,false
-glutinous rice,glutinous rice,glutinous rice,standalone,false,false
-mung bean paste,mung bean paste,mung bean paste,standalone,false,false
-sticky rice flour,sticky rice flour,sticky rice flour,standalone,false,false
-pandan leaves,pandan leaves,pandan leaves,standalone,false,false
-taro,taro,taro,standalone,false,false
-longan,longan,longan,standalone,false,false
-baguette,bread,baguette,related_variant,false,false
-sriracha,hot sauce,sriracha,related_variant,false,false
-ground oats,oats,ground oats,related_variant,false,false
-sugar syrup,sugar syrup,sugar syrup,standalone,false,false
-cooking apples,apples,cooking apples,related_variant,false,false
-vanilla powder,vanilla flavoring,vanilla powder,related_variant,false,false
-veal,veal,veal,standalone,false,false
-oyster mushrooms,fresh mushrooms,oyster mushrooms,related_variant,false,false
-rice stick noodles,rice noodles,rice stick noodles,related_variant,false,false
-dark soy sauce,soy sauce,dark soy sauce,related_variant,false,false
-tiger prawns,shrimp and prawns,tiger prawns,related_variant,false,false
-padron peppers,sweet peppers,padron peppers,related_variant,false,false
-raw yucca,cassava root,cassava,exact_equivalent,false,false
-hake,hake,hake,standalone,false,false
-panang curry paste,panang curry paste,panang curry paste,standalone,false,false
-makrut lime leaves,makrut lime leaves,makrut lime leaves,canonical,false,false
-dried red chillies,dried whole chile,dried red chillies,related_variant,false,false
-shrimp paste,shrimp paste,shrimp paste,standalone,false,false
-lemongrass,lemongrass,lemongrass,canonical,false,false
-blueberries,blueberries,blueberries,standalone,false,false
-green papaya,green papaya,green papaya,standalone,false,false
-unsalted peanuts,peanuts,unsalted peanuts,related_variant,false,false
-oatmeal,oats,oatmeal,related_variant,true,false
-unflavoured gelatin,gelatin,unflavoured gelatin,canonical,false,false
-passion fruit pulp,passion fruit pulp,passion fruit pulp,standalone,false,false
-panquehue cheese,panquehue cheese,panquehue cheese,standalone,false,false
-creamed corn,creamed corn,creamed corn,standalone,false,false
-peaches,peaches,peaches,standalone,false,false
-peanut cookies,peanut cookies,peanut cookies,standalone,false,false
-gelatine leafs,gelatin,gelatine leafs,related_variant,false,false
-peanut brittle,peanut brittle,peanut brittle,standalone,false,false
-pears,pears,pears,standalone,false,false
-flank steak,beef steaks,beef flank steak,exact_equivalent,false,false
-plum jam,plum jam,plum jam,standalone,false,false
-spaghetti,wheat pasta,spaghetti,canonical,false,false
-pilchards,sardines,sardines,exact_equivalent,false,false
-pistachio paste,pistachio paste,pistachio paste,standalone,false,false
-unwaxed lime,limes,unwaxed lime,related_variant,false,false
-white chocolate,white chocolate,white chocolate,standalone,false,false
-unsalted pistachio,pistachios,unsalted pistachio,related_variant,false,false
-oreo cream biscuits,oreo cream biscuits,oreo cream biscuits,standalone,false,false
-sevaiiya,sevaiiya,sevaiiya,standalone,true,false
-malai,malai,malai,standalone,true,false
-mixed peppers,sweet peppers,mixed peppers,related_variant,true,false
-coco sugar,palm sugar,coco sugar,related_variant,false,false
-bread rolls,bread,bread rolls,related_variant,false,false
-stale bread,bread,stale bread,related_variant,false,false
-achiote paste,achiote paste,achiote paste,standalone,false,false
-baby lettuce leaves,lettuce,baby lettuce leaves,related_variant,false,false
-pomegranate,pomegranate,pomegranate,standalone,false,false
-white sauerkraut,sauerkraut,sauerkraut,exact_equivalent,false,false
-fennel seeds,fennel seeds,fennel seeds,standalone,false,false
-haricot beans,white beans,haricot beans,related_variant,false,false
-great northern beans,white beans,great northern beans,related_variant,false,false
-lima beans,lima beans,lima beans,canonical,false,false
-banana pepper,fresh hot chile,banana pepper,related_variant,false,false
-ciabatta,bread,ciabatta,related_variant,false,false
-peach juice,peach juice,peach juice,standalone,false,false
-beef gravy,beef gravy,beef gravy,standalone,false,false
-cheese curds,cheese curds,cheese curds,standalone,false,false
-prahok,prahok,prahok,standalone,false,false
-shelled hazelnuts,hazelnuts,shelled hazelnuts,related_variant,false,false
-lamb stock,lamb stock,lamb stock,standalone,false,false
-soda water,soda water,soda water,standalone,false,false
-purple sprouting broccoli,broccoli,purple sprouting broccoli,related_variant,false,false
-sweet quark,sweet quark,sweet quark,standalone,false,false
-rhubarb,rhubarb,rhubarb,standalone,false,false
-pork knuckle,pork meat cuts,pork knuckle,related_variant,false,false
-bouillon cubes,bouillon cubes,bouillon cubes,standalone,true,false
-mackerel,mackerel,mackerel,standalone,false,false
-tamarind ball,tamarind,tamarind ball,related_variant,false,false
-canned tomatoes,canned tomatoes,canned tomatoes,canonical,false,false
-wholegrain bread,bread,wholegrain bread,related_variant,false,false
-rice paper sheets,rice paper sheets,rice paper sheets,standalone,false,false
-smoky paprika,smoked paprika,smoked paprika,exact_equivalent,false,true
-pitted black olives,black olives,pitted black olives,related_variant,false,false
-rigatoni,wheat pasta,rigatoni,related_variant,false,false
-pecorino,pecorino,pecorino,standalone,false,false
-baby aubergine,eggplant,baby aubergine,related_variant,false,false
-frozen peas,green peas,frozen peas,related_variant,false,false
-full fat sour cream,sour cream,full fat sour cream,related_variant,false,false
-pimento stuffed olives,green olives,pimento stuffed olives,related_variant,false,false
-kabanos sausages,kabanos,kabanos sausages,canonical,false,false
-runner beans,green beans,runner beans,related_variant,false,false
-rye,rye grain,rye,related_variant,false,false
-english muffins,english muffins,english muffins,standalone,false,false
-smoked salmon,smoked salmon,smoked salmon,canonical,false,false
-petit pois,green peas,petit pois,related_variant,false,false
-szechuan peppercorns,sichuan pepper,sichuan pepper,exact_equivalent,false,false
-jersey royal potatoes,potatoes,jersey royal potatoes,related_variant,false,false
-caramel,caramel,caramel,standalone,false,false
-caramel sauce,caramel sauce,caramel sauce,canonical,false,false
-toffee popcorn,toffee popcorn,toffee popcorn,standalone,false,false
-ackee,ackee,ackee,standalone,false,false
-bamboo shoot,bamboo shoot,bamboo shoot,standalone,false,false
-pineapple chunks,pineapple chunks,pineapple chunks,standalone,false,false
-vegetable shortening,vegetable shortening,vegetable shortening,canonical,false,false
-saskatoon berries,saskatoon berries,saskatoon berries,standalone,false,false
-hispi (sweetheart) cabbage,headed cabbage,hispi (sweetheart) cabbage,related_variant,false,false
-sea bass fillets,sea bass fillets,sea bass fillets,standalone,false,false
-vermicelli pasta,wheat pasta,vermicelli pasta,related_variant,false,false
-monkfish,monkfish,monkfish,standalone,false,false
-baby squid,squid,baby squid,related_variant,false,false
-frozen seafood mix,frozen seafood mix,frozen seafood mix,standalone,false,false
-chuck roast,beef braising cuts,chuck roast,canonical,false,false
-cooking wine,cooking wine,cooking wine,standalone,false,false
-snow peas,edible pod peas,snow peas,canonical,false,false
-chilli bean paste,doubanjiang,chilli bean paste,related_variant,true,false
-chinese long beans,green beans,chinese long beans,related_variant,false,false
-dried chillies,dried whole chile,dried chillies,canonical,false,false
-silken tofu,tofu,silken tofu,related_variant,false,false
-chinese sesame sauce,chinese sesame sauce,chinese sesame sauce,standalone,false,false
-palm hearts,palm hearts,palm hearts,standalone,false,false
-seasoned rice vinegar,rice vinegar,seasoned rice vinegar,related_variant,false,false
-vermicelli rice noodles,rice noodles,rice vermicelli,exact_equivalent,false,false
-nougatine,nougatine,nougatine,standalone,true,false
-herring,herring,herring,standalone,false,false
-grapefruit,grapefruit,grapefruit,standalone,false,false
-smoky aïoli,smoky aïoli,smoky aïoli,standalone,false,false
-cashews,cashews,cashews,canonical,false,false
-lean minced beef,ground beef,lean minced beef,related_variant,false,false
-hot beef stock,beef stock,hot beef stock,related_variant,false,false
-pinto beans,pinto beans,pinto beans,standalone,false,false
-roasted pepper,sweet peppers,roasted pepper,related_variant,true,false
-serrano ham,dry cured ham,serrano ham,related_variant,false,false
-vine tomatoes,fresh tomatoes,vine tomatoes,related_variant,false,false
-hot smoked paprika,smoked paprika,hot smoked paprika,related_variant,false,false
-penne rigate,wheat pasta,penne rigate,related_variant,false,false
-italian seasoning,italian seasoning,italian seasoning,standalone,false,false
-parmigiano-reggiano,parmesan,parmigiano-reggiano,related_variant,false,false
-can of chickpeas,chickpeas,can of chickpeas,related_variant,false,false
-brown rice noodle,rice noodles,brown rice noodle,related_variant,false,false
-fillet of steak,beef steaks,fillet of steak,related_variant,true,false
-chinese cabbage,napa cabbage,chinese cabbage,related_variant,true,false
-tabasco sauce,hot sauce,tabasco sauce,related_variant,false,false
-chicken drumsticks,chicken meat,chicken drumsticks,related_variant,false,false
-medjool dates,dates,medjool dates,related_variant,false,false
-ground poppy seeds,poppy seeds,ground poppy seeds,related_variant,false,false
-redcurrants,redcurrants,redcurrants,standalone,false,false
-rice wine,shaoxing wine,rice wine,related_variant,false,false
-pineapple juice,pineapple juice,pineapple juice,standalone,false,false
-parsnips,parsnips,parsnips,standalone,false,false
-shredded coconut,shredded coconut,shredded coconut,canonical,false,false
-wholegrain mustard,prepared mustard,wholegrain mustard,related_variant,false,false
-stir-fry vegetables,stir-fry vegetables,stir-fry vegetables,standalone,false,false
-brown rice,brown rice,brown rice,standalone,false,false
-egg noodles,egg noodles,egg noodles,standalone,false,false
-chinese leaf,napa cabbage,napa cabbage,exact_equivalent,false,false
-thai green curry paste,thai green curry paste,thai green curry paste,standalone,false,false
-udon noodles,udon noodles,udon noodles,standalone,false,false
-lime leaves,makrut lime leaves,lime leaves,related_variant,true,false
-thai fish sauce,fish sauce,thai fish sauce,related_variant,false,false
-pork tenderloin,pork meat cuts,pork tenderloin,related_variant,false,false
-raw frozen prawns,shrimp and prawns,raw frozen prawns,related_variant,false,false
-pak choi,bok choy,bok choi,exact_equivalent,false,false
-trout,trout,trout,canonical,false,false
-baby pak koi,bok choy,baby pak koi,related_variant,false,false
-gruyere,gruyere,gruyere,canonical,false,false
-smoked ham,ham,smoked ham,related_variant,false,false
-marinated tofu,tofu,marinated tofu,related_variant,false,false
-hoisin sauce,hoisin sauce,hoisin sauce,standalone,false,false
-galangal paste,galangal,galangal paste,related_variant,false,false
-thai chilli jam,thai chilli jam,thai chilli jam,standalone,false,false
-sweet sherry,sherry,sweet sherry,related_variant,false,false
-vegetable millk,vegetable millk,vegetable millk,standalone,true,false
-dessert rice,short grain rice,dessert rice,related_variant,false,false
-turkey,turkey,turkey,standalone,false,false
-turkey mince,turkey mince,turkey mince,standalone,false,false
-white cornmeal,cornmeal,white cornmeal,related_variant,false,false
-raw vegetables,raw vegetables,raw vegetables,standalone,false,false
-vegan white wine vinegar,white wine vinegar,white wine vinegar,exact_equivalent,false,false
-tempeh,tempeh,tempeh,standalone,false,false
-flax eggs,flax eggs,flax eggs,standalone,false,false
-almond milk,almond milk,almond milk,standalone,false,false
-green red lentils,green red lentils,green red lentils,standalone,true,false
-vegan butter,vegan butter,vegan butter,standalone,false,false
-soya milk,soya milk,soya milk,standalone,false,false
-roasted vegetables,roasted vegetables,roasted vegetables,standalone,false,false
-mixed grain,mixed grain,mixed grain,standalone,false,false
-garlic granules,dried garlic,garlic granules,related_variant,false,true
-toast,bread,toast,related_variant,false,false
-paccheri pasta,wheat pasta,paccheri pasta,related_variant,false,false
-hind shank,beef braising cuts,hind shank,related_variant,false,false
-sweet red peppers,sweet peppers,sweet red peppers,canonical,false,false
-cassaba,cassaba,cassaba,standalone,true,false
-yautia,yautia,yautia,standalone,false,false
-white yam,white yam,white yam,standalone,false,false
-skirty steak,beef steaks,skirty steak,related_variant,false,false
-sazon,sazon,sazon,canonical,false,false
-yellow masarepa,yellow masarepa,yellow masarepa,standalone,false,false
-rainbow trout,trout,rainbow trout,related_variant,false,false
-bok choi,bok choy,bok choi,canonical,false,false
-rice vermicelli,rice noodles,rice vermicelli,related_variant,false,false
-egg rolls,egg rolls,egg rolls,standalone,false,false
-lamb shanks,lamb cuts,lamb shanks,related_variant,false,false
-rice flour pancakes,rice flour pancakes,rice flour pancakes,standalone,false,false
-pork shoulder steaks,pork meat cuts,pork shoulder steaks,related_variant,false,false
-stoned dates,dates,pitted dates,exact_equivalent,false,false
-streaky bacon,bacon,streaky bacon,related_variant,false,false
-wonton skin,wonton skin,wonton skin,standalone,false,false
-liquid cheese,liquid cheese,liquid cheese,standalone,false,false
-polish kabanos,kabanos,kabanos sausages,exact_equivalent,false,false
-precooked white cornmeal,cornmeal,precooked white cornmeal,related_variant,false,false
-nori sheets,nori,nori sheets,exact,false,false
-salted herring fillets,salted herring,salted herring fillets,standalone,false,false
+ingredient_name,family_name,equivalence_ingredient_name,relationship_type,review_needed,is_pantry_staple,role
+black eyed peas,black eyed peas,black eyed peas,standalone,false,false,protein
+garlic,fresh garlic,garlic,canonical,false,false,aromatic
+green chilli,fresh hot chile,green chilli,related_variant,false,false,aromatic
+red onions,onions,red onions,related_variant,false,false,aromatic
+plain flour,all purpose flour,all purpose flour,exact_equivalent,false,true,starch
+salt,salt,salt,canonical,false,true,seasoning
+chilli powder,ground chile,chilli powder,exact_equivalent,true,false,seasoning
+baking powder,baking powder,baking powder,standalone,false,false,seasoning
+vegetable oil,neutral cooking oil,vegetable oil,canonical,false,true,seasoning
+ginger,ginger,ginger,canonical,false,false,aromatic
+red chilli,fresh hot chile,red chilli,related_variant,false,false,aromatic
+raw tiger prawns,shrimp and prawns,raw tiger prawns,related_variant,false,false,protein
+plum tomatoes,fresh tomatoes,plum tomatoes,related_variant,false,false,produce
+coriander,coriander seed,coriander,related_variant,true,false,seasoning
+lime,limes,lime,canonical,false,false,produce
+achiote seeds,annatto,achiote seeds,canonical,false,false,seasoning
+romano pepper,sweet peppers,romano pepper,related_variant,false,false,produce
+lamb mince,lamb mince,lamb mince,standalone,false,false,protein
+red pepper paste,red pepper paste,red pepper paste,standalone,false,false,seasoning
+pul biber,chile flakes,pul biber,related_variant,false,false,seasoning
+sunflower oil,neutral cooking oil,sunflower oil,related_variant,false,true,seasoning
+olive oil,olive oil,olive oil,canonical,false,true,seasoning
+ground pork,ground pork,ground pork,canonical,false,false,protein
+carrots,carrots,carrot,exact_equivalent,false,false,produce
+scallions,scallions,scallions,canonical,false,false,aromatic
+cabbage,headed cabbage,cabbage,canonical,false,false,produce
+soy sauce,soy sauce,soy sauce,canonical,false,false,seasoning
+rice vinegar,rice vinegar,rice vinegar,canonical,false,false,seasoning
+egg roll wrappers,egg roll wrappers,egg roll wrappers,standalone,false,false,starch
+oil,oil,oil,standalone,true,true,seasoning
+duck sauce,duck sauce,duck sauce,standalone,false,false,seasoning
+plum sauce,plum sauce,plum sauce,standalone,false,false,seasoning
+potatoes,potatoes,potatoes,canonical,false,false,starch
+onion,onions,onion,canonical,false,false,aromatic
+paprika,paprika,paprika,standalone,false,false,seasoning
+tomato puree,tomato puree,tomato puree,canonical,true,false,seasoning
+tinned tomatos,canned tomatoes,canned tomatoes,exact_equivalent,false,false,produce
+basil leaves,fresh basil,basil leaves,related_variant,false,false,aromatic
+avocado,avocado,avocado,standalone,false,false,produce
+habanero pepper,fresh hot chile,habanero pepper,related_variant,false,false,aromatic
+egg,whole eggs,egg,canonical,false,false,protein
+vinegar,vinegar,vinegar,standalone,true,false,seasoning
+cilantro,cilantro,cilantro,canonical,false,false,aromatic
+white bread,bread,white bread,related_variant,false,false,starch
+almonds,almonds,almonds,canonical,false,false,seasoning
+extra virgin olive oil,olive oil,extra virgin olive oil,related_variant,false,true,seasoning
+garlic clove,fresh garlic,garlic,exact_equivalent,false,false,aromatic
+red wine vinegar,red wine vinegar,red wine vinegar,standalone,false,false,seasoning
+all purpose flour,all purpose flour,all purpose flour,canonical,false,true,starch
+cornstarch,cornstarch,cornstarch,canonical,false,false,seasoning
+butter,butter,butter,canonical,false,true,seasoning
+sugar,granulated sugar,granulated sugar,exact_equivalent,false,true,seasoning
+egg yolks,egg yolks,egg yolks,standalone,false,false,protein
+lemon zest,lemon zest,lemon zest,standalone,false,false,seasoning
+dulce de leche,dulce de leche,dulce de leche,standalone,false,false,seasoning
+desiccated coconut,shredded coconut,desiccated coconut,related_variant,false,false,seasoning
+red pepper,sweet peppers,red pepper,related_variant,true,false,produce
+tomato,fresh tomatoes,tomato,canonical,false,false,produce
+jalapeno,fresh hot chile,jalapeno,related_variant,false,false,aromatic
+semolina,semolina,semolina,canonical,false,false,starch
+water,water,water,canonical,false,true,seasoning
+black pepper,black pepper,black pepper,related_variant,true,true,seasoning
+ground cinnamon,cinnamon,ground cinnamon,canonical,false,false,seasoning
+ground cumin,cumin,ground cumin,related_variant,false,false,seasoning
+thyme,thyme,thyme,related_variant,false,false,aromatic
+bay leaf,bay leaves,bay leaves,exact_equivalent,false,false,seasoning
+lemon juice,lemon juice,lemon juice,standalone,false,false,seasoning
+green pepper,sweet peppers,green pepper,related_variant,true,false,produce
+pepper,pepper,pepper,standalone,true,true,seasoning
+ground beef,ground beef,ground beef,canonical,false,false,protein
+parsley,fresh parsley,parsley,canonical,false,false,aromatic
+cornmeal,cornmeal,cornmeal,canonical,false,false,starch
+queso fresco,queso fresco,queso fresco,standalone,false,false,dairy
+mozzarella,mozzarella,mozzarella,canonical,false,false,dairy
+eggs,whole eggs,egg,exact_equivalent,false,false,protein
+milk,dairy milk,milk,canonical,false,false,dairy
+fish fillet,fish fillet,fish fillet,standalone,true,false,protein
+coconut milk,coconut milk,coconut milk,canonical,false,false,seasoning
+red curry paste,thai red curry paste,thai red curry paste,exact_equivalent,false,false,seasoning
+fish sauce,fish sauce,fish sauce,canonical,false,false,seasoning
+brown sugar,soft brown sugar,brown sugar,canonical,false,false,seasoning
+chicken stock,chicken stock,chicken stock,canonical,false,false,seasoning
+kaffir lime leaves,makrut lime leaves,makrut lime leaves,exact_equivalent,false,false,aromatic
+banana leaves,banana leaves,banana leaves,standalone,false,false,seasoning
+egg plants,eggplant,aubergine,exact_equivalent,false,false,produce
+callaloo,callaloo,callaloo,standalone,true,false,produce
+pumpkin,pumpkin,pumpkin,canonical,false,false,produce
+porridge oats,oats,porridge oats,related_variant,false,false,starch
+caster sugar,granulated sugar,caster sugar,related_variant,false,false,seasoning
+golden syrup,golden syrup,golden syrup,standalone,false,false,seasoning
+bicarbonate of soda,bicarbonate of soda,bicarbonate of soda,standalone,false,false,seasoning
+flour,flour,flour,standalone,true,true,starch
+unsalted butter,butter,unsalted butter,related_variant,false,true,seasoning
+peanut butter,peanut butter,peanut butter,standalone,false,false,seasoning
+braeburn apples,apples,braeburn apples,related_variant,false,false,produce
+demerara sugar,demerara sugar,demerara sugar,standalone,false,false,seasoning
+blackberries,blackberries,blackberries,standalone,false,false,produce
+cinnamon,cinnamon,cinnamon,related_variant,false,false,seasoning
+ice cream,ice cream,ice cream,standalone,false,false,dairy
+self-raising flour,self-raising flour,self-raising flour,standalone,false,false,starch
+melted butter,butter,melted butter,related_variant,false,true,seasoning
+vanilla extract,vanilla flavoring,vanilla extract,canonical,false,false,seasoning
+apples,apples,apples,canonical,false,false,produce
+ground sugar,granulated sugar,ground sugar,related_variant,true,false,seasoning
+digestive biscuits,digestive biscuits,digestive biscuits,standalone,false,false,starch
+bramley apples,apples,bramley apples,related_variant,false,false,produce
+salted butter,butter,salted butter,related_variant,false,true,seasoning
+"free-range eggs, beaten",whole eggs,"free-range egg, beaten",exact_equivalent,false,false,protein
+ground almonds,almonds,ground almonds,related_variant,false,false,seasoning
+almond extract,almond flavoring,almond extract,canonical,false,false,seasoning
+flaked almonds,almonds,flaked almonds,related_variant,false,false,seasoning
+sour milk,sour milk,sour milk,standalone,true,false,dairy
+shortening,vegetable shortening,shortening,related_variant,false,false,seasoning
+cold water,water,cold water,related_variant,false,true,seasoning
+ground nutmeg,nutmeg,ground nutmeg,canonical,false,false,seasoning
+cinnamon stick,cinnamon,cinnamon stick,related_variant,false,false,seasoning
+maple syrup,maple syrup,maple syrup,standalone,false,false,seasoning
+bacon,bacon,bacon,canonical,false,false,protein
+cheese,cheese,cheese,standalone,true,false,dairy
+sesame seed,sesame seed,sesame seed,standalone,false,false,seasoning
+mascarpone,mascarpone,mascarpone,standalone,false,false,dairy
+greek yogurt,plain yogurt,greek yogurt,related_variant,false,false,dairy
+icing sugar,powdered sugar,powdered sugar,exact_equivalent,false,false,seasoning
+orange blossom water,orange blossom water,orange blossom water,standalone,false,false,seasoning
+meringue nests,meringue nests,meringue nests,standalone,false,false,seasoning
+apricot,fresh apricots,apricot,standalone,false,false,produce
+turkish delight,turkish delight,turkish delight,standalone,false,false,seasoning
+mint,mint,mint,canonical,false,false,aromatic
+corn flour,cornstarch,corn flour,related_variant,true,false,seasoning
+warm water,water,warm water,related_variant,false,true,seasoning
+corn arepa filled with mozarella cheese,corn arepa filled with mozarella cheese,corn arepa filled with mozarella cheese,standalone,false,false,starch
+fried ripe bananas,fried ripe bananas,fried ripe bananas,standalone,true,false,produce
+black beans,black beans,black beans,standalone,false,false,protein
+pico de gallo sauce,pico de gallo sauce,pico de gallo sauce,standalone,false,false,seasoning
+shredded meat,shredded meat,shredded meat,standalone,false,false,protein
+beef,beef cuts unspecified,beef,canonical,false,false,protein
+cumin,cumin,cumin,related_variant,false,false,seasoning
+oregano,oregano,oregano,canonical,false,false,seasoning
+beef stock,beef stock,beef stock,canonical,false,false,seasoning
+puff pastry,puff pastry,puff pastry,standalone,false,false,starch
+vanilla sugar,vanilla sugar,vanilla sugar,standalone,false,false,seasoning
+cardamom,cardamom,cardamom,canonical,false,false,seasoning
+figs,figs,figs,standalone,false,false,produce
+walnuts,walnuts,walnuts,canonical,false,false,seasoning
+pork belly slices,pork meat cuts,pork belly slices,related_variant,false,false,protein
+black pudding,blood sausage,black pudding,canonical,false,false,protein
+bacon lardon,bacon,bacon lardon,related_variant,false,false,protein
+chilli flakes,chile flakes,red chilli flakes,exact_equivalent,false,false,seasoning
+dried white beans,white beans,dried white beans,canonical,false,false,protein
+paella rice,short grain rice,paella rice,related_variant,false,false,starch
+raw king prawns,shrimp and prawns,raw king prawns,related_variant,false,false,protein
+saffron,saffron,saffron,standalone,false,false,seasoning
+white wine,white wine,white wine,canonical,false,false,seasoning
+seafood stock,seafood stock,seafood stock,standalone,false,false,seasoning
+squid,squid,squid,canonical,false,false,protein
+rice,rice,rice,standalone,true,false,starch
+condensed milk,condensed milk,sweetened condensed milk,exact_equivalent,false,false,dairy
+mixed beef cuts,beef cuts unspecified,mixed beef cuts,related_variant,false,false,protein
+chorizo,chorizo,chorizo,standalone,false,false,protein
+morcilla,blood sausage,morcilla,related_variant,false,false,protein
+aubergine,eggplant,aubergine,canonical,false,false,produce
+bread,bread,bread,canonical,false,false,starch
+hummus,hummus,hummus,standalone,false,false,seasoning
+cherry tomatoes,fresh tomatoes,cherry tomatoes,related_variant,false,false,produce
+lemon,lemons,lemon,canonical,false,false,produce
+couscous,couscous,couscous,standalone,false,false,starch
+vegetable stock,vegetable stock,vegetable stock,canonical,false,false,seasoning
+goats cheese,goats cheese,goats cheese,standalone,false,false,dairy
+lean minced steak,ground beef,lean minced beef,exact_equivalent,false,false,protein
+cooked beetroot,beets,cooked beetroot,related_variant,false,false,produce
+naan bread,flatbread,naan bread,related_variant,false,false,starch
+rocket,rocket,rocket,standalone,false,false,produce
+soured cream and chive dip,soured cream and chive dip,soured cream and chive dip,standalone,false,false,seasoning
+tapioca,tapioca,tapioca,standalone,true,false,starch
+banana,banana,banana,canonical,false,false,produce
+egg white,egg white,egg white,standalone,false,false,protein
+powdered sugar,powdered sugar,powdered sugar,canonical,false,false,seasoning
+natural yoghurt,plain yogurt,natural yoghurt,canonical,false,false,dairy
+baby new potatoes,potatoes,baby new potatoes,related_variant,false,false,starch
+hot chilli powder,ground chile,hot chilli powder,related_variant,false,false,seasoning
+cumin seeds,cumin,cumin seeds,canonical,false,false,seasoning
+tortillas,tortillas,tortillas,standalone,true,false,starch
+chicken thighs,chicken meat,chicken thighs,related_variant,false,false,protein
+challots,shallots,shallots,exact_equivalent,false,false,aromatic
+cayenne pepper,ground chile,cayenne pepper,related_variant,false,false,seasoning
+turmeric,turmeric powder,turmeric,related_variant,false,false,seasoning
+fennel,fennel bulb,fennel,related_variant,true,false,produce
+tamarind paste,tamarind,tamarind paste,related_variant,false,false,seasoning
+kosher salt,salt,kosher salt,related_variant,false,true,seasoning
+tahini,tahini,tahini,canonical,false,false,seasoning
+ground walnuts,walnuts,ground walnuts,related_variant,false,false,seasoning
+lime juice,lime juice,lime juice,standalone,false,false,seasoning
+coconut oil,coconut oil,coconut oil,standalone,false,false,seasoning
+spring onions,scallions,scallions,exact_equivalent,false,false,aromatic
+pork shoulder,pork meat cuts,pork shoulder,related_variant,false,false,protein
+oyster sauce,oyster sauce,oyster sauce,standalone,false,false,seasoning
+honey,honey,honey,canonical,false,false,seasoning
+jasmine rice,aromatic long grain rice,jasmine rice,related_variant,false,false,starch
+cucumber,cucumber,cucumber,standalone,false,false,produce
+cilantro leaves,cilantro,cilantro,exact_equivalent,false,false,aromatic
+tomatoes,fresh tomatoes,tomato,exact_equivalent,false,false,produce
+red chilli powder,ground chile,red chilli powder,canonical,false,false,seasoning
+coriander leaves,cilantro,cilantro,exact_equivalent,false,false,aromatic
+yeast,bakers yeast,yeast,related_variant,false,false,seasoning
+coconut,coconut,coconut,standalone,false,false,produce
+raisins,raisins,raisins,canonical,false,false,produce
+evaporated milk,evaporated milk,evaporated milk,standalone,false,false,dairy
+almond essence,almond flavoring,almond essence,related_variant,true,false,seasoning
+dried sorrel,dried sorrel,dried sorrel,standalone,true,false,seasoning
+ground ginger,ginger,ground ginger,related_variant,false,false,aromatic
+vanilla pod,vanilla flavoring,vanilla pod,related_variant,false,false,seasoning
+orange,orange,orange,standalone,false,false,produce
+brie,brie,brie,standalone,false,false,dairy
+sorrel jam,sorrel jam,sorrel jam,standalone,true,false,seasoning
+salmon,salmon,salmon,standalone,false,false,protein
+black olives,black olives,black olives,canonical,false,false,seasoning
+yuca,cassava root,cassava,exact_equivalent,false,false,starch
+ground black pepper,black pepper,ground black pepper,canonical,false,true,seasoning
+sour cream,sour cream,sour cream,canonical,false,false,dairy
+chilled butter,butter,chilled butter,related_variant,false,false,seasoning
+raspberry jam,raspberry jam,raspberry jam,standalone,false,false,seasoning
+"free-range egg, beaten",whole eggs,"free-range egg, beaten",related_variant,false,false,protein
+pecan nuts,pecan nuts,pecan nuts,standalone,false,false,seasoning
+ground cardomom,cardamom,ground cardomom,related_variant,false,false,seasoning
+ricotta,ricotta,ricotta,standalone,false,false,dairy
+vanilla bean paste,vanilla flavoring,vanilla bean paste,related_variant,false,false,seasoning
+filo pastry,phyllo,phyllo dough,exact_equivalent,false,false,starch
+ground pistachios,pistachios,ground pistachios,related_variant,false,false,seasoning
+salt cod,salt cod,salt cod,standalone,false,false,protein
+tobasco sauce,hot sauce,tabasco sauce,exact_equivalent,false,false,seasoning
+nutmeg,nutmeg,nutmeg,related_variant,false,false,seasoning
+raspberries,raspberries,raspberries,standalone,false,false,produce
+rice noodles,rice noodles,rice noodles,canonical,false,false,starch
+sweet chilli sauce,sweet chilli sauce,sweet chilli sauce,standalone,false,false,seasoning
+bean sprouts,mung bean sprouts,bean sprouts,related_variant,true,false,produce
+prawns,shrimp and prawns,shrimp,exact_equivalent,false,false,protein
+white fish,white fish fillets,white fish,related_variant,true,false,protein
+daikon radish,radishes,daikon radish,related_variant,false,false,produce
+ground turmeric,turmeric powder,turmeric powder,exact_equivalent,false,false,seasoning
+ground coriander,coriander seed,ground coriander,related_variant,false,false,seasoning
+pigs trotters,pigs trotters,pigs trotters,standalone,false,false,protein
+oxtail,oxtail,oxtail,standalone,false,false,protein
+scotch bonnet,fresh hot chile,scotch bonnet,related_variant,false,false,aromatic
+cloves,cloves,clove,exact_equivalent,false,false,seasoning
+basil,fresh basil,basil,related_variant,false,false,aromatic
+white bread mix,white bread mix,white bread mix,standalone,false,false,starch
+clear honey,honey,honey,exact_equivalent,false,false,seasoning
+barramundi,barramundi,barramundi,standalone,false,false,protein
+chili powder,ground chile,chili powder,related_variant,true,false,seasoning
+pink food colouring,pink food colouring,pink food colouring,standalone,false,false,seasoning
+marzipan,marzipan,marzipan,standalone,false,false,seasoning
+pork,pork meat cuts,pork,canonical,false,false,protein
+barbeque sauce,barbeque sauce,barbeque sauce,standalone,false,false,seasoning
+hotsauce,hot sauce,hotsauce,canonical,false,false,seasoning
+tomato ketchup,tomato ketchup,tomato ketchup,standalone,false,false,seasoning
+sausages,sausages,sausages,standalone,false,false,protein
+tomato sauce,tomato sauce,tomato sauce,standalone,false,false,seasoning
+butter beans,lima beans,lima beans,exact_equivalent,false,false,protein
+black treacle,molasses,black treacle,related_variant,false,false,seasoning
+english mustard,prepared mustard,english mustard,related_variant,false,false,seasoning
+dry sherry,sherry,dry sherry,related_variant,false,false,seasoning
+sirloin steak,beef steaks,sirloin steak,canonical,false,false,protein
+broccoli,broccoli,broccoli,canonical,false,false,produce
+high heat cooking oil,neutral cooking oil,high heat cooking oil,related_variant,false,true,seasoning
+rapeseed oil,neutral cooking oil,rapeseed oil,related_variant,false,true,seasoning
+red wine,red wine,red wine,standalone,false,false,seasoning
+mustard,prepared mustard,mustard,canonical,false,false,seasoning
+green beans,green beans,green beans,canonical,false,false,produce
+shallots,shallots,shallots,canonical,false,false,aromatic
+stout,beer,stout,related_variant,false,false,seasoning
+oysters,oysters,oysters,standalone,false,false,protein
+beef stock concentrate,beef stock,beef stock concentrate,related_variant,false,false,seasoning
+white wine vinegar,white wine vinegar,white wine vinegar,canonical,false,false,seasoning
+goose fat,goose fat,goose fat,standalone,false,false,seasoning
+beef shin,beef braising cuts,beef shin,related_variant,false,false,protein
+chestnut mushroom,fresh mushrooms,chestnut mushroom,related_variant,false,false,produce
+bouquet garni,bouquet garni,bouquet garni,standalone,false,false,seasoning
+celeriac,celeriac,celeriac,standalone,false,false,produce
+rosemary,rosemary,rosemary,standalone,false,false,aromatic
+beef brisket,beef braising cuts,beef brisket,related_variant,false,false,protein
+bay leaves,bay leaves,bay leaves,canonical,false,false,seasoning
+onions,onions,onion,exact_equivalent,false,false,aromatic
+celery,celery,celery,standalone,false,false,produce
+leek,leek,leek,standalone,false,false,aromatic
+swede,swede,swede,standalone,false,false,produce
+suet,suet,suet,standalone,false,false,seasoning
+lard,lard,lard,standalone,false,false,seasoning
+dried oregano,oregano,dried oregano,related_variant,false,false,seasoning
+red pepper flakes,chile flakes,red chilli flakes,exact_equivalent,false,false,seasoning
+egg wash,egg wash,egg wash,standalone,false,false,seasoning
+chimichurri sauce,chimichurri sauce,chimichurri sauce,standalone,false,false,seasoning
+sesame seed oil,sesame seed oil,sesame seed oil,standalone,false,false,seasoning
+starch,starch,starch,standalone,true,false,seasoning
+noodles,noodles,noodles,standalone,true,false,starch
+minced garlic,fresh garlic,minced garlic,related_variant,false,false,aromatic
+mushrooms,fresh mushrooms,mushrooms,canonical,false,false,produce
+beef tenderloin,beef steaks,beef tenderloin,related_variant,false,false,protein
+palm sugar,palm sugar,palm sugar,canonical,false,false,seasoning
+sea salt,salt,sea salt,related_variant,false,true,seasoning
+lettuce,lettuce,lettuce,canonical,false,false,produce
+kampot pepper,black pepper,kampot pepper,related_variant,false,false,seasoning
+basmati rice,aromatic long grain rice,basmati rice,canonical,false,false,starch
+turmeric powder,turmeric powder,turmeric powder,canonical,false,false,seasoning
+star anise,star anise,star anise,standalone,false,false,seasoning
+coriander seeds,coriander seed,coriander seeds,canonical,false,false,seasoning
+birds-eye chillies,fresh hot chile,birds-eye chillies,related_variant,false,false,aromatic
+pumpkin puree,pumpkin,pumpkin puree,related_variant,false,false,produce
+worcestershire sauce,worcestershire sauce,worcestershire sauce,standalone,false,false,seasoning
+coconut cream,coconut cream,coconut cream,standalone,false,false,seasoning
+beef fillet,beef steaks,beef tenderloin,exact_equivalent,false,false,protein
+creme fraiche,creme fraiche,creme fraiche,standalone,false,false,dairy
+parma ham,dry cured ham,parma ham,related_variant,false,false,protein
+beetroot,beets,beetroot,canonical,false,false,produce
+red cabbage,headed cabbage,red cabbage,related_variant,false,false,produce
+caraway seed,caraway seed,caraway seed,standalone,false,false,seasoning
+frozen mixed berries,frozen mixed berries,frozen mixed berries,standalone,false,false,produce
+blackcurrant jam,blackcurrant jam,blackcurrant jam,standalone,false,false,seasoning
+chicken stock cube,chicken stock,chicken stock cube,related_variant,false,false,seasoning
+cannellini beans,white beans,cannellini beans,related_variant,false,false,protein
+dill,dill,dill,canonical,false,false,aromatic
+minced beef,ground beef,ground beef,exact_equivalent,false,false,protein
+minced pork,ground pork,ground pork,exact_equivalent,false,false,protein
+breadcrumbs,breadcrumbs,breadcrumbs,standalone,false,false,seasoning
+sirop de liège,sirop de liège,sirop de liège,standalone,false,false,seasoning
+beer,beer,beer,canonical,false,false,seasoning
+savoy cabbage,headed cabbage,savoy cabbage,related_variant,false,false,produce
+whole milk,dairy milk,whole milk,related_variant,false,false,dairy
+chicken legs,chicken meat,chicken legs,related_variant,false,false,protein
+chicken breast,chicken meat,chicken breast,related_variant,false,false,protein
+cream,dairy cream,cream,canonical,false,false,dairy
+ginger garlic paste,ginger garlic paste,ginger garlic paste,standalone,false,false,aromatic
+curry powder,curry powder,curry powder,standalone,false,false,seasoning
+garam masala,garam masala,garam masala,standalone,false,false,seasoning
+red potatoes,potatoes,red potatoes,related_variant,false,false,starch
+sesame seed burger buns,bread,sesame seed burger buns,related_variant,false,false,starch
+iceberg lettuce,lettuce,iceberg lettuce,related_variant,false,false,produce
+dill pickles,dill pickles,dill pickles,standalone,false,false,seasoning
+mayonnaise,mayonnaise,mayonnaise,standalone,false,false,seasoning
+onion salt,onion salt,onion salt,standalone,false,false,seasoning
+garlic powder,dried garlic,garlic powder,canonical,false,false,seasoning
+kielbasa,kielbasa,kielbasa,standalone,false,false,protein
+sauerkraut,sauerkraut,sauerkraut,canonical,false,false,seasoning
+marjoram,marjoram,marjoram,standalone,false,false,seasoning
+diced tomatoes,canned tomatoes,diced tomatoes,related_variant,true,false,produce
+white cabbage,headed cabbage,white cabbage,related_variant,false,false,produce
+german sausages,german sausages,german sausages,standalone,false,false,protein
+prunes,prunes,prunes,standalone,false,false,produce
+peppercorns,black pepper,peppercorns,related_variant,true,true,seasoning
+juniper berries,juniper berries,juniper berries,standalone,false,false,seasoning
+allspice berries,allspice,allspice berries,canonical,false,false,seasoning
+coconut flakes,shredded coconut,coconut flakes,related_variant,false,false,seasoning
+dried fruit,dried fruit,dried fruit,standalone,false,false,produce
+pork back ribs,pork meat cuts,pork back ribs,related_variant,false,false,protein
+hazlenuts,hazelnuts,hazlenuts,canonical,false,false,seasoning
+double cream,dairy cream,double cream,related_variant,false,false,dairy
+yogurt,plain yogurt,yogurt,related_variant,false,false,dairy
+buckwheat,buckwheat,buckwheat,standalone,false,false,starch
+unwaxed lemon,lemons,unwaxed lemon,related_variant,false,false,produce
+cheddar cheese,cheddar,cheddar cheese,canonical,false,false,dairy
+feta,feta,feta,canonical,false,false,dairy
+kidney beans,kidney beans,kidney beans,standalone,false,false,protein
+crusty bread,bread,crusty bread,related_variant,false,false,starch
+dark chocolate,dark chocolate,dark chocolate,canonical,false,false,seasoning
+allspice,allspice,allspice,related_variant,false,false,seasoning
+ancho chillies,dried whole chile,ancho chillies,related_variant,false,false,seasoning
+balsamic vinegar,balsamic vinegar,balsamic vinegar,standalone,false,false,seasoning
+dark brown sugar,soft brown sugar,dark brown soft sugar,exact_equivalent,false,false,seasoning
+borlotti beans,borlotti beans,borlotti beans,standalone,false,false,protein
+cabbage leaves,headed cabbage,cabbage leaves,related_variant,false,false,produce
+cooked chestnut,chestnuts,cooked chestnut,related_variant,false,false,produce
+cranberry,cranberries,cranberry,canonical,false,false,produce
+cocoa powder,cocoa powder,cocoa powder,canonical,false,false,seasoning
+parmesan,parmesan,parmesan,canonical,false,false,dairy
+pistachio,pistachios,pistachio,canonical,false,false,seasoning
+sultanas,raisins,sultanas,related_variant,false,false,produce
+alinos sauce,alinos sauce,alinos sauce,standalone,true,false,seasoning
+breadfruit,breadfruit,breadfruit,standalone,false,false,starch
+red pepper sauce,red pepper sauce,red pepper sauce,standalone,false,false,seasoning
+codfish bulljaw,codfish bulljaw,codfish bulljaw,standalone,true,false,protein
+prosciutto,dry cured ham,prosciutto,canonical,false,false,protein
+stilton cheese,stilton cheese,stilton cheese,standalone,false,false,dairy
+chicken,chicken meat,chicken,canonical,false,false,protein
+bryndza cheese,bryndza cheese,bryndza cheese,standalone,false,false,dairy
+chives,chives,chives,canonical,false,false,aromatic
+lemons,lemons,lemon,exact_equivalent,false,false,produce
+dark rum,dark rum,dark rum,standalone,false,false,seasoning
+radish,radishes,radish,canonical,false,false,produce
+apple cider vinegar,apple cider vinegar,apple cider vinegar,canonical,false,false,seasoning
+chocolate chips,chocolate chips,chocolate chips,canonical,false,false,seasoning
+smoked paprika,smoked paprika,smoked paprika,canonical,false,false,seasoning
+dried mint,mint,dried mint,related_variant,false,false,aromatic
+heavy cream,dairy cream,heavy cream,related_variant,false,false,dairy
+cafe la llave,cafe la llave,cafe la llave,standalone,false,false,seasoning
+cajun,cajun,cajun,standalone,true,false,seasoning
+flour tortilla,wheat tortillas,flour tortilla,standalone,false,false,starch
+little gem lettuce,lettuce,little gem lettuce,related_variant,false,false,produce
+salsa,salsa,salsa,standalone,false,false,seasoning
+kale,kale,kale,standalone,false,false,produce
+white vinegar,white vinegar,white vinegar,standalone,false,false,seasoning
+morning glory,morning glory,morning glory,standalone,false,false,produce
+soya bean,soybean,soya bean,standalone,false,false,protein
+chilli,fresh hot chile,chilli,canonical,false,false,aromatic
+rice flour,rice flour,rice flour,standalone,false,false,starch
+wheat flour,wheat flour,wheat flour,standalone,true,false,starch
+shortcrust pastry,shortcrust pastry,shortcrust pastry,canonical,false,false,starch
+muscovado sugar,soft brown sugar,muscovado sugar,related_variant,false,false,seasoning
+single cream,dairy cream,single cream,related_variant,false,false,dairy
+dried apricots,dried apricots,dried apricots,standalone,false,false,produce
+tamarind pulp,tamarind,tamarind pulp,canonical,false,false,seasoning
+canned beans,canned beans,canned beans,standalone,false,false,protein
+cream cheese,cream cheese,cream cheese,standalone,false,false,dairy
+cashew nuts,cashews,cashews,exact_equivalent,false,false,seasoning
+farine,farine,farine,standalone,true,false,starch
+cassava flour,cassava flour,cassava flour,standalone,false,false,starch
+cassava,cassava root,cassava,canonical,false,false,starch
+dark brown soft sugar,soft brown sugar,dark brown soft sugar,related_variant,false,false,seasoning
+casabe,casabe,casabe,standalone,false,false,starch
+turkey ham,turkey ham,turkey ham,standalone,false,false,protein
+sweetcorn,sweetcorn,sweetcorn,canonical,false,false,produce
+green olives,green olives,green olives,canonical,false,false,seasoning
+beets,beets,beetroot,exact_equivalent,false,false,produce
+peas,green peas,peas,canonical,false,false,produce
+lobster,lobster,lobster,standalone,false,false,protein
+vegetable stock cube,vegetable stock,vegetable stock cube,related_variant,false,false,seasoning
+strong white bread flour,bread flour,bread flour,exact_equivalent,false,false,starch
+poppy seeds,poppy seeds,poppy seeds,canonical,false,false,seasoning
+gouda cheese,gouda cheese,gouda cheese,standalone,false,false,dairy
+emmentaler cheese,emmentaler cheese,emmentaler cheese,standalone,false,false,dairy
+phyllo dough,phyllo,phyllo dough,canonical,false,false,starch
+white flour,white flour,white flour,standalone,true,true,starch
+pickle juice,pickle juice,pickle juice,standalone,false,false,seasoning
+celery salt,celery salt,celery salt,standalone,false,false,seasoning
+mustard powder,mustard seed,mustard powder,canonical,false,false,seasoning
+squash,winter squash,squash,canonical,true,false,produce
+parmesan cheese,parmesan,parmesan,exact_equivalent,false,false,dairy
+bowtie pasta,wheat pasta,bowtie pasta,related_variant,false,false,starch
+jerk,jerk,jerk,standalone,true,false,seasoning
+sun-dried tomatoes,sun-dried tomatoes,sun-dried tomatoes,standalone,false,false,produce
+dry white wine,white wine,dry white wine,related_variant,false,false,seasoning
+ginger cordial,ginger cordial,ginger cordial,standalone,false,false,seasoning
+harissa spice,harissa spice,harissa spice,standalone,false,false,seasoning
+chickpeas,chickpeas,chickpeas,canonical,false,false,protein
+enchilada sauce,enchilada sauce,enchilada sauce,standalone,false,false,seasoning
+shredded monterey jack cheese,monterey jack,monterey jack cheese,exact_equivalent,false,false,dairy
+corn tortillas,corn tortillas,corn tortillas,standalone,false,false,starch
+chicken breasts,chicken meat,chicken breast,exact_equivalent,false,false,protein
+macaroni,wheat pasta,macaroni,related_variant,false,false,starch
+fajita seasoning,fajita seasoning,fajita seasoning,standalone,false,false,seasoning
+canola oil,neutral cooking oil,canola oil,related_variant,false,true,seasoning
+chinese five spice powder,chinese five spice,chinese five spice powder,canonical,false,false,seasoning
+ham,ham,ham,canonical,false,false,protein
+ginger paste,ginger,ginger paste,related_variant,false,false,aromatic
+fenugreek,fenugreek,fenugreek,standalone,false,false,seasoning
+orange juice,orange juice,orange juice,standalone,false,false,seasoning
+sake,sake,sake,standalone,false,false,seasoning
+granulated sugar,granulated sugar,granulated sugar,canonical,false,true,seasoning
+potato starch,potato starch,potato starch,standalone,false,false,seasoning
+chicken liver,chicken liver,chicken liver,standalone,false,false,protein
+ground mustard,mustard seed,mustard powder,exact_equivalent,false,false,seasoning
+sherry,sherry,sherry,canonical,false,false,seasoning
+chicken wings,chicken meat,chicken wings,related_variant,false,false,protein
+passata,passata,passata,standalone,false,false,seasoning
+gruyere cheese,gruyere,gruyere,exact_equivalent,false,false,dairy
+quinoa,quinoa,quinoa,standalone,false,false,starch
+dijon mustard,prepared mustard,dijon mustard,related_variant,false,false,seasoning
+pine nuts,pine nuts,pine nuts,standalone,false,false,seasoning
+sherry vinegar,sherry vinegar,sherry vinegar,standalone,false,false,seasoning
+spinach,spinach,spinach,standalone,false,false,produce
+zapallo squash,winter squash,zapallo squash,related_variant,false,false,produce
+lamb loin chops,lamb cuts,lamb loin chops,related_variant,false,false,protein
+linguine pasta,wheat pasta,linguine pasta,related_variant,false,false,starch
+sugar snap peas,edible pod peas,sugar snap peas,related_variant,false,false,produce
+king prawns,shrimp and prawns,king prawns,related_variant,false,false,protein
+fromage frais,fromage frais,fromage frais,standalone,false,false,dairy
+chicken bouillon powder,chicken stock,chicken bouillon powder,related_variant,false,false,seasoning
+red wine jelly,red wine jelly,red wine jelly,standalone,false,false,seasoning
+molasses,molasses,molasses,canonical,false,false,seasoning
+bread flour,bread flour,bread flour,canonical,false,false,starch
+light brown soft sugar,soft brown sugar,light brown soft sugar,related_variant,false,false,seasoning
+dark chocolate chips,chocolate chips,dark chocolate chips,related_variant,false,false,seasoning
+unsweetened cocoa,cocoa powder,cocoa powder,exact_equivalent,false,false,seasoning
+milk chocolate,milk chocolate,milk chocolate,standalone,false,false,seasoning
+cacao,cocoa powder,cacao,related_variant,true,false,seasoning
+vanilla,vanilla flavoring,vanilla,related_variant,true,false,seasoning
+mars bar,mars bar,mars bar,standalone,false,false,seasoning
+rice krispies,rice krispies,rice krispies,standalone,false,false,starch
+golden caster sugar,granulated sugar,golden caster sugar,related_variant,false,false,seasoning
+plain chocolate,dark chocolate,plain chocolate,related_variant,true,false,seasoning
+cocoa,cocoa powder,cocoa,related_variant,true,false,seasoning
+freekeh,freekeh,freekeh,standalone,false,false,starch
+lamb,lamb cuts,lamb,canonical,false,false,protein
+zucchini,zucchini,zucchini,canonical,false,false,produce
+beef tomatoes,fresh tomatoes,beef tomatoes,related_variant,false,false,produce
+candied peel,candied citrus peel,candied peel,canonical,false,false,seasoning
+glace cherry,glace cherry,glace cherry,standalone,false,false,seasoning
+currants,currants,currants,standalone,false,false,produce
+mixed spice,mixed spice,mixed spice,standalone,false,false,seasoning
+rose water,rose water,rose water,standalone,false,false,seasoning
+dark soft brown sugar,soft brown sugar,dark brown soft sugar,exact_equivalent,false,false,seasoning
+rolled oats,oats,rolled oats,canonical,false,false,starch
+christmas pudding,christmas pudding,christmas pudding,standalone,false,false,starch
+grand marnier,grand marnier,grand marnier,standalone,false,false,seasoning
+custard,custard,custard,standalone,false,false,dairy
+new potatoes,potatoes,new potatoes,related_variant,false,false,starch
+pork chops,pork meat cuts,pork chops,related_variant,false,false,protein
+strong white flour,bread flour,bread flour,exact_equivalent,false,false,starch
+fast action yeast,bakers yeast,instant yeast,exact_equivalent,false,false,seasoning
+clams,clams,clams,standalone,false,false,protein
+brandy,brandy,brandy,standalone,false,false,seasoning
+asparagus,asparagus,asparagus,canonical,false,false,produce
+dried leaves of summer savoury,summer savory,dried leaves of summer savoury,related_variant,false,false,seasoning
+ground clove,cloves,ground clove,related_variant,false,false,seasoning
+russet potato,potatoes,russet potato,related_variant,false,false,starch
+cider,cider,cider,standalone,false,false,seasoning
+farmers cheese,farmers cheese,farmers cheese,standalone,false,false,dairy
+sazon goya with azafran,sazon,sazon goya with azafran,related_variant,false,false,seasoning
+conchs,conchs,conchs,standalone,false,false,protein
+seasoning,seasoning,seasoning,standalone,true,false,seasoning
+lentils,whole lentils,lentils,canonical,false,false,protein
+corn on the cob,sweetcorn,corn on the cob,related_variant,false,false,produce
+small potatoes,potatoes,small potatoes,related_variant,false,false,starch
+corned beef,corned beef,corned beef,standalone,false,false,protein
+freshly chopped parsley,fresh parsley,parsley,exact_equivalent,false,false,aromatic
+cottage cheese,cottage cheese,cottage cheese,standalone,false,false,dairy
+mango,mango,mango,standalone,false,false,produce
+ice cubes,ice cubes,ice cubes,standalone,false,false,seasoning
+chopped tomatoes,canned tomatoes,chopped tomatoes,related_variant,true,false,produce
+orange zest,orange zest,orange zest,standalone,false,false,seasoning
+tempura flour,tempura flour,tempura flour,standalone,false,false,starch
+italian fennel sausages,italian fennel sausages,italian fennel sausages,standalone,false,false,protein
+shiitake mushrooms,fresh mushrooms,shiitake mushrooms,related_variant,false,false,produce
+courgettes,zucchini,zucchini,exact_equivalent,false,false,produce
+lamb shoulder,lamb cuts,lamb shoulder,related_variant,false,false,protein
+garlic sauce,garlic sauce,garlic sauce,standalone,false,false,seasoning
+vinaigrette dressing,vinaigrette dressing,vinaigrette dressing,standalone,false,false,seasoning
+refried beans,refried beans,refried beans,standalone,false,false,protein
+hard taco shells,hard taco shells,hard taco shells,standalone,false,false,starch
+shredded mexican cheese,shredded mexican cheese,shredded mexican cheese,standalone,false,false,dairy
+grape tomatoes,fresh tomatoes,grape tomatoes,related_variant,false,false,produce
+green salsa,green salsa,green salsa,standalone,false,false,seasoning
+cuban bread,bread,cuban bread,related_variant,false,false,starch
+swiss cheese,swiss cheese,swiss cheese,standalone,false,false,dairy
+deli ham,ham,deli ham,related_variant,false,false,protein
+fennel bulb,fennel bulb,fennel bulb,canonical,false,false,produce
+beef stock cubes,beef stock,beef stock cubes,related_variant,false,false,seasoning
+feather blade beef,beef braising cuts,feather blade beef,related_variant,false,false,protein
+mature cheddar,cheddar,mature cheddar,related_variant,false,false,dairy
+toor dal,toor dal,toor dal,standalone,false,false,protein
+ghee,ghee,ghee,standalone,false,false,seasoning
+mustard seeds,mustard seed,mustard seeds,related_variant,false,false,seasoning
+rye grain,rye grain,rye grain,canonical,false,false,starch
+dark beer,beer,dark beer,related_variant,false,false,seasoning
+buttermilk,buttermilk,buttermilk,standalone,false,false,dairy
+seeds,seeds,seeds,standalone,true,false,seasoning
+rye flour,rye flour,rye flour,standalone,false,false,starch
+pitted dates,dates,pitted dates,canonical,false,false,produce
+oats,oats,oats,related_variant,false,false,starch
+pickled grape leaves,vine leaves,pickled grape leaves,related_variant,false,false,produce
+boiling water,water,boiling water,related_variant,false,true,seasoning
+instant yeast,bakers yeast,instant yeast,canonical,false,false,seasoning
+flat rice noodles,rice noodles,flat rice noodles,related_variant,false,false,starch
+duck legs,duck legs,duck legs,standalone,false,false,protein
+maria cookies,maria cookies,maria cookies,standalone,false,false,starch
+sweetened condensed milk,condensed milk,sweetened condensed milk,canonical,false,false,dairy
+apricot jam,apricot jam,apricot jam,standalone,false,false,seasoning
+buckwheat flour,buckwheat flour,buckwheat flour,standalone,false,false,starch
+dutch stroop,dutch stroop,dutch stroop,standalone,false,false,seasoning
+yellow pepper,sweet peppers,yellow pepper,related_variant,false,false,produce
+sweet smoked paprika,smoked paprika,sweet smoked paprika,related_variant,false,false,seasoning
+summer savoury,summer savory,summer savoury,canonical,false,false,seasoning
+mixed peel,candied citrus peel,candied peel,exact_equivalent,false,false,seasoning
+unsalted beef stock,beef stock,unsalted beef stock,related_variant,false,false,seasoning
+shaoxing wine,shaoxing wine,shaoxing wine,canonical,false,false,seasoning
+mung bean sprouts,mung bean sprouts,mung bean sprouts,canonical,false,false,produce
+shrimp,shrimp and prawns,shrimp,canonical,false,false,protein
+pita bread,flatbread,pita bread,canonical,false,false,starch
+red snapper,red snapper,red snapper,standalone,false,false,protein
+malt vinegar,malt vinegar,malt vinegar,standalone,false,false,seasoning
+strawberries,strawberries,strawberries,standalone,false,false,produce
+pomegranate molasses,pomegranate molasses,pomegranate molasses,standalone,false,false,seasoning
+sumac,sumac,sumac,standalone,false,false,seasoning
+chickpea flour,chickpea flour,chickpea flour,standalone,false,false,starch
+falafel,falafel,falafel,standalone,false,false,protein
+whole black peppercorns,black pepper,whole black peppercorns,exact_equivalent,false,true,seasoning
+fettuccine,wheat pasta,fettuccine,related_variant,false,false,starch
+clotted cream,clotted cream,clotted cream,standalone,false,false,dairy
+haddock,haddock,haddock,standalone,false,false,protein
+floury potatoes,potatoes,floury potatoes,related_variant,false,false,starch
+semi-skimmed milk,dairy milk,semi-skimmed milk,related_variant,false,false,dairy
+white fish fillets,white fish fillets,white fish fillets,canonical,false,false,protein
+jerusalem artichokes,jerusalem artichokes,jerusalem artichokes,standalone,false,false,produce
+gruyère,gruyere,gruyere,exact_equivalent,false,false,dairy
+fish stock,fish stock,fish stock,standalone,false,false,seasoning
+cod,cod,cod,standalone,false,false,protein
+mussels,mussels,mussels,standalone,false,false,protein
+graham cracker crumbs,graham cracker crumbs,graham cracker crumbs,standalone,false,false,starch
+cream of tartar,cream of tartar,cream of tartar,standalone,false,false,seasoning
+turnips,turnips,turnips,standalone,false,false,produce
+french lentils,whole lentils,french lentils,related_variant,false,false,protein
+tarragon leaves,tarragon leaves,tarragon leaves,standalone,false,false,aromatic
+sardines,sardines,sardines,canonical,false,false,protein
+capers,capers,capers,standalone,false,false,seasoning
+cocoy banana,banana,cocoy banana,related_variant,false,false,produce
+crab meay,crab meay,crab meay,standalone,false,false,protein
+frogs legs,frogs legs,frogs legs,standalone,false,false,protein
+broad beans,broad beans,broad beans,standalone,false,false,protein
+baked beans,baked beans,baked beans,standalone,false,false,protein
+salsa lizano,salsa lizano,salsa lizano,standalone,false,false,seasoning
+chopped onion,onions,onion,exact_equivalent,false,false,aromatic
+cubed feta cheese,feta,feta,exact_equivalent,false,false,dairy
+gochujang,gochujang,gochujang,standalone,false,false,seasoning
+speculaas spice mix,speculaas spice mix,speculaas spice mix,standalone,false,false,seasoning
+almond paste,almond paste,almond paste,standalone,false,false,seasoning
+chopped parsley,fresh parsley,parsley,exact_equivalent,false,false,aromatic
+gingerbread spice,gingerbread spice,gingerbread spice,standalone,false,false,seasoning
+grape nut cereal,grape nut cereal,grape nut cereal,standalone,false,false,starch
+tahini paste,tahini,tahini,exact_equivalent,false,false,seasoning
+strong wholemeal flour,bread flour,strong wholemeal flour,related_variant,false,false,starch
+monterey jack cheese,monterey jack,monterey jack cheese,canonical,false,false,dairy
+colby jack cheese,colby jack cheese,colby jack cheese,standalone,false,false,dairy
+grits,grits,grits,standalone,false,false,starch
+light raisins,raisins,light raisins,related_variant,false,false,produce
+cherry,fresh cherries,cherry,standalone,false,false,produce
+jamón ibérico,dry cured ham,jamón ibérico,related_variant,false,false,protein
+date molasses,date molasses,date molasses,standalone,false,false,seasoning
+fruit mix,fruit mix,fruit mix,standalone,false,false,produce
+wood ear mushrooms,fresh mushrooms,wood ear mushrooms,related_variant,false,false,produce
+tofu,tofu,tofu,canonical,false,false,protein
+white chocolate chips,chocolate chips,white chocolate chips,related_variant,false,false,seasoning
+miniature marshmallows,miniature marshmallows,miniature marshmallows,standalone,false,false,seasoning
+lamb leg,lamb cuts,lamb leg,related_variant,false,false,protein
+sweet peppadew peppers,sweet peppadew peppers,sweet peppadew peppers,standalone,false,false,produce
+coarse salt,salt,coarse salt,related_variant,false,true,seasoning
+whole wheat,whole wheat,whole wheat,standalone,false,false,starch
+charlotte potatoes,potatoes,charlotte potatoes,related_variant,false,false,starch
+fresh thyme,thyme,fresh thyme,canonical,false,false,aromatic
+jam,jam,jam,standalone,false,false,seasoning
+fine yellow cornmeal,cornmeal,fine yellow cornmeal,related_variant,false,false,starch
+ground allspice,allspice,ground allspice,related_variant,false,false,seasoning
+all-purpose seasoning,all-purpose seasoning,all-purpose seasoning,standalone,false,false,seasoning
+goat meat,goat meat,goat meat,standalone,false,false,protein
+jamaican curry powder,jamaican curry powder,jamaican curry powder,standalone,false,false,seasoning
+jumbo shrimp,shrimp and prawns,jumbo shrimp,related_variant,false,false,protein
+unsweetened coconut milk,coconut milk,coconut milk,exact_equivalent,false,false,seasoning
+ground annatto,annatto,ground annatto,related_variant,false,false,seasoning
+shrimp stock,shrimp stock,shrimp stock,standalone,false,false,seasoning
+caramelized sugar sauce,caramel sauce,caramelized sugar sauce,related_variant,false,false,seasoning
+dried cranberries,cranberries,dried cranberries,related_variant,false,false,produce
+dried cherries,dried cherries,dried cherries,standalone,false,false,produce
+sweet potatoes,sweet potatoes,sweet potatoes,standalone,false,false,starch
+wild garlic leaves,wild garlic leaves,wild garlic leaves,standalone,false,false,aromatic
+manchego,manchego,manchego,standalone,false,false,dairy
+sushi rice,short grain rice,sushi rice,canonical,false,false,starch
+mirin,mirin,mirin,standalone,false,false,seasoning
+yellow split peas,yellow split peas,yellow split peas,standalone,false,false,protein
+kabse spice,kabse spice,kabse spice,standalone,false,false,seasoning
+ras el hanout,ras el hanout,ras el hanout,standalone,false,false,seasoning
+fries,fries,fries,standalone,false,false,starch
+doner meat,doner meat,doner meat,standalone,false,false,protein
+carrot,carrots,carrot,canonical,false,false,produce
+smoked haddock,smoked haddock,smoked haddock,standalone,false,false,protein
+lamb fat,lamb fat,lamb fat,standalone,false,false,seasoning
+sage,sage,sage,standalone,false,false,aromatic
+sirloin steak tips,beef steaks,sirloin steak tips,related_variant,false,false,protein
+semolina flour,semolina,semolina flour,related_variant,false,false,starch
+knafeh,knafeh,knafeh,standalone,true,false,starch
+yellow food colouring,yellow food colouring,yellow food colouring,standalone,false,false,seasoning
+garlic bulb,fresh garlic,garlic,exact_equivalent,false,false,aromatic
+chilli sauce,hot sauce,chilli sauce,related_variant,true,false,seasoning
+brown lentils,whole lentils,brown lentils,related_variant,false,false,protein
+ground mahleb,ground mahleb,ground mahleb,standalone,false,false,seasoning
+red chilli flakes,chile flakes,red chilli flakes,canonical,false,false,seasoning
+water chestnut,water chestnut,water chestnut,standalone,false,false,produce
+peanuts,peanuts,peanuts,canonical,false,false,seasoning
+whipping cream,dairy cream,whipping cream,related_variant,false,false,dairy
+thai red curry paste,thai red curry paste,thai red curry paste,canonical,false,false,seasoning
+khus khus,poppy seeds,poppy seeds,exact_equivalent,false,false,seasoning
+full fat yogurt,plain yogurt,full fat yogurt,related_variant,false,false,dairy
+biryani masala,biryani masala,biryani masala,standalone,false,false,seasoning
+madras paste,madras paste,madras paste,standalone,false,false,seasoning
+tomato purée,tomato puree,tomato purée,exact_equivalent,true,false,seasoning
+butternut squash,winter squash,butternut squash,related_variant,false,false,produce
+vine leaves,vine leaves,vine leaves,canonical,false,false,produce
+clove,cloves,clove,canonical,false,false,seasoning
+bulgur wheat,bulgur wheat,bulgur wheat,standalone,false,false,starch
+bun,bread,bun,related_variant,false,false,starch
+lamb kidney,lamb kidney,lamb kidney,standalone,false,false,protein
+sour pork sausage,sour pork sausage,sour pork sausage,standalone,false,false,protein
+pickled garlics,pickled garlics,pickled garlics,standalone,false,false,seasoning
+hot mint,hot mint,hot mint,standalone,true,false,aromatic
+roasted peanut,peanuts,roasted peanut,related_variant,false,false,seasoning
+vegetables,vegetables,vegetables,standalone,false,false,produce
+plantain,plantain,plantain,standalone,false,false,starch
+lasagne sheets,lasagne sheets,lasagne sheets,standalone,false,false,starch
+mozzarella balls,mozzarella,mozzarella balls,related_variant,false,false,dairy
+lemongrass stalks,lemongrass,lemongrass,exact_equivalent,false,false,aromatic
+five spice powder,chinese five spice,chinese five spice powder,exact_equivalent,false,false,seasoning
+dried white corn,dried white corn,dried white corn,standalone,false,false,starch
+doubanjiang,doubanjiang,doubanjiang,canonical,false,false,seasoning
+fermented black beans,fermented black beans,fermented black beans,standalone,false,false,seasoning
+sichuan pepper,sichuan pepper,sichuan pepper,canonical,false,false,seasoning
+ground onion,ground onion,ground onion,standalone,false,false,seasoning
+strained yoghurt,plain yogurt,strained yoghurt,related_variant,false,false,dairy
+massaman curry paste,massaman curry paste,massaman curry paste,standalone,false,false,seasoning
+dried dill,dill,dried dill,related_variant,false,false,aromatic
+beef flank steak,beef steaks,beef flank steak,related_variant,false,false,protein
+paneer,paneer,paneer,standalone,false,false,protein
+almond flour,almond flour,almond flour,standalone,false,false,starch
+dried shrimp,dried shrimp,dried shrimp,standalone,false,false,seasoning
+pickled scallion heads,pickled scallion heads,pickled scallion heads,standalone,false,false,seasoning
+pickled scallion head brine,pickled scallion head brine,pickled scallion head brine,standalone,false,false,seasoning
+galangal,galangal,galangal,canonical,false,false,aromatic
+baby plum tomatoes,fresh tomatoes,baby plum tomatoes,related_variant,false,false,produce
+fresh basil,fresh basil,fresh basil,canonical,false,false,aromatic
+farfalle,wheat pasta,bowtie pasta,exact_equivalent,false,false,starch
+tuna,tuna,tuna,standalone,false,false,protein
+chinese broccoli,chinese broccoli,chinese broccoli,standalone,false,false,produce
+beef cutlet,beef steaks,beef cutlet,related_variant,false,false,protein
+mincemeat,mincemeat,mincemeat,standalone,false,false,seasoning
+ready rolled shortcrust pastry,shortcrust pastry,ready rolled shortcrust pastry,related_variant,false,false,starch
+chopped chive,chives,chives,exact_equivalent,false,false,aromatic
+dried white navy beans,white beans,dried white navy beans,related_variant,false,false,protein
+cider vinegar,apple cider vinegar,apple cider vinegar,exact_equivalent,false,false,seasoning
+mulukhiyah,mulukhiyah,mulukhiyah,standalone,false,false,produce
+chestnuts,chestnuts,chestnuts,canonical,false,false,produce
+wild mushrooms,fresh mushrooms,wild mushrooms,related_variant,false,false,produce
+truffle oil,truffle oil,truffle oil,standalone,false,false,seasoning
+custard powder,custard powder,custard powder,standalone,false,false,seasoning
+napa cabbage,napa cabbage,napa cabbage,canonical,false,false,produce
+peanut oil,neutral cooking oil,ground nut oil,exact_equivalent,false,false,seasoning
+anchovy fillet,anchovy fillet,anchovy fillet,standalone,false,false,seasoning
+hot smoked flaked salmon,smoked salmon,hot smoked flaked salmon,related_variant,false,false,protein
+pretzels,pretzels,pretzels,standalone,false,false,starch
+ground nut oil,neutral cooking oil,ground nut oil,related_variant,false,false,seasoning
+horseradish,horseradish,horseradish,standalone,false,false,seasoning
+white asparagus,asparagus,white asparagus,related_variant,false,false,produce
+rye bread,rye bread,rye bread,standalone,false,false,starch
+västerbottensost cheese,västerbottensost cheese,västerbottensost cheese,standalone,false,false,dairy
+glutinous rice,glutinous rice,glutinous rice,standalone,false,false,starch
+mung bean paste,mung bean paste,mung bean paste,standalone,false,false,seasoning
+sticky rice flour,sticky rice flour,sticky rice flour,standalone,false,false,starch
+pandan leaves,pandan leaves,pandan leaves,standalone,false,false,aromatic
+taro,taro,taro,standalone,false,false,starch
+longan,longan,longan,standalone,false,false,produce
+baguette,bread,baguette,related_variant,false,false,starch
+sriracha,hot sauce,sriracha,related_variant,false,false,seasoning
+ground oats,oats,ground oats,related_variant,false,false,starch
+sugar syrup,sugar syrup,sugar syrup,standalone,false,false,seasoning
+cooking apples,apples,cooking apples,related_variant,false,false,produce
+vanilla powder,vanilla flavoring,vanilla powder,related_variant,false,false,seasoning
+veal,veal,veal,standalone,false,false,protein
+oyster mushrooms,fresh mushrooms,oyster mushrooms,related_variant,false,false,produce
+rice stick noodles,rice noodles,rice stick noodles,related_variant,false,false,starch
+dark soy sauce,soy sauce,dark soy sauce,related_variant,false,false,seasoning
+tiger prawns,shrimp and prawns,tiger prawns,related_variant,false,false,protein
+padron peppers,sweet peppers,padron peppers,related_variant,false,false,produce
+raw yucca,cassava root,cassava,exact_equivalent,false,false,starch
+hake,hake,hake,standalone,false,false,protein
+panang curry paste,panang curry paste,panang curry paste,standalone,false,false,seasoning
+makrut lime leaves,makrut lime leaves,makrut lime leaves,canonical,false,false,aromatic
+dried red chillies,dried whole chile,dried red chillies,related_variant,false,false,seasoning
+shrimp paste,shrimp paste,shrimp paste,standalone,false,false,seasoning
+lemongrass,lemongrass,lemongrass,canonical,false,false,aromatic
+blueberries,blueberries,blueberries,standalone,false,false,produce
+green papaya,green papaya,green papaya,standalone,false,false,produce
+unsalted peanuts,peanuts,unsalted peanuts,related_variant,false,false,seasoning
+oatmeal,oats,oatmeal,related_variant,true,false,starch
+unflavoured gelatin,gelatin,unflavoured gelatin,canonical,false,false,seasoning
+passion fruit pulp,passion fruit pulp,passion fruit pulp,standalone,false,false,produce
+panquehue cheese,panquehue cheese,panquehue cheese,standalone,false,false,dairy
+creamed corn,creamed corn,creamed corn,standalone,false,false,produce
+peaches,peaches,peaches,standalone,false,false,produce
+peanut cookies,peanut cookies,peanut cookies,standalone,false,false,starch
+gelatine leafs,gelatin,gelatine leafs,related_variant,false,false,seasoning
+peanut brittle,peanut brittle,peanut brittle,standalone,false,false,seasoning
+pears,pears,pears,standalone,false,false,produce
+flank steak,beef steaks,beef flank steak,exact_equivalent,false,false,protein
+plum jam,plum jam,plum jam,standalone,false,false,seasoning
+spaghetti,wheat pasta,spaghetti,canonical,false,false,starch
+pilchards,sardines,sardines,exact_equivalent,false,false,protein
+pistachio paste,pistachio paste,pistachio paste,standalone,false,false,seasoning
+unwaxed lime,limes,unwaxed lime,related_variant,false,false,produce
+white chocolate,white chocolate,white chocolate,standalone,false,false,seasoning
+unsalted pistachio,pistachios,unsalted pistachio,related_variant,false,false,seasoning
+oreo cream biscuits,oreo cream biscuits,oreo cream biscuits,standalone,false,false,starch
+sevaiiya,sevaiiya,sevaiiya,standalone,true,false,starch
+malai,malai,malai,standalone,true,false,dairy
+mixed peppers,sweet peppers,mixed peppers,related_variant,true,false,produce
+coco sugar,palm sugar,coco sugar,related_variant,false,false,seasoning
+bread rolls,bread,bread rolls,related_variant,false,false,starch
+stale bread,bread,stale bread,related_variant,false,false,starch
+achiote paste,achiote paste,achiote paste,standalone,false,false,seasoning
+baby lettuce leaves,lettuce,baby lettuce leaves,related_variant,false,false,produce
+pomegranate,pomegranate,pomegranate,standalone,false,false,produce
+white sauerkraut,sauerkraut,sauerkraut,exact_equivalent,false,false,seasoning
+fennel seeds,fennel seeds,fennel seeds,standalone,false,false,seasoning
+haricot beans,white beans,haricot beans,related_variant,false,false,protein
+great northern beans,white beans,great northern beans,related_variant,false,false,protein
+lima beans,lima beans,lima beans,canonical,false,false,protein
+banana pepper,fresh hot chile,banana pepper,related_variant,false,false,aromatic
+ciabatta,bread,ciabatta,related_variant,false,false,starch
+peach juice,peach juice,peach juice,standalone,false,false,seasoning
+beef gravy,beef gravy,beef gravy,standalone,false,false,seasoning
+cheese curds,cheese curds,cheese curds,standalone,false,false,dairy
+prahok,prahok,prahok,standalone,false,false,seasoning
+shelled hazelnuts,hazelnuts,shelled hazelnuts,related_variant,false,false,seasoning
+lamb stock,lamb stock,lamb stock,standalone,false,false,seasoning
+soda water,soda water,soda water,standalone,false,false,seasoning
+purple sprouting broccoli,broccoli,purple sprouting broccoli,related_variant,false,false,produce
+sweet quark,sweet quark,sweet quark,standalone,false,false,dairy
+rhubarb,rhubarb,rhubarb,standalone,false,false,produce
+pork knuckle,pork meat cuts,pork knuckle,related_variant,false,false,protein
+bouillon cubes,bouillon cubes,bouillon cubes,standalone,true,false,seasoning
+mackerel,mackerel,mackerel,standalone,false,false,protein
+tamarind ball,tamarind,tamarind ball,related_variant,false,false,seasoning
+canned tomatoes,canned tomatoes,canned tomatoes,canonical,false,false,produce
+wholegrain bread,bread,wholegrain bread,related_variant,false,false,starch
+rice paper sheets,rice paper sheets,rice paper sheets,standalone,false,false,starch
+smoky paprika,smoked paprika,smoked paprika,exact_equivalent,false,false,seasoning
+pitted black olives,black olives,pitted black olives,related_variant,false,false,seasoning
+rigatoni,wheat pasta,rigatoni,related_variant,false,false,starch
+pecorino,pecorino,pecorino,standalone,false,false,dairy
+baby aubergine,eggplant,baby aubergine,related_variant,false,false,produce
+frozen peas,green peas,frozen peas,related_variant,false,false,produce
+full fat sour cream,sour cream,full fat sour cream,related_variant,false,false,dairy
+pimento stuffed olives,green olives,pimento stuffed olives,related_variant,false,false,seasoning
+kabanos sausages,kabanos,kabanos sausages,canonical,false,false,protein
+runner beans,green beans,runner beans,related_variant,false,false,produce
+rye,rye grain,rye,related_variant,false,false,starch
+english muffins,english muffins,english muffins,standalone,false,false,starch
+smoked salmon,smoked salmon,smoked salmon,canonical,false,false,protein
+petit pois,green peas,petit pois,related_variant,false,false,produce
+szechuan peppercorns,sichuan pepper,sichuan pepper,exact_equivalent,false,false,seasoning
+jersey royal potatoes,potatoes,jersey royal potatoes,related_variant,false,false,starch
+caramel,caramel,caramel,standalone,false,false,seasoning
+caramel sauce,caramel sauce,caramel sauce,canonical,false,false,seasoning
+toffee popcorn,toffee popcorn,toffee popcorn,standalone,false,false,seasoning
+ackee,ackee,ackee,standalone,false,false,produce
+bamboo shoot,bamboo shoot,bamboo shoot,standalone,false,false,produce
+pineapple chunks,pineapple chunks,pineapple chunks,standalone,false,false,produce
+vegetable shortening,vegetable shortening,vegetable shortening,canonical,false,false,seasoning
+saskatoon berries,saskatoon berries,saskatoon berries,standalone,false,false,produce
+hispi (sweetheart) cabbage,headed cabbage,hispi (sweetheart) cabbage,related_variant,false,false,produce
+sea bass fillets,sea bass fillets,sea bass fillets,standalone,false,false,protein
+vermicelli pasta,wheat pasta,vermicelli pasta,related_variant,false,false,starch
+monkfish,monkfish,monkfish,standalone,false,false,protein
+baby squid,squid,baby squid,related_variant,false,false,protein
+frozen seafood mix,frozen seafood mix,frozen seafood mix,standalone,false,false,protein
+chuck roast,beef braising cuts,chuck roast,canonical,false,false,protein
+cooking wine,cooking wine,cooking wine,standalone,false,false,seasoning
+snow peas,edible pod peas,snow peas,canonical,false,false,produce
+chilli bean paste,doubanjiang,chilli bean paste,related_variant,true,false,seasoning
+chinese long beans,green beans,chinese long beans,related_variant,false,false,produce
+dried chillies,dried whole chile,dried chillies,canonical,false,false,seasoning
+silken tofu,tofu,silken tofu,related_variant,false,false,protein
+chinese sesame sauce,chinese sesame sauce,chinese sesame sauce,standalone,false,false,seasoning
+palm hearts,palm hearts,palm hearts,standalone,false,false,produce
+seasoned rice vinegar,rice vinegar,seasoned rice vinegar,related_variant,false,false,seasoning
+vermicelli rice noodles,rice noodles,rice vermicelli,exact_equivalent,false,false,starch
+nougatine,nougatine,nougatine,standalone,true,false,seasoning
+herring,herring,herring,standalone,false,false,protein
+grapefruit,grapefruit,grapefruit,standalone,false,false,produce
+smoky aïoli,smoky aïoli,smoky aïoli,standalone,false,false,seasoning
+cashews,cashews,cashews,canonical,false,false,seasoning
+lean minced beef,ground beef,lean minced beef,related_variant,false,false,protein
+hot beef stock,beef stock,hot beef stock,related_variant,false,false,seasoning
+pinto beans,pinto beans,pinto beans,standalone,false,false,protein
+roasted pepper,sweet peppers,roasted pepper,related_variant,true,false,produce
+serrano ham,dry cured ham,serrano ham,related_variant,false,false,protein
+vine tomatoes,fresh tomatoes,vine tomatoes,related_variant,false,false,produce
+hot smoked paprika,smoked paprika,hot smoked paprika,related_variant,false,false,seasoning
+penne rigate,wheat pasta,penne rigate,related_variant,false,false,starch
+italian seasoning,italian seasoning,italian seasoning,standalone,false,false,seasoning
+parmigiano-reggiano,parmesan,parmigiano-reggiano,related_variant,false,false,dairy
+can of chickpeas,chickpeas,can of chickpeas,related_variant,false,false,protein
+brown rice noodle,rice noodles,brown rice noodle,related_variant,false,false,starch
+fillet of steak,beef steaks,fillet of steak,related_variant,true,false,protein
+chinese cabbage,napa cabbage,chinese cabbage,related_variant,true,false,produce
+tabasco sauce,hot sauce,tabasco sauce,related_variant,false,false,seasoning
+chicken drumsticks,chicken meat,chicken drumsticks,related_variant,false,false,protein
+medjool dates,dates,medjool dates,related_variant,false,false,produce
+ground poppy seeds,poppy seeds,ground poppy seeds,related_variant,false,false,seasoning
+redcurrants,redcurrants,redcurrants,standalone,false,false,produce
+rice wine,shaoxing wine,rice wine,related_variant,false,false,seasoning
+pineapple juice,pineapple juice,pineapple juice,standalone,false,false,seasoning
+parsnips,parsnips,parsnips,standalone,false,false,produce
+shredded coconut,shredded coconut,shredded coconut,canonical,false,false,seasoning
+wholegrain mustard,prepared mustard,wholegrain mustard,related_variant,false,false,seasoning
+stir-fry vegetables,stir-fry vegetables,stir-fry vegetables,standalone,false,false,produce
+brown rice,brown rice,brown rice,standalone,false,false,starch
+egg noodles,egg noodles,egg noodles,standalone,false,false,starch
+chinese leaf,napa cabbage,napa cabbage,exact_equivalent,false,false,produce
+thai green curry paste,thai green curry paste,thai green curry paste,standalone,false,false,seasoning
+udon noodles,udon noodles,udon noodles,standalone,false,false,starch
+lime leaves,makrut lime leaves,lime leaves,related_variant,true,false,aromatic
+thai fish sauce,fish sauce,thai fish sauce,related_variant,false,false,seasoning
+pork tenderloin,pork meat cuts,pork tenderloin,related_variant,false,false,protein
+raw frozen prawns,shrimp and prawns,raw frozen prawns,related_variant,false,false,protein
+pak choi,bok choy,bok choi,exact_equivalent,false,false,produce
+trout,trout,trout,canonical,false,false,protein
+baby pak koi,bok choy,baby pak koi,related_variant,false,false,produce
+gruyere,gruyere,gruyere,canonical,false,false,dairy
+smoked ham,ham,smoked ham,related_variant,false,false,protein
+marinated tofu,tofu,marinated tofu,related_variant,false,false,protein
+hoisin sauce,hoisin sauce,hoisin sauce,standalone,false,false,seasoning
+galangal paste,galangal,galangal paste,related_variant,false,false,aromatic
+thai chilli jam,thai chilli jam,thai chilli jam,standalone,false,false,seasoning
+sweet sherry,sherry,sweet sherry,related_variant,false,false,seasoning
+vegetable millk,vegetable millk,vegetable millk,standalone,true,false,dairy
+dessert rice,short grain rice,dessert rice,related_variant,false,false,starch
+turkey,turkey,turkey,standalone,false,false,protein
+turkey mince,turkey mince,turkey mince,standalone,false,false,protein
+white cornmeal,cornmeal,white cornmeal,related_variant,false,false,starch
+raw vegetables,raw vegetables,raw vegetables,standalone,false,false,produce
+vegan white wine vinegar,white wine vinegar,white wine vinegar,exact_equivalent,false,false,seasoning
+tempeh,tempeh,tempeh,standalone,false,false,protein
+flax eggs,flax eggs,flax eggs,standalone,false,false,seasoning
+almond milk,almond milk,almond milk,standalone,false,false,dairy
+green red lentils,green red lentils,green red lentils,standalone,true,false,protein
+vegan butter,vegan butter,vegan butter,standalone,false,false,seasoning
+soya milk,soya milk,soya milk,standalone,false,false,dairy
+roasted vegetables,roasted vegetables,roasted vegetables,standalone,false,false,produce
+mixed grain,mixed grain,mixed grain,standalone,false,false,starch
+garlic granules,dried garlic,garlic granules,related_variant,false,false,seasoning
+toast,bread,toast,related_variant,false,false,starch
+paccheri pasta,wheat pasta,paccheri pasta,related_variant,false,false,starch
+hind shank,beef braising cuts,hind shank,related_variant,false,false,protein
+sweet red peppers,sweet peppers,sweet red peppers,canonical,false,false,produce
+cassaba,cassaba,cassaba,standalone,true,false,starch
+yautia,yautia,yautia,standalone,false,false,starch
+white yam,white yam,white yam,standalone,false,false,starch
+skirty steak,beef steaks,skirty steak,related_variant,false,false,protein
+sazon,sazon,sazon,canonical,false,false,seasoning
+yellow masarepa,yellow masarepa,yellow masarepa,standalone,false,false,starch
+rainbow trout,trout,rainbow trout,related_variant,false,false,protein
+bok choi,bok choy,bok choi,canonical,false,false,produce
+rice vermicelli,rice noodles,rice vermicelli,related_variant,false,false,starch
+egg rolls,egg rolls,egg rolls,standalone,false,false,starch
+lamb shanks,lamb cuts,lamb shanks,related_variant,false,false,protein
+rice flour pancakes,rice flour pancakes,rice flour pancakes,standalone,false,false,starch
+pork shoulder steaks,pork meat cuts,pork shoulder steaks,related_variant,false,false,protein
+stoned dates,dates,pitted dates,exact_equivalent,false,false,produce
+streaky bacon,bacon,streaky bacon,related_variant,false,false,protein
+wonton skin,wonton skin,wonton skin,standalone,false,false,starch
+liquid cheese,liquid cheese,liquid cheese,standalone,false,false,dairy
+polish kabanos,kabanos,kabanos sausages,exact_equivalent,false,false,protein
+precooked white cornmeal,cornmeal,precooked white cornmeal,related_variant,false,false,starch
+nori sheets,nori,nori sheets,exact,false,false,seasoning
+salted herring fillets,salted herring,salted herring fillets,standalone,false,false,protein
