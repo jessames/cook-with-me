@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_11_27_150000) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_28_171000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -49,6 +49,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_11_27_150000) do
     t.string "relationship_type"
     t.boolean "review_needed", default: false
     t.boolean "is_pantry_staple", default: false, null: false
+    t.string "role"
     t.index ["ingredient_family_id"], name: "index_ingredients_on_ingredient_family_id"
   end
 

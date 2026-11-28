@@ -1,100 +1,100 @@
 class RecipeMatcher
+  ROLE_WEIGHTS = {
+    "protein" => 5, "starch" => 3, "produce" => 2, "dairy" => 2, "aromatic" => 1, "seasoning" => 1
+  }.freeze
+  DEFAULT_WEIGHT = 1
+  RELATED_MATCH_FACTOR = 0.75
+  MISSING_PENALTY = 0.5
+  RESULT_LIMIT = 3
+  MEAL_SIZED_TYPES = %w[breakfast lunch dinner any].freeze
+  FILLING_ROLES = %w[protein starch].freeze
+
   def initialize(ingredient_ids, meal_type: nil)
     @ingredient_ids = ingredient_ids.map(&:to_i).uniq
     @meal_type = meal_type
   end
 
   def call
-    return [] if @ingredient_ids.empty?
+    selected = Ingredient.where(id: @ingredient_ids).to_a
+    return [] if selected.empty?
 
-    selected_ingredients = Ingredient
-      .where(id: @ingredient_ids)
-      .index_by(&:id)
-
-    return [] if selected_ingredients.empty?
-
-    recipes = Recipe.where(recommendation_eligible: true)
-
-    if @meal_type.present? && @meal_type != "any"
-      recipes = recipes.where("? = ANY(meal_types)", @meal_type)
-    end
-
-    results = recipes.includes(ingredients: :ingredient_family).map do |recipe|
-      recipe_ingredients = recipe.ingredients.uniq(&:id)
-
-      # Each selected ingredient can satisfy only one recipe ingredient.
-      available_ingredients = selected_ingredients.values.dup
-
-      exact_ids = []
-      related_ids = []
-      missing_ids = []
-
-      # First, prioritize exact matches.
-      unmatched_ingredients = []
-
-      recipe_ingredients.each do |required|
-        match = available_ingredients.find do |available|
-          exact_match?(available, required)
-        end
-
-        if match
-          exact_ids << required.id
-          available_ingredients.delete(match)
-        else
-          unmatched_ingredients << required
-        end
-      end
-
-      # Then look for related ingredients among those still available.
-      unmatched_ingredients.each do |required|
-        match = available_ingredients.find do |available|
-          related_match?(available, required)
-        end
-
-        if match
-          related_ids << required.id
-          available_ingredients.delete(match)
-        else
-          missing_ids << required.id
-        end
-      end
-
-      matching_ids = exact_ids + related_ids
-
-      additional_ingredient_count = missing_ids.count do |id|
-        recipe_ingredients.find { |ingredient| ingredient.id == id }.is_pantry_staple == false
-      end
-
-      {
-        recipe: recipe,
-        matching_ids: matching_ids,
-        missing_ids: missing_ids,
-        matching_count: matching_ids.count,
-        missing_count: missing_ids.count,
-        exact_matching_ids: exact_ids,
-        related_matching_ids: related_ids,
-        exact_matching_count: exact_ids.count,
-        related_matching_count: related_ids.count,
-        additional_ingredient_count: additional_ingredient_count
-      }
-    end
-
-    results = results.select do |result|
-      result[:matching_count] > 0
-    end
-
-    results = results.sort_by do |result|
-      [
-        -result[:matching_count],
-        -result[:exact_matching_count],
-        result[:additional_ingredient_count]
-      ]
-    end
-
-    results.first(3)
+    results = candidate_recipes.map { |recipe| evaluate(recipe, selected) }
+    ranked = rank(results.select { |result| result[:matching_count].positive? })
+    ranked = filling_first(ranked) if meal_sized?
+    ranked.first(RESULT_LIMIT)
   end
 
   private
+
+  def candidate_recipes
+    recipes = Recipe.where(recommendation_eligible: true)
+    recipes = recipes.where("? = ANY(meal_types)", @meal_type) if @meal_type.present? && @meal_type != "any"
+    recipes.includes(:ingredients)
+  end
+
+  def rank(results)
+    results.sort_by do |result|
+      [-result[:score], result[:additional_ingredient_count], -result[:exact_matching_count], result[:recipe].id]
+    end
+  end
+
+  # For meal-sized requests, filling recipes always outrank non-filling ones;
+  # non-filling recipes only fill slots left over.
+  def filling_first(results)
+    filling, light = results.partition { |result| result[:filling] }
+    filling + light
+  end
+
+  def meal_sized?
+    @meal_type.blank? || MEAL_SIZED_TYPES.include?(@meal_type)
+  end
+
+  def evaluate(recipe, selected)
+    required = recipe.ingredients.uniq(&:id)
+    exact, related, missing = match_ingredients(required, selected.dup)
+    build_result(recipe, exact, related, missing).merge(
+      filling: required.any? { |ingredient| FILLING_ROLES.include?(ingredient.role) }
+    )
+  end
+
+  # Each selected ingredient can satisfy only one recipe ingredient:
+  # exact matches are claimed first, then related (same family) matches.
+  def match_ingredients(required, available)
+    exact, unmatched = claim(required, available) { |have, need| exact_match?(have, need) }
+    related, missing = claim(unmatched, available) { |have, need| related_match?(have, need) }
+    [exact, related, missing]
+  end
+
+  def claim(required, available)
+    required.partition do |need|
+      match = available.find { |have| yield(have, need) }
+      available.delete(match) if match
+      match
+    end
+  end
+
+  def build_result(recipe, exact, related, missing)
+    matching = exact + related
+    {
+      recipe: recipe,
+      matching_ids: matching.map(&:id), missing_ids: missing.map(&:id),
+      matching_count: matching.size, missing_count: missing.size,
+      exact_matching_ids: exact.map(&:id), related_matching_ids: related.map(&:id),
+      exact_matching_count: exact.size, related_matching_count: related.size,
+      additional_ingredient_count: missing.count { |ingredient| !ingredient.is_pantry_staple },
+      score: score(exact, related, missing)
+    }
+  end
+
+  def score(exact, related, missing)
+    used = total_weight(exact) + (RELATED_MATCH_FACTOR * total_weight(related))
+    needed = total_weight(missing.reject(&:is_pantry_staple))
+    (used - (MISSING_PENALTY * needed)).to_f
+  end
+
+  def total_weight(ingredients)
+    ingredients.sum { |ingredient| ROLE_WEIGHTS.fetch(ingredient.role, DEFAULT_WEIGHT) }
+  end
 
   def exact_match?(available, required)
     return true if available.id == required.id
