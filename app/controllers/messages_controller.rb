@@ -30,7 +30,7 @@ class MessagesController < ApplicationController
       - InstructionUpdateTool:
         - Use the tool when the user reports a problem, missing ingredient, requested recipe change, or limitation that makes a recipe step difficult or impossible for them.
         - Do not use it for unrelated cooking questions.
-        - Call it at most twice per user turn. Combine related information from the current message and relevant earlier messages.
+        - Combine related information from the current message and relevant earlier messages.
         - Adapt the affected step and any remaining steps that depend on it. Preserve unaffected steps, and do not assume a step is unfinished if the user says they completed it.
         - Respect the user's stated needs without making assumptions about their abilities or circumstances.
         - Do not invent ingredients, quantities, equipment, or details about what happened. Suggest an alternative method only when it can be done with information already available; otherwise, ask what tools or ingredients the user has.
@@ -89,8 +89,11 @@ class MessagesController < ApplicationController
             fresh_instruction = @message.instruction&.reload
 
             if fresh_instruction
-              streams << turbo_stream.replace("instruction_content",
-                "<div id='instruction_content' class='display-6 mb-4'>#{fresh_instruction.instruction_content}</div>")
+              streams << turbo_stream.replace(
+              "instruction_content",
+              partial: "instructions/instruction_content",
+              locals: { instruction: fresh_instruction }
+              )
             end
           end
 
