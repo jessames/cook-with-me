@@ -31,9 +31,17 @@ which uses only the onion.
   **a protein counts for more than a supporting item like onion.** Given
   chicken, rice, onion, a chicken-and-rice dish needing 4 more items must beat
   a dish needing 1 more item that uses only the onion.
-- This is a **weighting, not a hard filter** (Claude's reading of "weigh
-  higher"): if no recipe uses the user's protein, still return the best of the
-  rest rather than nothing.
+- This is a **weighting, not a hard filter**: if no recipe uses the user's
+  protein, still return the best of the rest rather than nothing.
+- **That fallback must respect the meal type.** If the user picks lunch and no
+  recipe uses their protein, recommend a filling meal, not a salad. "Filling"
+  = the recipe contains a `protein` or `starch` ingredient (owned or missing).
+  Applies to breakfast, lunch, dinner and "any"; not snack or dessert.
+- **The pantry staple list is trimmed** to what people really always have:
+  salt, black pepper, water, cooking oil, olive oil, white sugar, plain flour,
+  butter. Fresh produce (onion, garlic, herbs), spices, specialty sugars and
+  flours, baking powder, vinegar and coconut oil are no longer staples. Eggs
+  are a `protein` and not a staple.
 - **Approach: add a `role` to the hand-reviewed ingredient data** (chosen over
   alternatives below).
 
@@ -91,7 +99,7 @@ which uses only the onion.
 
   | role | weight | examples |
   |---|---|---|
-  | `protein` | 5 | chicken meat, ground beef, salmon, tofu, whole eggs, chickpeas, lentils |
+  | `protein` | 5 | chicken meat, ground beef, salmon, tofu, eggs (all variants), chickpeas, lentils |
   | `starch` | 3 | rice, wheat pasta, potatoes, noodles, bread, tortillas |
   | `produce` | 2 | carrots, spinach, sweet peppers, apples, fresh tomatoes |
   | `dairy` | 2 | dairy milk, cheddar, plain yogurt, dairy cream |
@@ -103,7 +111,26 @@ which uses only the onion.
 - Claude drafts roles for every row; the team reviews the CSV diff before
   merge. Borderline calls (eggs in baking, beans as protein vs produce) default
   to the table above and are listed in the PR for review.
-- `is_pantry_staple` is unchanged and independent: staples are assumed owned
+- **Pantry staples (decided with the user).** Set `is_pantry_staple=true`
+  only for these CSV rows; every other row becomes `false`:
+  - salt: salt, sea salt, kosher salt, coarse salt
+  - black pepper: pepper, black pepper, ground black pepper, peppercorns,
+    whole black peppercorns
+  - water: water, cold water, warm water, boiling water
+  - cooking oil: oil, vegetable oil, sunflower oil, canola oil, rapeseed oil,
+    high heat cooking oil
+  - olive oil: olive oil, extra virgin olive oil
+  - sugar: sugar, granulated sugar
+  - plain flour: flour, plain flour, all purpose flour, white flour
+  - butter: butter, salted butter, unsalted butter, melted butter
+
+  Removed from today's 86 (now `false`): onion/garlic/fresh herbs and all
+  variants, spices and dried herbs, caster/icing/powdered/brown/demerara/
+  golden sugars, self-raising/bread/strong/corn flour, cornstarch, baking
+  powder, vinegar, coconut oil. Eggs: role `protein`, not a staple. Removing
+  onion (224 recipes) and garlic (238) means they now count as missing; as
+  `aromatic` (weight 1) their penalty is small.
+- Staples are assumed owned
   and never penalised as missing, whatever their role. A staple the user
   *did* select (e.g. garlic) still earns its normal role weight when a recipe
   uses it. *(Claude's call.)*
@@ -117,7 +144,8 @@ which uses only the onion.
   `validate_data` rejects missing/unknown roles and inconsistent roles within a
   family; `validate_ingredient_results` checks `role`.
 - **Existing databases:** a schema migration adds the column, then a data
-  migration applies **only** roles from the CSV (no-op on an empty DB,
+  migration applies **only** `role` and `is_pantry_staple` from the CSV
+  (no-op on an empty DB,
   irreversible), following the `ImportRecipeData` pattern. It must **not**
   re-run the full `RecipeDataImportService`: that also re-syncs recipe
   repairs, and `sync_instructions` can destroy instructions that cook-session
@@ -136,8 +164,16 @@ missing_score = Σ weight(role) over missing NON-staple recipe ingredients
 score         = used_score − MISSING_PENALTY × missing_score   (start 0.5)
 ```
 
-- Sort by `-score`, then fewer missing non-staple ingredients, then more exact
-  matches, then recipe id (deterministic).
+- **Filling first (meal-sized requests).** When `meal_type` is breakfast,
+  lunch, dinner or "any", recipes that are *filling* (contain at least one
+  `protein` or `starch` ingredient, owned or missing) rank above all
+  non-filling ones. Non-filling recipes appear only if fewer than 3 filling
+  ones match. Not applied for snack or dessert. (A recipe that uses the user's
+  protein is filling by definition, so this only bites in the no-protein
+  fallback, e.g. lunch + an unavailable protein returns a filling meal rather
+  than a green salad.)
+- Then sort by `-score`, then fewer missing non-staple ingredients, then more
+  exact matches, then recipe id (deterministic).
 - Keep the rule that a recipe must match at least one selected ingredient.
 - Ingredients with no role (e.g. not in the CSV) use a default weight of 1.
 - The result hash keeps all existing keys (the view and any callers keep
@@ -159,7 +195,13 @@ dish missing chorizo (5), peppers (2), stock (1), paprika (1) scores
   - related (family) match scores below exact;
   - `review_needed` ingredients still don't match via equivalence/family;
   - meal type filter and `recommendation_eligible` still apply;
-  - no protein match available → still returns the best remaining recipes.
+  - no protein match available → still returns the best remaining recipes;
+  - lunch/dinner/breakfast/"any" + no protein match → a filling recipe beats
+    a higher-scoring non-filling one (e.g. a green salad); for snack/dessert
+    the filling rule does not apply;
+  - fewer than 3 filling matches → non-filling recipes fill the remaining
+    slots.
+- Import validation: only the agreed staple rows are `is_pantry_staple=true`.
 - Import validation tests for the role column (missing / unknown /
   inconsistent within family).
 
