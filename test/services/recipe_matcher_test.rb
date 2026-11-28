@@ -99,6 +99,40 @@ class RecipeMatcherTest < ActiveSupport::TestCase
     assert_equal 2, result[:exact_matching_count]
   end
 
+  def salad_and_stew(meal_types: %w[lunch dinner])
+    tomato = ing("tomato", role: "produce")
+    cucumber = ing("cucumber", role: "produce")
+    lettuce = ing("lettuce", role: "produce")
+    recipe("Salad", tomato, cucumber, lettuce, meal_types:)
+    recipe("Stew", tomato, ing("potatoes", role: "starch"), meal_types:)
+    [ing("salmon", role: "protein"), tomato, cucumber, lettuce]
+  end
+
+  test "lunch fallback prefers filling meal over salad" do
+    assert_equal "Stew", names(salad_and_stew, meal_type: "lunch").first
+  end
+
+  test "non-filling fills remaining slots" do
+    assert_equal %w[Stew Salad], names(salad_and_stew, meal_type: "lunch")
+  end
+
+  test "snack ignores the filling rule" do
+    selected = salad_and_stew(meal_types: %w[snack])
+    assert_equal %w[Salad Stew], names(selected, meal_type: "snack")
+  end
+
+  test "nil meal type behaves like any" do
+    selected = salad_and_stew
+    assert_equal %w[Stew Salad], names(selected, meal_type: nil)
+    assert_equal %w[Stew Salad], names(selected, meal_type: "any")
+  end
+
+  test "filling flag reported" do
+    selected = salad_and_stew
+    assert result_for(selected, "Stew")[:filling]
+    refute result_for(selected, "Salad")[:filling]
+  end
+
   test "staples-only selection still returns recipes" do
     butter = ing("butter", role: "seasoning", staple: true)
     recipe("Buttered toast", butter)

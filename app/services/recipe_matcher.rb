@@ -6,6 +6,8 @@ class RecipeMatcher
   RELATED_MATCH_FACTOR = 0.75
   MISSING_PENALTY = 0.5
   RESULT_LIMIT = 3
+  MEAL_SIZED_TYPES = %w[breakfast lunch dinner any].freeze
+  FILLING_ROLES = %w[protein starch].freeze
 
   def initialize(ingredient_ids, meal_type: nil)
     @ingredient_ids = ingredient_ids.map(&:to_i).uniq
@@ -17,7 +19,9 @@ class RecipeMatcher
     return [] if selected.empty?
 
     results = candidate_recipes.map { |recipe| evaluate(recipe, selected) }
-    rank(results.select { |result| result[:matching_count].positive? }).first(RESULT_LIMIT)
+    ranked = rank(results.select { |result| result[:matching_count].positive? })
+    ranked = filling_first(ranked) if meal_sized?
+    ranked.first(RESULT_LIMIT)
   end
 
   private
@@ -34,10 +38,23 @@ class RecipeMatcher
     end
   end
 
+  # For meal-sized requests, filling recipes always outrank non-filling ones;
+  # non-filling recipes only fill slots left over.
+  def filling_first(results)
+    filling, light = results.partition { |result| result[:filling] }
+    filling + light
+  end
+
+  def meal_sized?
+    @meal_type.blank? || MEAL_SIZED_TYPES.include?(@meal_type)
+  end
+
   def evaluate(recipe, selected)
     required = recipe.ingredients.uniq(&:id)
     exact, related, missing = match_ingredients(required, selected.dup)
-    build_result(recipe, exact, related, missing)
+    build_result(recipe, exact, related, missing).merge(
+      filling: required.any? { |ingredient| FILLING_ROLES.include?(ingredient.role) }
+    )
   end
 
   # Each selected ingredient can satisfy only one recipe ingredient:
