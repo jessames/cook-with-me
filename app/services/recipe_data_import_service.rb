@@ -252,15 +252,19 @@ class RecipeDataImportService
         ingredient.ingredient_family&.name == row["family_name"] &&
         ingredient.equivalence_key == equivalence_ingredient.id &&
         ingredient.relationship_type == row["relationship_type"] &&
-        ingredient.review_needed == (row["review_needed"] == "true") &&
-        ingredient.is_pantry_staple == (row["is_pantry_staple"] == "true") &&
-        ingredient.role == row["role"]
+        ingredient_flags_match?(ingredient, row)
       )
 
       raise "Ingredient validation failed: #{ingredient.name}" unless valid
     end
 
     puts "Ingredient classifications validated: #{@ingredient_rows.size}"
+  end
+
+  def ingredient_flags_match?(ingredient, row)
+    ingredient.review_needed == (row["review_needed"] == "true") &&
+      ingredient.is_pantry_staple == (row["is_pantry_staple"] == "true") &&
+      ingredient.role == row["role"]
   end
 
   def validate_recipe_results
