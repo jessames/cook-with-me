@@ -48,8 +48,8 @@ class RecipeMatcherTest < ActiveSupport::TestCase
 
   test "related match scores 0.75 of the weight" do
     family = IngredientFamily.create!(name: "chicken meat")
-    thighs = ing("thighs", role: "protein", family:, equivalence: 1)
-    recipe("Breast dish", ing("breast", role: "protein", family:, equivalence: 2))
+    thighs = ing("thighs", role: "protein", family:, equivalence: -1)
+    recipe("Breast dish", ing("breast", role: "protein", family:, equivalence: -2))
     result = results([thighs]).first
     assert_in_delta 3.75, result[:score]
     assert_equal 1, result[:related_matching_count]
@@ -57,8 +57,8 @@ class RecipeMatcherTest < ActiveSupport::TestCase
 
   test "review_needed blocks equivalence and family matching" do
     family = IngredientFamily.create!(name: "chicken meat")
-    thighs = ing("thighs", role: "protein", family:, equivalence: 1)
-    recipe("Breast dish", ing("breast", role: "protein", family:, equivalence: 2, review: true))
+    thighs = ing("thighs", role: "protein", family:, equivalence: -1)
+    recipe("Breast dish", ing("breast", role: "protein", family:, equivalence: -2, review: true))
     assert_empty results([thighs])
   end
 
@@ -91,8 +91,8 @@ class RecipeMatcherTest < ActiveSupport::TestCase
 
   test "two family members used once each" do
     family = IngredientFamily.create!(name: "chicken meat")
-    thighs = ing("thighs", role: "protein", family:, equivalence: 1)
-    breast = ing("breast", role: "protein", family:, equivalence: 2)
+    thighs = ing("thighs", role: "protein", family:, equivalence: -1)
+    breast = ing("breast", role: "protein", family:, equivalence: -2)
     recipe("Mixed chicken", breast, thighs)
     result = results([thighs, breast]).first
     assert_equal 2, result[:matching_count]

@@ -6,8 +6,8 @@ class IngredientRoleStapleSyncTest < ActiveSupport::TestCase
   end
 
   test "sets role and staple flag only" do
-    onion = Ingredient.create!(name: "onion", is_pantry_staple: true, relationship_type: "canonical")
-    IngredientRoleStapleSync.new([row("onion", "onions", "aromatic", false)]).call
+    onion = Ingredient.create!(name: "zz test onion", is_pantry_staple: true, relationship_type: "canonical")
+    IngredientRoleStapleSync.new([row("zz test onion", "onions", "aromatic", false)]).call
     onion.reload
     assert_equal "aromatic", onion.role
     refute onion.is_pantry_staple
@@ -19,8 +19,8 @@ class IngredientRoleStapleSyncTest < ActiveSupport::TestCase
   end
 
   test "raises on invalid roles and changes nothing" do
-    egg = Ingredient.create!(name: "egg")
-    assert_raises(StandardError) { IngredientRoleStapleSync.new([row("egg", "whole eggs", "meat", false)]).call }
+    egg = Ingredient.create!(name: "zz test egg")
+    assert_raises(StandardError) { IngredientRoleStapleSync.new([row("zz test egg", "whole eggs", "meat", false)]).call }
     assert_nil egg.reload.role
   end
 end
