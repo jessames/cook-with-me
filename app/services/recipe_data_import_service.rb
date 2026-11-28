@@ -71,6 +71,10 @@ class RecipeDataImportService
 
     raise "Invalid equivalence references: #{invalid_references}" if invalid_references.any?
 
+    role_errors = IngredientClassificationCheck.errors(@ingredient_rows)
+
+    raise "Invalid ingredient roles: #{role_errors}" if role_errors.any?
+
     # Check that required ingredients exist or will be created
     available_ingredients = Ingredient.pluck(:name) + new_ingredient_names
 
@@ -131,7 +135,8 @@ class RecipeDataImportService
         equivalence_key: equivalence_ingredient.id,
         relationship_type: row["relationship_type"],
         review_needed: row["review_needed"] == "true",
-        is_pantry_staple: row["is_pantry_staple"] == "true"
+        is_pantry_staple: row["is_pantry_staple"] == "true",
+        role: row["role"]
       )
     end
 
@@ -248,7 +253,8 @@ class RecipeDataImportService
         ingredient.equivalence_key == equivalence_ingredient.id &&
         ingredient.relationship_type == row["relationship_type"] &&
         ingredient.review_needed == (row["review_needed"] == "true") &&
-        ingredient.is_pantry_staple == (row["is_pantry_staple"] == "true")
+        ingredient.is_pantry_staple == (row["is_pantry_staple"] == "true") &&
+        ingredient.role == row["role"]
       )
 
       raise "Ingredient validation failed: #{ingredient.name}" unless valid
