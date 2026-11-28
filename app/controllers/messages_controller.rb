@@ -38,7 +38,11 @@ class MessagesController < ApplicationController
 
   def index
     @cook_session = current_user.cook_sessions.find(params[:cook_session_id])
-    @instruction = @cook_session.recipe.instructions.find(params[:instruction_id])
+
+    @instruction = @cook_session.recipe.instructions.find(
+      params[:instruction_id]
+    )
+
     @messages = @cook_session.messages.order(:created_at)
   end
 
